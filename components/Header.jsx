@@ -14,14 +14,14 @@ const Header = () => {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <header className="w-full  items-center fixed px-2 lg:px-8 pt-0 lg:pt-6 text-white  mix-blend-difference bg-none   font-Montserrat   z-50 ">
+    <header className="w-full  items-center fixed px-2 sm:px-8 lg:px-20 pt-0 lg:pt-6 text-white  mix-blend-difference bg-none   font-Montserrat   z-50 ">
       <div className="flex w-full h-full items-center justify-between">
         <div className=" h-full  items-center   flex text-2xl lg:text-4xl  font-handwriting">
           {" "}
           <Link href="/">AUZ</Link>
         </div>
 
-        <div className=" h-full flex items-center  pl-10">
+        <div className=" h-full flex items-center  ">
           <ul className="h-full  filter gap-8 text-md flex  items-end ">
           
             {headers.map((header, index) => {
@@ -35,7 +35,7 @@ const Header = () => {
               );
             })}
             <div className="visible lg:hidden ">
-              <Hamburger toggled={isOpen} toggle={setOpen} />
+              <Hamburger toggled={isOpen} toggle={setOpen} size={24}/>
             </div>
           </ul>
         </div>

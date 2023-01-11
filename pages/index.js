@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <Layout>
       <div className="bg-black">
-        <div className="w-full mx-auto lg:gap-10 px-10 lg:px-20  py-20 lg:py-28 gap-6  min-h-[180vh] grid grid-cols-1 lg:grid-cols-2    relative">
+        <div className="w-full mx-auto lg:gap-10 px-4 lg:px-20  py-20 lg:py-28 gap-4  min-h-[180vh] grid grid-cols-1 lg:grid-cols-2    relative">
           <HomeCard
             image={AboutMeImage}
             title="About Me"
@@ -35,7 +35,7 @@ export default function Home() {
             image={SkillImage}
             title="Skills"
             discription="Programming and english skill"
-            src="/"
+            src="/AboutMe/#Skills"
           />
           <div className=" rounded-2xl   text-gray-300 duration-500 relative filter  flex items-center justify-center">
             <div className="w-full max-w-full justify-center items-center flex flex-row  mt-10 lg:mt-0   ">

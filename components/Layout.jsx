@@ -14,7 +14,7 @@ export default function Layout({ children }) {
       </Head>
       <Header />
       <main className="overflow-hidden font-extralight font-montserrat">{children}</main>
-     
+     <Footer/>
     </div>
   );
 }

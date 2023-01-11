@@ -9,13 +9,16 @@ module.exports = {
       fontFamily: { 
         montserrat: ['Montserrat'],handwriting: ['Moon Dance'],
       },
-    
+      colors:{
+        deepgreen:"rgb(141,149,146)"
+      }
     },
   },
 
   variants: {
     extend: {},
   },
+
   
   plugins: [],
 };
