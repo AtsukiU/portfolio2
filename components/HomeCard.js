@@ -9,21 +9,21 @@ const HomeCard = (props) => {
         onMouseEnter={props.onMouseEnter}
         onMouseLeave={props.onMouseLeave}
         kdrop-br
-        className="min-h-[50vh] flex flex-col rounded-2xl  relative "
+        className="min-h-[50vh] flex flex-col  relative "
       >
         <Image
-          className=" w-full h-full  object-cover filter rounded-2xl  sm:opacity-100  "
+          className=" w-full h-full  object-cover filter"
           layout="fill"
           src={props.image}
           alt="cardImage"
         />
 
-        <div className="w-full h-full pb-2  lg:pb-4 pl-4  lg:pl-8  items-start justify-end group flex flex-col rounded-2xl  transition cursor-pointer backdrop-brightness-75 ">
-          <div className="flex justify-center lg:translate-y-7 group-hover:translate-y-0 duration-500 tracking-wide font-light  text-white text-xl lg:text-3xl ">
+        <div className="w-full h-full  pl-4  lg:pl-8  items-start justify-end group flex flex-col  transition cursor-pointer backdrop-brightness-90 hover:backdrop-brightness-50 duration-700 group">
+          <div className="flex justify-center lg:translate-y-7 group-hover:translate-y-0 duration-700 tracking-wide font-light  text-white text-2xl lg:text-3xl ">
             {props.title}
           </div>
 
-          <div className="lg:opacity-0 group-hover:opacity-100 lg:translate-y-7 group-hover:translate-y-0  group-hover:visible duration-500 py-2 justify-center tracking-wide font-light text-zinc-200 text-xs lg:text-sm ">
+          <div className="flex lg:opacity-0 group-hover:opacity-100 lg:translate-y-7 group-hover:translate-y-0  group-hover:visible duration-700 py-5 justify-center tracking-wide font-light text-white text-sm lg:text-sm ">
             {props.discription}
           </div>
         </div>

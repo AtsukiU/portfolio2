@@ -3,10 +3,11 @@ import { useState } from "react";
 import HomeCard from "../components/HomeCard";
 import Layout from "../components/Layout";
 import Link from "next/link";
-import AboutMeImage from "../public/5857d74e-586d-45e2-bacc-bc710ee82c7d-0.jpg";
-import PortfolioImage from "../public/safar-safarov-koOdUvfGr4c-unsplash.jpg";
-import SkillImage from "../public/kobu-agency-ipARHaxETRk-unsplash.jpg";
-import MyImage from "../public/000030.JPG";
+
+import Image from "next/image";
+import Portfolio1Img from "../public/Portfolio1.png";
+import Portfolio2Img from "../public/PortFolio.png";
+import PostItMemo from "../public/PostItMemo.png";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
@@ -24,7 +25,6 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/bundle";
 import "swiper/css/effect-fade";
 
-import Image from "next/image";
 
 const TestSlick = () => {
   const [DefaultBackgroundImage, setDefaultBackgroundImage] = useState(0);
@@ -38,27 +38,30 @@ const TestSlick = () => {
   const [LinkUrl, setLinkUrl] = useState("/AboutMe");
 
   const HomeCards = [
-    { img: MyImage, title: "About Me", src: "/AboutMe", discription: "im auz" },
     {
-      img: PortfolioImage,
+      img: Portfolio1Img,
+      title: "About Me",
+      src: "/AboutMe",
+      discription: "im auz",
+    },
+    {
+      img: PostItMemo,
       title: "Portfolio",
       src: "/Portfolio",
       discription:
         "my portfolio it is my hopecrazy inre¥tresut jkfenfi fjiefjpeifpe dikfjifjefpei jfiejfeifjefjejfdfjdfkdfjdkfjdkf  jfeikanitem eirjd ",
     },
-    { img: SkillImage, title: "Skills", src: "/", discription: "my skill" },
+    { img: Portfolio2Img, title: "Skills", src: "/", discription: "my skill" },
   ];
 
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
     <Layout>
-      <div className="w-full h-full hidden lg:flex">
-        <div className="min-w-full min-h-screen flex  items-center   bg-zinc-200  relative   ">
+      <div className="w-full h-full pt-20 px-20 hidden lg:flex">
+        <div className="min-w-full min-h-screen bg-black  relative   ">
           <Swiper
             modules={[
-           
-             
               Scrollbar,
               Mousewheel,
               Thumbs,
@@ -75,9 +78,9 @@ const TestSlick = () => {
             {HomeCards.map((HomeCard, index) => {
               return (
                 <SwiperSlide key={index}>
-                  <div className="w-10/12 h-[85vh] mx-auto relative  z-0 hidden lg:flex">
+                  <div className="w-full h-[80vh] mx-auto relative   z-0 hidden lg:flex">
                     <Image
-                      className="filter brightness-50   "
+                      className="filter brightness-75 "
                       objectFit="cover"
                       layout="fill"
                       alt="background"
@@ -89,8 +92,8 @@ const TestSlick = () => {
             })}
           </Swiper>
 
-          <div className="h-full  w-full absolute  z-99 top-0 bottom-0 right-0 left-0 lg:flex justify-center hidden">
-            <div className="w-full h-full  flex">
+          <div className="h-full  w-screen absolute pl-10 z-99 top-0 bottom-0 right-0 left-0 lg:flex justify-center hidden">
+            <div className="w-screen h-full  flex">
               <Swiper
                 modules={[
                   Navigation,
@@ -99,7 +102,7 @@ const TestSlick = () => {
                   Mousewheel,
                   Thumbs,
                 ]}
-                slidesPerView={3}
+                slidesPerView={1}
                 spaceBetween={0}
                 loop={true}
                 mousewheel={true}
@@ -113,19 +116,15 @@ const TestSlick = () => {
                       : null,
                 }}
               >
-                <div className="h-full  w-full flex items-center ">
+                <div className="h-full w-screen z-99 flex items-center">
                   {HomeCards.map((HomeCard, index) => {
                     return (
                       <SwiperSlide key={index}>
-                        <div className="h-full w-full px-40 flex  flex-col items-start justify-center text-white ">
+                        <div className="h-full w-screen text-white ">
                           {" "}
-                          <div className="text-8xl font-semibold  tracking-wide ">
+                          <div className=" text-8xl font-semibold  tracking-wide ">
                             {HomeCard.title}
                           </div>
-                          <div className="pt-4 font-light hidden">
-                            {HomeCard.discription}
-                          </div>
-                          <div className="maru"></div>
                         </div>
                       </SwiperSlide>
                     );
@@ -219,7 +218,7 @@ const TestSlick = () => {
           >
             <SwiperSlide>
               <HomeCard
-                image={MyImage}
+                image={Portfolio1Img}
                 title="About Me"
                 discription="I'm AUZ "
                 src="/AboutMe"
@@ -228,7 +227,7 @@ const TestSlick = () => {
 
             <SwiperSlide>
               <HomeCard
-                image={PortfolioImage}
+                image={PostItMemo}
                 title="Portfolio"
                 discription="My Portfolio "
                 src="/Portfolio"
@@ -237,7 +236,7 @@ const TestSlick = () => {
 
             <SwiperSlide>
               <HomeCard
-                image={SkillImage}
+                image={Portfolio2Img}
                 title="Skills"
                 discription="My Skills"
                 src="/"

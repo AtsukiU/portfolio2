@@ -4,8 +4,6 @@ import MyImage from "../public/000030.JPG";
 import Image from "next/image";
 import Link from "next/link";
 
-import { MdTransitEnterexit } from "react-icons/md";
-
 import Fishing from "../public/IMG_0248.jpg";
 import Guitar from "/public/IMG_0528.jpg";
 import Trip from "/public/000009.JPG";
@@ -15,7 +13,6 @@ import Wiskey from "/public/IMG_4261.jpg";
 import Aquarium from "/public/IMG_5773.jpg";
 import Cat from "/public/cat.jpg";
 import Car from "/public/IMG_8069.jpg";
-import Mouse from "/public/tenzmouse.jpg";
 import Unaghi from "/public/unaghi.jpg";
 import Book from "/public/book.jpg";
 import Programming from "../public/programming.jpg";
@@ -31,7 +28,7 @@ import { Autoplay, EffectFade, Pagination, FreeMode } from "swiper";
 const AboutMe = () => {
   const PortfolioCards = [
     {
-      title: "Portfolio1",
+      title: "My portfolio1",
       src: Portfolio1Img,
       subTitle: "React",
       PortfolioDiscriptionURL: "/PortfolioDiscription",
@@ -43,7 +40,7 @@ const AboutMe = () => {
       PortfolioDiscriptionURL: "/PortfolioDiscription",
     },
     {
-      title: "Portfolio2",
+      title: "My portfolio2",
       src: Portfolio2Img,
       subTitle: "React",
       PortfolioDiscriptionURL: "/PortfolioDiscription",
@@ -94,6 +91,10 @@ const AboutMe = () => {
 
   const OtherSkills = [
     {
+      title: "Git",
+      Discription: "Gitでのリポジトリーの管理、更新",
+    },
+    {
       title: "TOEIC L&R 850",
       Discription: "L&R 850",
     },
@@ -117,7 +118,7 @@ const AboutMe = () => {
       discription: "酒屋巡りして掘り出し物を探しています。",
       src: Wiskey,
     },
-    { title: "Unagi", discription: "大好物はうなぎです", src: Unaghi },
+    { title: "Eel", discription: "大好物はうなぎです", src: Unaghi },
     { title: "Aquarium", discription: "", src: Aquarium },
     {
       title: "Guitar",
@@ -176,129 +177,143 @@ const AboutMe = () => {
           <div className="w-full flex flex-col items-center">
             <div className="w-full h-[100vh] flex  items-center text-white ">
               <div className="w-full px-4 lg:px-20  items-center flex  flex-col">
-                <div className="lg:w-7/12  lg:mr-auto  flex mt-10 uppercase  text-4xl sm:text-6xl lg:text-8xl  ">
-                  I&apos;m AUZ.<br></br> Welcome to my website.
+                <div className="lg:w-7/12  lg:mr-auto  flex flex-col mt-10 uppercase  text-4xl sm:text-6xl lg:text-8xl  ">
+                  <a className="">I&apos;m AUZ.</a>
+                  <a className="text-zinc-600">Welcome to my website.</a>
                 </div>
-                <div className="my-20 sm:flex w-full lg:w-1/2 mr-auto text-zinc-400 text-sm">
+                <div className="my-20 sm:flex w-full lg:w-1/2 mr-auto text-zinc-400 text-sm lg:text-base tracking-wide">
                   AUZです。ポートフォリオサイトをご覧いただきありがとうございます。
                 </div>
               </div>
             </div>
 
-            <div
-              style={{ backgroundImage: "url(000030.JPG)" }}
-              className=" w-full lg:mb-28  bg-fixed bg-no-repeat"
-            >
-              <div className="h-full flex flex-col px-4 lg:px-20  text-zinc-300 font-light  backdrop-brightness-50">
-                <div className="py-20 ">
-                  <div className="text-4xl">AUZ</div>{" "}
-                  <div className="text-sm mt-20">Age24 / Web Developer </div>
+            <div className=" w-full min-h-screen lg:mb-40   grid grid-cols-1 lg:grid-cols-3 ">
+              <div className=" col-span-2 h-full min-h-[110vh] flex flex-col justify-center px-4 lg:px-20  text-white tracking-widest backdrop-brightness-50">
+                <div className="text-4xl lg:text-6xl ">AUZ</div>{" "}
+                <div className="text-sm lg:text-xl mt-20 pb-20">
+                  Age24 / Web Developer{" "}
                 </div>
-                <div className="text-xs pb-20">
-                  <div className="pb-5">
-                    <div className="text-zinc-400 ">2022</div>
-                    <div className="lg:ml-3">
-                      プログラミングやデザインの魅力に惹かれ独学で制作を開始。
-                    </div>{" "}
-                  </div>
-                  <div className="pb-5">
-                    <div className="text-zinc-400 ">2020-</div>
-                    <div className="lg:ml-3">
-                      新卒入社した会社でカウンターセールスを学ぶ。
-                    </div>{" "}
-                  </div>
-                  <div className="pb-5">
-                    <div className="text-zinc-400">2020-2016</div>
-                    <div className="lg:ml-3">
-                      経済学部経済学科を卒業。TOEIC850を取得。
-                    </div>{" "}
-                  </div>
-
-                  <div className="pb-5">
-                    <div className="text-zinc-400">1998</div>
-                    <div className="lg:ml-3">山梨で生まれる。</div>{" "}
-                  </div>
+                <div className="text-xs lg:text-base lg:w-8/12  pb-10">
+                  1998年山梨で生まれる。大学では経済学を学び、語学の習得にも注力。大学卒業後は金融系企業で窓口営業を経験。働く中で自分が何を本当にしたいかを考え、自分で何かを作ると決意する。
+                </div>
+                <div className="text-xs lg:text-base lg:w-8/12 t pb-20">
+                  現在は主にフロントエンド関連でReactやNext.jsを習得。人の心を動かせるものを作ることを目標にしています。
                 </div>
               </div>
-              <div className="  h-full flex flex-col gap-2 lg:gap-2 px-6 lg:px-20 backdrop-brightness-50"></div>
+              <div className=" brightness-100  w-full ml-auto h-full ">
+                <Image alt="MyImage" src={MyImage} objectFit="cover" layout="fill" />
+              </div>
             </div>
 
             {/* <div className="text-white -mt-4"></div> */}
           </div>
-          <div className="w-full h-full px-0 lg:px-20 ml-0 lg:ml-20 bg-white text-black rounded-b-2xl lg:rounded-2xl">
+          <div className="px-0 lg:px-20 ml-0 lg:ml-0  w-full h-full min-h-[100vh]  flex flex-col justify-center bg-zinc-100 text-black rounded-b-2xl lg:rounded-2xl">
             {" "}
-            <div className="px-4 lg:px-10 py-20 text-4xl">Portfolio</div>
-            <div className="px-4 lg:px-10 pb-10">
-              <div className="text-sm">React / Next.js</div>
-              <div className="text-sm">ChakraUI / TailwindCSS</div>
-              <div className="text-sm">Firebase / GraphQL / Node.js</div>
-              <div className="text-sm">git</div>
-              <div className="py-20 flex ">
-                <Link href="/Portfolio">
-                  <div className="text-sm border-b border-zinc-400  cursor-pointer duration-500 hover:-translate-y-1">
-                    VIEW PORTFOLIO
-                  </div>
-                </Link>
-              </div>
+            <div className="px-4 lg:px-10 pt-20 lg:pt-40 pb-20  lg:pb-20 tracking-wider  text-4xl lg:text-6xl">
+              Portfolio
             </div>
-            <div className=" lg:pl-10 pb-20 ">
-              <Swiper
-                module={[Autoplay, EffectFade, Pagination]}
-                spaceBetween={4}
-                speed={1000}
-                pagenation={true}
-                loop={true}
-                effect="fade"
-                slidesPerView={1.1}
-                breakpoints={{
-                  1024: {
-                    slidesPerView: 2.2,
-                    spaceBetween: 10,
-                  },
-                }}
-              >
+            <div className="flex flex-col">
+              <div className="px-4 lg:px-10 mt-0 lg:mt-7 pb-20">
+                <div className="text-sm lg:text-base">React / Next.js</div>
+                <div className="text-sm lg:text-base mt-1">
+                  ChakraUI / TailwindCSS / styled-components
+                </div>
+                <div className="text-sm lg:text-base mt-1">
+                  FramerMotion / GSAP{" "}
+                </div>
+                <div className="text-sm lg:text-base mt-1">
+                  Firebase / GraphQL / Node.js
+                </div>
+                <div className="text-sm lg:text-base mt-1">Git / </div>
+              </div>
+              <div className=" lg:w-2/3 px-4 lg:px-10 pb-20">
                 {PortfolioCards.map((PortfolioCard, index) => {
                   return (
-                    <SwiperSlide key={index}>
-                      <Link href="/Portfolio">
-                        <div className="min-h-[50vh]  mx-auto relative ">
-                          <div>
-                            <Image
-                              className=" filter brightness-100 "
-                              objectFit="cover"
-                              layout="fill"
-                              src={PortfolioCard.src}
-                              alt="PortfolioCards"
-                              mousewheel={true}
-                            />
-                          </div>
-                          <div className=" p-4 lg:p-3  w-full h-full text-sm   absolute bottom flex items-end  backdrop-brightness-90  duration-500 text-white">
-                            {PortfolioCard.title}
-                          </div>
-                        </div>
-                      </Link>
-                    </SwiperSlide>
+                    <div
+                      className="my-1 py-2 lg:py-5  lg:text-4xl text-sm text-deep border-b border-zinc-400"
+                      key={index}
+                    >
+                      <Link href="/Portfolio">{PortfolioCard.title}</Link>
+                    </div>
                   );
                 })}
-              </Swiper>
+                <div className="pt-10 lg:pt-20 pb-0 lg:pb-40 flex justify-center lg:justify-start">
+                  <Link href="/Portfolio">
+                    <div className="text-sm  lg:text-xl  border py-2 px-8 rounded-full  border-zinc-300  cursor-pointer duration-500 hover:bg-zinc-200">
+                      VIEW PORTFOLIO
+                    </div>
+                  </Link>
+                </div>
+              </div>
+              <div className="pb-20 hidden">
+                <Swiper
+                  module={[Autoplay, EffectFade, Pagination]}
+                  spaceBetween={4}
+                  speed={1000}
+                  pagenation={true}
+                  loop={true}
+                  effect="fade"
+                  slidesPerView={1.1}
+                  breakpoints={{
+                    1024: {
+                      slidesPerView: 1.2,
+                      spaceBetween: 10,
+                    },
+                  }}
+                >
+                  {PortfolioCards.map((PortfolioCard, index) => {
+                    return (
+                      <SwiperSlide key={index}>
+                        <Link href="/Portfolio">
+                          <div className="min-h-[50vh]  mx-auto relative ">
+                            <div>
+                              <Image
+                                className=" filter brightness-100 "
+                                objectFit="cover"
+                                layout="fill"
+                                src={PortfolioCard.src}
+                                alt="PortfolioCards"
+                                mousewheel={true}
+                              />
+                            </div>
+                            <div className=" p-4 lg:p-3  w-full h-full text-sm  lg:text-base   absolute bottom flex items-end  backdrop-brightness-90  duration-500 text-white">
+                              {PortfolioCard.title}
+                            </div>
+                          </div>
+                        </Link>
+                      </SwiperSlide>
+                    );
+                  })}
+                </Swiper>
+              </div>
             </div>
           </div>
 
           <div
-            className=" w-full bg-black px-4 lg:px-20 text-white "
+            className=" w-full flex flex-col justify-center bg-black  text-white "
             id="Skills"
           >
-            <div className="text-4xl pt-20 ">Skills</div>
+            <div className="text-4xl lg:text-6xl px-4 lg:px-20 pt-40 ">
+              Skills
+            </div>
 
-            <div className="py-20 gap-2 text-sm flex items-center">
+            <div className="py-20 px-0 lg:px-0 gap-2 text-base  lg:text-xl flex items-center">
               <Swiper
                 modules={[FreeMode]}
-                slidesPerView="1.9"
+                slidesPerView="1.8"
                 freeMode={false}
                 loop="true"
                 draggable="true"
                 centeredSlides={true}
                 spaceBetween={16}
+                breakpoints={{
+                  1024: {
+                    slidesPerView: 1.8,
+                    loop: true,
+
+                    centeredSlides: true,
+                  },
+                }}
               >
                 <SwiperSlide>
                   <div
@@ -342,7 +357,7 @@ const AboutMe = () => {
               </Swiper>
             </div>
 
-            <div className="grid grid-col-1 pb-20">
+            <div className="px-4 lg:px-20 grid grid-col-1 pb-20">
               {activeFrontEnd ? (
                 <div className="w-full h-full mx-auto   grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-10">
                   {FrontEndSkills.map((skill, index) => {
@@ -351,8 +366,10 @@ const AboutMe = () => {
                         className=" pb-2  flex flex-col border-b border-zinc-400"
                         key={index}
                       >
-                        <div className="text-sm font-light">{skill.title}</div>
-                        <div className="mt-2  text-gray-400 text-xs lg:text-xs font-light  hidden lg:flex">
+                        <div className="text-sm  lg:text-xl font-light">
+                          {skill.title}
+                        </div>
+                        <div className="mt-2  text-gray-400 text-xs lg:text-sm font-light  hidden lg:flex">
                           {skill.Discription}
                         </div>
                       </div>
@@ -373,7 +390,7 @@ const AboutMe = () => {
                         <div className="text-sm lg:text-base font-light">
                           {skill.title}
                         </div>
-                        <div className="mt-2 text-gray-400 text-xs lg:text-xs font-light  hidden lg:flex">
+                        <div className="mt-2 text-gray-400 text-xs lg:text-sm font-light  hidden lg:flex">
                           {skill.Discription}
                         </div>
                       </div>
@@ -395,7 +412,7 @@ const AboutMe = () => {
                         <div className="text-sm lg:text-base  font-light">
                           {skill.title}
                         </div>
-                        <div className="mt-2 text-zinc-400 text-xs lg:text-xs font-light  hidden lg:flex">
+                        <div className="mt-2 text-zinc-400 text-xs lg:text-sm font-light  hidden lg:flex">
                           {skill.Discription}
                         </div>
                       </div>
@@ -409,14 +426,14 @@ const AboutMe = () => {
           </div>
         </div>
 
-        <div className="py-20 bg-black min-w-full  min-h-screen px-4 lg:px-20">
+        <div className="pt-40 pb-20 bg-black min-w-full  min-h-screen px-4 lg:px-20">
           {" "}
           <div className="w-full  mx-auto min-h-screen justify-center  flex flex-col ">
             <div className="w-full">
-              <div className="text-4xl pb-20">Favorite</div>
-              <div className="">
-                travel football fishing car aquarium cat game guiter pc books
-                wiskey eel and more...
+              <div className="text-4xl lg:text-6xl pb-20">Favorite</div>
+              <div className="text-sm lg:text-xl">
+                Travel Football Fishing Car Aquarium Cat Game Guiter PC Books
+                Wiskey and more...
               </div>
             </div>
 

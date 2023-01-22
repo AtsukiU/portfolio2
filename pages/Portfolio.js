@@ -14,89 +14,109 @@ export default function Portfolio() {
     {
       title: "Portfolio",
       src: Portfolio1Img,
-      subTitle: "React / ChakraUI / GmailJS ",
+      subTitle: "React / ChakraUI / EmailJS ",
       PortfolioDiscriptionURL: "https://portfolio-beta-murex-17.vercel.app/",
       PortfolioDiscription:
-        "自身初のポートフォリオサイト。コンセプトはモダンなUIUXです。ダークモードの導入にも挑戦し、ChakraUIの利点を活かしています。またコンタクトフォームに関してはGmailJSを使い、直接フォーム上からコンタクトが取れるようにしました。",
+        "自身初のポートフォリオサイト。コンセプトはモダンなUIUXです。ダークモードとライトモードの切り替えを実装。直接コンタクトが取れるコンタクトフォームを導入しました。スライダーも導入し、どういったスキルを持っているかなどを視覚的に分かりやすくしています。",
+      PortfolioDiscription2:
+        "Reactを使用。ダークモードの導入や簡単なアニメーションの導入、現代的なUIUXデザインでのポートフォリオサイトの作成を考えていたため、CSSフレームワークはChakraUIが最適であると考え採用しました。",
     },
     {
       title: "Post It Memo",
       src: PostItMemo,
-      subTitle: "React / Firebase / ChakraUI。",
-      PortfolioDiscriptionURL: "/PortfolioDiscription",
+      subTitle: "React / Firebase / styled-components / FramerMotion",
+      PortfolioDiscriptionURL: "https://react-post-it.vercel.app/",
       PortfolioDiscription:
-        "付箋型のメモアプリ。Firebaseに触ってみたかったので作成。データの入力、読み込み、削除が出来ます。",
+        "付箋型のメモアプリ。簡単に使うことが出来るシンプルなアプリを目指し制作。データの入力、読み込み、削除が出来ます。",
+      PortfolioDiscription2:
+        "Reactを使用。CSSフレームワークはstyled-componentsを使用。データの保持にはFirebaseを使用しています。FramerMotionを使用し、メモ作成時のアニメーションを導入しています。",
     },
 
     {
       title: "Portfolio2",
       src: Portfolio2Img,
-      subTitle: "Next.js / TailwindCSS / ReactSlick",
-      PortfolioDiscriptionURL: "/PortfolioDiscription",
+      subTitle: "Next.js / TailwindCSS / ReactSlick / EmailJS / GSAP",
+      PortfolioDiscriptionURL: "https://portfolio2-three-gamma.vercel.app/",
       PortfolioDiscription:
-        "2つ目のポートフォリオサイト。利便性や自由度の高さを考慮しNext.jsとTailwindCSSを使用。デザイン性の高いレイアウトにも対応出来るようにしました。",
+        "2つ目のポートフォリオサイト。より自由度が高く、自分が好きだと思えるサイトを目指し制作。",
+      PortfolioDiscription2:
+        " Next.js、TailwindCSSを使い制作開始。Next.jsはReactに比べルーティングやSSRの点で優位性があると考え採用。デザイン性を高めたかったのでChakraUIより自由度の高いTailwindCSSを導入。",
     },
   ];
 
   return (
     <Layout>
-      <div className="bg-zinc-900 text-white">
-        <div className="pt-28 px-3 lg:px-20 flex  font-normal text-3xl sm:text-5xl lg:text-6xl">
-          My Portfolio
-        </div>
-        <div className=" w-full px-4 mx-auto h-full  py-10 grid grid-cols-1  gap-4 lg:gap-4">
+      <div className="bg-white text-black">
+        <div className=" w-full mx-auto h-full pt-10  lg:pb-40 grid grid-cols-1">
           {PortfolioCards.map((PortfolioCard, index) => {
             return (
               <div
                 key={index}
-                className=" h-full grid grid-cols-1 lg:grid-cols-2 px-0 lg:px-16 xl:px-20 lg:my-8 gap-3 "
+                className=" grid grid-cols-1 lg:grid-cols-1 my-20 lg:my-20 "
               >
-                <div className="lg:h-[50vh] flex  filter relative ">
-                  <Image
-                    className=" filter brightness-90  duration-1000 "
-                    objectFit="cover"
-                    layout="fill"
-                    src={PortfolioCard.src}
-                    alt="PortfolioCards"
-                  />
+                <div className="px-4 lg:px-20 flex  items-cneter justify-between ">
+                  <div className=" flex lg:flex-row flex-col pt-0 lg:pt-20 mb-20  w-full">
+                    <div className=" text-4xl lg:text-8xl  uppercase text-black tracking-wide">
+                      {PortfolioCard.title}
+                    </div>{" "}
+                    <div className="flex  items-end ">
+                      <div className="text-xs lg:text-2xl lg:ml-10   flex text-zinc-800">
+                        {index + 1}/{PortfolioCards.length}
+                      </div>
+                      <div className=" text-xs lg:text-sm lg:ml-10 text-zinc-800">
+                        {PortfolioCard.subTitle}
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
-                <div className="min-h-[100vh] lg:min-h-[50vh] w-full bg-zinc-900 lg:bg-zinc-900 rounded-md">
-                  <div className="h-1/2 lg:-p-8 flex  filter relative lg:hidden">
+                <div className=" lg:ml-0 lg:min-h-[80vh] flex  filter relative">
+                  <a href={PortfolioCard.PortfolioDiscriptionURL}>
                     <Image
-                      className=" filter brightness-90  duration-1000 rounded-t-md "
+                      className=" filter brightness-95  duration-1000 cursol-pointer"
+                      objectFit="cover"
+                      layout="fill"
+                      src={PortfolioCard.src}
+                      alt="PortfolioCards"
+                    />
+                  </a>
+                </div>
+
+                <div className=" min-h-[100vh] lg:min-h-[50vh]  w-full">
+                  <div className="h-[50vh]  flex mb-5 lg:mb-0 filter relative lg:hidden">
+                    <Image
+                      className=" filter brightness-90  duration-1000 "
                       objectFit="cover"
                       layout="fill"
                       src={PortfolioCard.src}
                       alt="PortfolioCards"
                     />
                   </div>
-                  <div className="p-4 lg:p-12 xl:p-16">
-                    <div className=" flex  items-end justify-between ">
-                      <div className="flex">
-                        <div className="text-xl lg:text-4xl pb-2 lg:pb-0  font-light  tracking-wider  text-white">
-                          {PortfolioCard.title}
-                        </div>{" "}
-                        <div className="text-xs lg:text-sm ml-4  flex items-center lg:items-end  text-zinc-400">
-                         ({index + 1}/{PortfolioCards.length})
+                  <div className="px-4 lg:px-10 flex flex-col tracking-widest ">
+                    <div className="pt-10 lg:pt-20 lg:px-20 py-5 flex flex-col  text-xs lg:text-sm  text-black ">
+                      <div className="grid grid-cols-1 gap-10 lg:gap-20 lg:grid-cols-2">
+                        <div className="text-xs lg:text-base"> </div>
+
+                        <div className=" flex flex-col text-xs lg:text-base  text-black">
+                          <div>
+                            {" "}
+                            <div className="mb-5 lg:mb-10 text-lg lg:text-2xl ">
+                              About the project
+                            </div>{" "}
+                            <div>{PortfolioCard.PortfolioDiscription}</div>
+                          </div>
+                          <div>
+                            <div className="mb-5 lg:mb-10  text-lg lg:text-2xl "></div>{" "}
+                            <div> {PortfolioCard.PortfolioDiscription2}</div>
+                          </div>
                         </div>
                       </div>
                     </div>
+
                     <a
                       href={PortfolioCard.PortfolioDiscriptionURL}
                       className="inline-block"
-                    >
-                      <div className="text-xs lg:text-sm lg:mt-8 flex items-center text-zinc-400">
-                        View Project
-                        <MdTransitEnterexit size={20} />
-                      </div>{" "}
-                    </a>
-                    <div className="flex items-end text-xs lg:text-sm tracking-wide text-zinc-200 pt-4 lg:pt-8">
-                      {PortfolioCard.PortfolioDiscription}
-                    </div>
-                    <div className="text-xs lg:text-sm pt-4 lg:pt-8 text-zinc-400">
-                      {PortfolioCard.subTitle}
-                    </div>
+                    ></a>
                   </div>
                 </div>
               </div>

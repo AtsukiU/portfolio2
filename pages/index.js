@@ -9,22 +9,21 @@ import React from "react";
 import AboutMeImage from "../public/000030.JPG";
 import PortfolioImage from "../public/safar-safarov-koOdUvfGr4c-unsplash.jpg";
 import SkillImage from "../public/kobu-agency-ipARHaxETRk-unsplash.jpg";
-import Slider from "react-slick";
+import ContactImage from "../public/Iphone.jpg";
 
-import {FaTwitterSquare ,FaGithubSquare} from "react-icons/fa"
+import { FaTwitterSquare, FaGithubSquare } from "react-icons/fa";
 
 export default function Home() {
   return (
     <Layout>
       <div className="bg-black">
-        <div className="w-full mx-auto lg:gap-10 px-4 lg:px-20  py-20 lg:py-28 gap-4  min-h-[180vh] grid grid-cols-1 lg:grid-cols-2    relative">
+        <div className="w-full mx-auto  px-4 lg:px-20  pt-20 lg:pt-28 pb-20 lg:pb-20  min-h-[100vh] gap-2 lg:gap-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4    relative">
           <HomeCard
             image={AboutMeImage}
             title="About Me"
             discription="Hello.I'm AUZ"
             src="/AboutMe"
           />
-
           <HomeCard
             image={PortfolioImage}
             title="Portfolio"
@@ -34,15 +33,15 @@ export default function Home() {
           <HomeCard
             image={SkillImage}
             title="Skills"
-            discription="Programming and english skill"
+            discription="Programming and other skill"
             src="/AboutMe/#Skills"
+          />{" "}
+          <HomeCard
+            image={ContactImage}
+            title="Contact"
+            discription="Email Twitter Github"
+            src="/Contact"
           />
-          <div className=" rounded-2xl   text-gray-300 duration-500 relative filter  flex items-center justify-center">
-            <div className="w-full max-w-full justify-center items-center flex flex-row  mt-10 lg:mt-0   ">
-              <div className="backdrop-opacity-10 text-zinc-200 lg:text-zinc-400 hover:text-zinc-200 duration-500 hover:-translate-y-3"><a href="https://twitter.com/itwebzozo"><FaTwitterSquare size={100} /></a></div>
-              <div className="backdrop-opacity-10 text-zinc-200 lg:text-zinc-400 hover:text-zinc-200 duration-500 hover:-translate-y-3"><a href="https://github.com/AtsukiU"><FaGithubSquare size={100}/></a></div>
-            </div>
-          </div>
         </div>
       </div>
     </Layout>
