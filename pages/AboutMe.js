@@ -190,13 +190,14 @@ const AboutMe = () => {
             <div className=" w-full min-h-screen lg:mb-40   grid grid-cols-1 lg:grid-cols-3 ">
               <div className=" col-span-2 h-full min-h-[110vh] flex flex-col justify-center px-4 lg:px-20  text-white tracking-widest backdrop-brightness-50">
                 <div className="text-4xl lg:text-6xl ">AUZ</div>{" "}
-                <div className="text-sm lg:text-xl mt-20 pb-20">
+                <div className="text-sm lg:text-2xl mt-20 mb-40">
                   Age24 / Web Developer{" "}
                 </div>
+                <div className="border-b mb-10 pb-2 text-xs border-zinc-600">about me</div>
                 <div className="text-xs lg:text-base lg:w-8/12  pb-10">
-                  1998年山梨で生まれる。大学では経済学を学び、語学の習得にも注力。大学卒業後は金融系企業で窓口営業を経験。働く中で自分が何を本当にしたいかを考え、自分で何かを作ると決意する。
+                  1998年山梨で生まれる。大学では経済学を学び、語学の習得にも注力。大学卒業後は金融系企業で窓口営業を経験。働く中で自分が何を本当にしたいかを考え、独学でWEB制作を始める。
                 </div>
-                <div className="text-xs lg:text-base lg:w-8/12 t pb-20">
+                <div className="text-xs lg:text-base lg:w-8/12 t pb-40">
                   現在は主にフロントエンド関連でReactやNext.jsを習得。人の心を動かせるものを作ることを目標にしています。
                 </div>
               </div>
@@ -290,20 +291,20 @@ const AboutMe = () => {
           </div>
 
           <div
-            className=" w-full flex flex-col justify-center bg-black  text-white "
+            className=" w-full flex flex-col justify-center bg-black  text-white tracking-widest"
             id="Skills"
           >
             <div className="text-4xl lg:text-6xl px-4 lg:px-20 pt-40 ">
               Skills
             </div>
 
-            <div className="py-20 px-0 lg:px-0 gap-2 text-base  lg:text-xl flex items-center">
+            <div className="py-20 lg:py-40 px-0 lg:px-20 gap-2 text-base  lg:text-xl flex items-center">
               <Swiper
                 modules={[FreeMode]}
-                slidesPerView="1.8"
+                slidesPerView="2.2"
                 freeMode={false}
                 loop="true"
-                draggable="true"
+                draggable="false"
                 centeredSlides={true}
                 spaceBetween={16}
                 breakpoints={{
@@ -359,11 +360,11 @@ const AboutMe = () => {
 
             <div className="px-4 lg:px-20 grid grid-col-1 pb-20">
               {activeFrontEnd ? (
-                <div className="w-full h-full mx-auto   grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-10">
+                <div className="w-full h-full mx-auto   grid grid-cols-1 lg:grid-cols-1 gap-2 lg:gap-10">
                   {FrontEndSkills.map((skill, index) => {
                     return (
                       <div
-                        className=" pb-2  flex flex-col border-b border-zinc-400"
+                        className=" pb-2  flex flex-col border-b border-zinc-600"
                         key={index}
                       >
                         <div className="text-sm  lg:text-xl font-light">
@@ -380,11 +381,11 @@ const AboutMe = () => {
                 <div></div>
               )}
               {activeBackEnd ? (
-                <div className="w-full h-full mx-auto  grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-10">
+                <div className="w-full h-full mx-auto  grid grid-cols-1 lg:grid-cols-1 gap-2 lg:gap-10">
                   {BackEndSkills.map((skill, index) => {
                     return (
                       <div
-                        className="   flex flex-col border-b border-zinc-400 pb-2 lg:pb-4"
+                        className="   flex flex-col border-b border-zinc-600 pb-2 lg:pb-4"
                         key={index}
                       >
                         <div className="text-sm lg:text-base font-light">
@@ -402,11 +403,11 @@ const AboutMe = () => {
               )}
 
               {activeOthers ? (
-                <div className="w-full h-full mx-auto  grid grid-cols-1 lg:grid-cols-3 gap-2 lg:gap-10">
+                <div className="w-full h-full mx-auto  grid grid-cols-1 lg:grid-cols-1 gap-2 lg:gap-10">
                   {OtherSkills.map((skill, index) => {
                     return (
                       <div
-                        className="flex flex-col border-b border-zinc-400 pb-2 lg:pb-4"
+                        className="flex flex-col border-b border-zinc-600 pb-2 lg:pb-4"
                         key={index}
                       >
                         <div className="text-sm lg:text-base  font-light">

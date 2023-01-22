@@ -25,7 +25,6 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/bundle";
 import "swiper/css/effect-fade";
 
-
 const TestSlick = () => {
   const [DefaultBackgroundImage, setDefaultBackgroundImage] = useState(0);
 
@@ -40,26 +39,31 @@ const TestSlick = () => {
   const HomeCards = [
     {
       img: Portfolio1Img,
-      title: "About Me",
+      title: "Portfolio1",
       src: "/AboutMe",
       discription: "im auz",
     },
     {
       img: PostItMemo,
-      title: "Portfolio",
+      title: "PostItMemo",
       src: "/Portfolio",
       discription:
         "my portfolio it is my hopecrazy inre¥tresut jkfenfi fjiefjpeifpe dikfjifjefpei jfiejfeifjefjejfdfjdfkdfjdkfjdkf  jfeikanitem eirjd ",
     },
-    { img: Portfolio2Img, title: "Skills", src: "/", discription: "my skill" },
+    {
+      img: Portfolio2Img,
+      title: "Portfolio2",
+      src: "/",
+      discription: "my skill",
+    },
   ];
 
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
     <Layout>
-      <div className="w-full h-full pt-20 px-20 hidden lg:flex">
-        <div className="min-w-full min-h-screen bg-black  relative   ">
+      <div className="w-full h-screen pt-10 lg:pt-20  bg-zinc-900 hidden lg:flex">
+        <div className="min-w-full min-h-screen   relative  ">
           <Swiper
             modules={[
               Scrollbar,
@@ -78,9 +82,9 @@ const TestSlick = () => {
             {HomeCards.map((HomeCard, index) => {
               return (
                 <SwiperSlide key={index}>
-                  <div className="w-full h-[80vh] mx-auto relative   z-0 hidden lg:flex">
+                  <div className="lg:w-2/3 h-[70vh] lg:h-[80vh] ml-auto relative z-0 ">
                     <Image
-                      className="filter brightness-75 "
+                      className="filter brightness-50 contrast-100 border border-zinc-500"
                       objectFit="cover"
                       layout="fill"
                       alt="background"
@@ -92,8 +96,8 @@ const TestSlick = () => {
             })}
           </Swiper>
 
-          <div className="h-full  w-screen absolute pl-10 z-99 top-0 bottom-0 right-0 left-0 lg:flex justify-center hidden">
-            <div className="w-screen h-full  flex">
+          <div className="h-full  w-screen absolute lg:pl-10 z-99 top-0 bottom-0 right-0 left-0 flex justify-center">
+            <div className="w-screen h-full flex">
               <Swiper
                 modules={[
                   Navigation,
@@ -102,7 +106,7 @@ const TestSlick = () => {
                   Mousewheel,
                   Thumbs,
                 ]}
-                slidesPerView={1}
+                slidesPerView={3}
                 spaceBetween={0}
                 loop={true}
                 mousewheel={true}
@@ -116,14 +120,17 @@ const TestSlick = () => {
                       : null,
                 }}
               >
-                <div className="h-full w-screen z-99 flex items-center">
+                <div className="min-h-screen w-screen z-99">
                   {HomeCards.map((HomeCard, index) => {
                     return (
                       <SwiperSlide key={index}>
-                        <div className="h-full w-screen text-white ">
+                        <div className="h-full w-screen min-h-[screen] flex flex-row lg:flex-col  mt-[75vh] lg:mt-[0vh]">
                           {" "}
-                          <div className=" text-8xl font-semibold  tracking-wide ">
+                          <div className="text-xl  lg:text-8xl font-semibold  tracking-wide mix-blend-difference">
                             {HomeCard.title}
+                          </div>
+                          <div className="text-sm lg:text-4xl mt-1 lg:mt-5 ml-4 lg:ml-0  flex text-zinc-200">
+                            {index + 1}/{HomeCards.length}
                           </div>
                         </div>
                       </SwiperSlide>
@@ -196,56 +203,30 @@ const TestSlick = () => {
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="min-h-screen h-full w-full  bg-black lg:hidden ">
-        <div className="pt-20 pb-10 sm:py-28 sm:pb-24 text-white w-10/12 font-semibold mx-auto  items-center flex  flex-col ">
-          <h1 className="flex justify-center text-2xl sm:text-3xl lg:text-5xl  ">
-            I&apos;m AUZ. Front End Developer based on Yamanashi,Japan. Welcome
-            to my personal website.
-          </h1>
-        </div>
-
-        <div className=" h-full  mb-6 my-auto  lg:hidden">
-          <Swiper
-            modules={[Navigation, Pagination, Scrollbar, Mousewheel, Thumbs]}
-            spaceBetween={0}
-            slidesPerView={1.1}
-            loop={true}
-            centeredSlides={true}
-            Pagination={{ clickable: true }}
-            mousewheel={true}
-          >
-            <SwiperSlide>
-              <HomeCard
-                image={Portfolio1Img}
-                title="About Me"
-                discription="I'm AUZ "
-                src="/AboutMe"
-              />
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <HomeCard
-                image={PostItMemo}
-                title="Portfolio"
-                discription="My Portfolio "
-                src="/Portfolio"
-              />
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <HomeCard
-                image={Portfolio2Img}
-                title="Skills"
-                discription="My Skills"
-                src="/"
-              />
-            </SwiperSlide>
-          </Swiper>
-          <div className="text-white flex items-center justify-center my-10 sm:my-10 font-bold ">
-            T----M
-          </div>
+        <div className="mt-10 min-h-screen  z-99 flex flex-col  lg:hidden">
+          {HomeCards.map((HomeCard, index) => {
+            return (
+              <div className="h-full mb-10  min-h-[screen]  " key={index}>
+                <div className="relative h-[65vh]">
+                  <Image
+                    className="filter brightness-50  contrast-100 border border-zinc-500"
+                    objectFit="cover"
+                    layout="fill"
+                    alt="background"
+                    src={HomeCard.img}
+                  />{" "}
+                  <div className="text-lg font-bold absolute right-2 top-2  flex text-zinc-400 z-99">
+                    {index + 1}/{HomeCards.length}
+                  </div>
+                </div>
+                <div className="flex my-5 ">
+                  <div className="text-2xl ml-2 font-semibold  tracking-wide mix-blend-difference">
+                    {HomeCard.title}
+                  </div>{" "}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </Layout>

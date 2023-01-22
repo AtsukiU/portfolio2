@@ -100,7 +100,7 @@ export default function Portfolio() {
                         <div className=" flex flex-col text-xs lg:text-base  text-black">
                           <div>
                             {" "}
-                            <div className="mb-5 lg:mb-10 text-lg lg:text-2xl ">
+                            <div className="mb-5 lg:mb-20 text-lg lg:text-2xl ">
                               About the project
                             </div>{" "}
                             <div>{PortfolioCard.PortfolioDiscription}</div>
