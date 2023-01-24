@@ -193,7 +193,9 @@ const AboutMe = () => {
                 <div className="text-sm lg:text-2xl mt-20 mb-40">
                   Age24 / Web Developer{" "}
                 </div>
-                <div className="border-b mb-10 pb-2 text-xs border-zinc-600">about me</div>
+                <div className="border-b mb-10 pb-2 text-xs border-zinc-600">
+                  about me
+                </div>
                 <div className="text-xs lg:text-base lg:w-8/12  pb-10">
                   1998年山梨で生まれる。大学では経済学を学び、語学の習得にも注力。大学卒業後は金融系企業で窓口営業を経験。働く中で自分が何を本当にしたいかを考え、独学でWEB制作を始める。
                 </div>
@@ -202,7 +204,12 @@ const AboutMe = () => {
                 </div>
               </div>
               <div className=" brightness-100  w-full ml-auto h-full ">
-                <Image alt="MyImage" src={MyImage} objectFit="cover" layout="fill" />
+                <Image
+                  alt="MyImage"
+                  src={MyImage}
+                  objectFit="cover"
+                  layout="fill"
+                />
               </div>
             </div>
 
@@ -210,7 +217,7 @@ const AboutMe = () => {
           </div>
           <div className="px-0 lg:px-20 ml-0 lg:ml-0  w-full h-full min-h-[100vh]  flex flex-col justify-center bg-zinc-100 text-black rounded-b-2xl lg:rounded-2xl">
             {" "}
-            <div className="px-4 lg:px-10 pt-20 lg:pt-40 pb-20  lg:pb-20 tracking-wider  text-4xl lg:text-6xl">
+            <div className="px-4 lg:px-10 pt-20 lg:pt-40 pb-20  lg:pb-20 font-bold tracking-wider  text-4xl lg:text-6xl">
               Portfolio
             </div>
             <div className="flex flex-col">
@@ -227,11 +234,11 @@ const AboutMe = () => {
                 </div>
                 <div className="text-sm lg:text-base mt-1">Git / </div>
               </div>
-              <div className="w-1/3 px-4 lg:px-10 pb-20 flex flex-col">
+              <div className="w-full uppercase px-4 lg:px-10 pb-20">
                 {PortfolioCards.map((PortfolioCard, index) => {
                   return (
                     <div
-                      className="my-1 lg:my-1 py-2 lg:pl-4 rotate-90  bg-black text-white    lg:text-4xl text-sm "
+                      className="mt-2 py-1 px-2  bg-black text-white    lg:text-3xl text-sm "
                       key={index}
                     >
                       <Link href="/Portfolio">{PortfolioCard.title}</Link>
@@ -246,6 +253,7 @@ const AboutMe = () => {
                   </Link>
                 </div>
               </div>
+
               <div className="pb-20 hidden">
                 <Swiper
                   module={[Autoplay, EffectFade, Pagination]}
