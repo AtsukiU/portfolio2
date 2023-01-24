@@ -227,11 +227,11 @@ const AboutMe = () => {
                 </div>
                 <div className="text-sm lg:text-base mt-1">Git / </div>
               </div>
-              <div className=" lg:w-2/3 px-4 lg:px-10 pb-20">
+              <div className="w-1/3 px-4 lg:px-10 pb-20 flex flex-col">
                 {PortfolioCards.map((PortfolioCard, index) => {
                   return (
                     <div
-                      className="my-1 py-2 lg:py-5  lg:text-4xl text-sm text-deep border-b border-zinc-400"
+                      className="my-1 lg:my-1 py-2 lg:pl-4 rotate-90  bg-black text-white    lg:text-4xl text-sm "
                       key={index}
                     >
                       <Link href="/Portfolio">{PortfolioCard.title}</Link>

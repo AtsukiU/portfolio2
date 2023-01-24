@@ -13,7 +13,7 @@ export default function Layout({ children }) {
         <meta name="description" content="AUZ's Portfolio" />
       </Head>
       <Header />
-      <main className="overflow-hidden font-extralight font-montserrat">{children}</main>
+      <main className="overflow-hidden  font-montserrat">{children}</main>
      <Footer/>
     </div>
   );

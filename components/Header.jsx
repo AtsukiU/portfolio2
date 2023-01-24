@@ -14,8 +14,8 @@ const Header = () => {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <header className="w-full  items-center fixed  text-white bg-none mix-blend-difference  font-Montserrat   z-50 ">
-      <div className="px-2 sm:px-4 lg:px-20 pt-0 lg:pt-6 flex filter  tracking-widest   w-full h-full items-center justify-between">
+    <header className="w-full  items-center fixed   text-white    font-Montserrat   z-50 ">
+      <div className="px-2 sm:px-4 lg:px-20 pt-0 lg:pt-6 mix-blend-difference bg-black lg:bg-opacity-100 flex filter  tracking-widest   w-full h-full items-center justify-between">
         <div className=" h-full  items-center  flex text-2xl lg:text-4xl  font-handwriting">
           {" "}
           <Link href="/">AUZ</Link>
@@ -40,7 +40,7 @@ const Header = () => {
         </div>
       </div>
       {isOpen ? (
-        <div className="flex lg:hidden w-screen h-[100vh]  -mt-12 lg:mt-0 pt-12 lg:pt-0 bg-black bg-opacity-90 lg:bg-opacity-100 z-49  lg:-z-1">
+        <div className="flex lg:hidden w-screen h-[100vh] -mt-12 lg:mt-0 pt-12 lg:pt-0 bg-black bg-opacity-90 lg:bg-opacity-100 z-0  lg:-z-1">
           <ul className="h-full w-full flex flex-col items-center ">
             {headers.map((header, index) => {
               return (
