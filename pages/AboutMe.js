@@ -245,7 +245,7 @@ const AboutMe = () => {
                     </div>
                   );
                 })}
-                <div className="pt-10 lg:pt-20 pb-0 lg:pb-40 flex justify-center lg:justify-start">
+                <div className="pt-10 lg:pt-20 pb-0 lg:pb-40 flex ">
                   <Link href="/Portfolio">
                     <div className="text-sm  lg:text-xl  border py-2 px-8 rounded-full  border-zinc-300  cursor-pointer duration-500 hover:bg-zinc-200">
                       VIEW PORTFOLIO
