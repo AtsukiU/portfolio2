@@ -28,19 +28,19 @@ import { Autoplay, EffectFade, Pagination, FreeMode } from "swiper";
 const AboutMe = () => {
   const PortfolioCards = [
     {
-      title: "My portfolio1",
+      title: "Portfolio1",
       src: Portfolio1Img,
       subTitle: "React",
       PortfolioDiscriptionURL: "/PortfolioDiscription",
     },
     {
-      title: "PostItMemo",
+      title: "Post It Memo",
       src: PostItMemo,
       subTitle: "React",
       PortfolioDiscriptionURL: "/PortfolioDiscription",
     },
     {
-      title: "My portfolio2",
+      title: "Portfolio2",
       src: Portfolio2Img,
       subTitle: "React",
       PortfolioDiscriptionURL: "/PortfolioDiscription",
@@ -217,11 +217,11 @@ const AboutMe = () => {
           </div>
           <div className="px-0 lg:px-20 ml-0 lg:ml-0  w-full h-full min-h-[100vh]  flex flex-col justify-center bg-zinc-100 text-black rounded-b-2xl lg:rounded-2xl">
             {" "}
-            <div className="px-4 lg:px-10 pt-20 lg:pt-40 pb-20  lg:pb-20 font-bold tracking-wider  text-4xl lg:text-6xl">
+            <div className=" pt-20 lg:pt-40 pb-20  lg:pb-20 font-bold tracking-wider  text-4xl lg:text-6xl">
               Portfolio
             </div>
             <div className="flex flex-col">
-              <div className="px-4 lg:px-10 mt-0 lg:mt-7 pb-20">
+              <div className=" mt-0 lg:mt-7 pb-20">
                 <div className="text-sm lg:text-base">React / Next.js</div>
                 <div className="text-sm lg:text-base mt-1">
                   ChakraUI / TailwindCSS / styled-components
@@ -234,11 +234,11 @@ const AboutMe = () => {
                 </div>
                 <div className="text-sm lg:text-base mt-1">Git / </div>
               </div>
-              <div className="w-full uppercase px-4 lg:px-10 pb-20">
+              <div className="w-full uppercase pb-20">
                 {PortfolioCards.map((PortfolioCard, index) => {
                   return (
                     <div
-                      className="mt-2 py-1 px-2  bg-black text-white    lg:text-3xl text-sm "
+                      className="mt-2 px-2  border-b text-black border-black    lg:text-3xl text-sm "
                       key={index}
                     >
                       <Link href="/Portfolio">{PortfolioCard.title}</Link>

@@ -12,7 +12,7 @@ import { MdTransitEnterexit } from "react-icons/md";
 export default function Portfolio() {
   const PortfolioCards = [
     {
-      title: "Portfolio",
+      title: "Portfolio 1",
       src: Portfolio1Img,
       subTitle: "React / ChakraUI / EmailJS ",
       PortfolioDiscriptionURL: "https://portfolio-beta-murex-17.vercel.app/",
@@ -51,6 +51,7 @@ export default function Portfolio() {
           {PortfolioCards.map((PortfolioCard, index) => {
             return (
               <div
+                id={PortfolioCards.title}
                 key={index}
                 className=" grid grid-cols-1 lg:grid-cols-1 my-20 lg:my-20 "
               >
