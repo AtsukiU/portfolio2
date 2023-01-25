@@ -55,7 +55,7 @@ export default function Portfolio() {
                 className=" grid grid-cols-1 lg:grid-cols-1 my-20 lg:my-20 "
               >
                 <div className="px-4 lg:px-20 flex  items-cneter justify-between ">
-                  <div className=" flex lg:flex-row flex-col pt-0 lg:pt-20 mb-20  w-full">
+                  <div className=" flex lg:flex-row flex-col pt-0 lg:pt-20 mb-10 lg:mb-20  w-full">
                     <div className=" text-4xl lg:text-8xl  uppercase text-black tracking-wide">
                       {PortfolioCard.title}
                     </div>{" "}
@@ -93,7 +93,7 @@ export default function Portfolio() {
                     />
                   </div>
                   <div className="px-4 lg:px-10 flex flex-col tracking-widest ">
-                    <div className="pt-10 lg:pt-20 lg:px-20 py-5 flex flex-col  text-xs lg:text-sm  text-black ">
+                    <div className="pt-0 lg:pt-20 lg:px-20 py-5 flex flex-col  text-xs lg:text-sm  text-black ">
                       <div className="grid grid-cols-1 gap-10 lg:gap-20 lg:grid-cols-2">
                         <div className="text-xs lg:text-base"> </div>
 

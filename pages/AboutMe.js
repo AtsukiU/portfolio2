@@ -188,16 +188,16 @@ const AboutMe = () => {
             </div>
 
             <div className=" w-full min-h-screen lg:mb-40   grid grid-cols-1 lg:grid-cols-3 ">
-              <div className=" col-span-2 h-full min-h-[110vh] flex flex-col justify-center px-4 lg:px-20  text-white tracking-widest backdrop-brightness-50">
+              <div className=" lg:col-span-2 h-full min-h-[110vh] flex flex-col justify-center px-4 lg:px-20  text-white tracking-widest backdrop-brightness-50">
                 <div className="text-4xl lg:text-6xl ">AUZ</div>{" "}
-                <div className="text-sm lg:text-2xl mt-20 mb-40">
+                <div className="text-sm lg:text-lg mt-10 lg:mt-20 mb-20">
                   Age24 / Web Developer{" "}
                 </div>
                 <div className="border-b mb-10 pb-2 text-xs border-zinc-600">
                   about me
                 </div>
                 <div className="text-xs lg:text-base lg:w-8/12  pb-10">
-                  1998年山梨で生まれる。大学では経済学を学び、語学の習得にも注力。大学卒業後は金融系企業で窓口営業を経験。働く中で自分が何を本当にしたいかを考え、独学でWEB制作を始める。
+                  1998年山梨で生まれる。大学では経済学を学び、語学の習得にも注力。大学卒業後は金融系企業で窓口営業を経験。働く中で自分が何を本当にしたいかを考え、独学でプログラミングを始める。
                 </div>
                 <div className="text-xs lg:text-base lg:w-8/12 t pb-40">
                   現在は主にフロントエンド関連でReactやNext.jsを習得。人の心を動かせるものを作ることを目標にしています。
