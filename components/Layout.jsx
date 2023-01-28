@@ -4,6 +4,9 @@ import Head from "next/head";
 import Header from "./Header";
 import Link from "next/link";
 
+
+
+
 export default function Layout({ children }) {
   return (
     <div>
@@ -11,6 +14,7 @@ export default function Layout({ children }) {
         
         <title>Welcome to AUZ&apos;s Portfolio</title>
         <meta name="description" content="AUZ's Portfolio" />
+        
       </Head>
       <Header />
       <main className="overflow-hidden  font-montserrat">{children}</main>

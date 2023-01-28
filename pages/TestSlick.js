@@ -62,8 +62,8 @@ const TestSlick = () => {
 
   return (
     <Layout>
-      <div className="w-full h-screen pt-10 lg:pt-20  bg-zinc-900 hidden lg:flex">
-        <div className="min-w-full min-h-screen   relative  ">
+      <div className="w-full h-screen  bg-white text-black hidden lg:flex">
+        <div className="min-w-full min-h-screen flex items-center justify-center relative  ">
           <Swiper
             modules={[
               Scrollbar,
@@ -71,20 +71,22 @@ const TestSlick = () => {
               Thumbs,
               EffectCoverflow,
               EffectFade,
+              Mousewheel,
             ]}
             slidesPerView={1}
-            draggable={false}
+            draggable={true}
             loop={true}
             effect={"fade"}
+            mousewheel={true}
             watchSlidesProgress={true}
             onSwiper={setThumbsSwiper}
           >
             {HomeCards.map((HomeCard, index) => {
               return (
                 <SwiperSlide key={index}>
-                  <div className="lg:w-2/3 h-[70vh] lg:h-[80vh] ml-auto relative z-0 ">
+                  <div className="lg:w-8/12 h-[70vh] lg:h-[65vh] mx-auto relative z-0 ">
                     <Image
-                      className="filter brightness-50 contrast-100 border border-zinc-500"
+                      className="filter brightness-90 contrast-100 border border-zinc-500"
                       objectFit="cover"
                       layout="fill"
                       alt="background"
@@ -96,8 +98,8 @@ const TestSlick = () => {
             })}
           </Swiper>
 
-          <div className="h-full  w-screen absolute lg:pl-10 z-99 top-0 bottom-0 right-0 left-0 flex justify-center">
-            <div className="w-screen h-full flex">
+          <div className="h-full  w-screen absolute  z-99 top-0 bottom-0 right-0 left-0 ">
+            <div className="">
               <Swiper
                 modules={[
                   Navigation,
@@ -106,12 +108,12 @@ const TestSlick = () => {
                   Mousewheel,
                   Thumbs,
                 ]}
-                slidesPerView={3}
+                slidesPerView={1}
                 spaceBetween={0}
                 loop={true}
                 mousewheel={true}
                 centeredSlides={true}
-                direction={"vertical"}
+                direction={"horizontal"}
                 watchSlidesProgress={true}
                 thumbs={{
                   swiper:
@@ -120,16 +122,16 @@ const TestSlick = () => {
                       : null,
                 }}
               >
-                <div className="min-h-screen w-screen z-99">
+                <div className="min-h-screen min-w-screen z-99 ">
                   {HomeCards.map((HomeCard, index) => {
                     return (
                       <SwiperSlide key={index}>
-                        <div className="h-full w-screen min-h-[screen] flex flex-row lg:flex-col  mt-[75vh] lg:mt-[0vh]">
+                        <div className=" h-full min-w-screen min-h-[screen] flex  mt-[80vh]">
                           {" "}
-                          <div className="text-xl  lg:text-8xl font-semibold  tracking-wide mix-blend-difference">
+                          <div className="w-8/12 mx-auto pt-4 text-xl  lg:text-8xl font-semibold  tracking-wide">
                             {HomeCard.title}
                           </div>
-                          <div className="text-sm lg:text-4xl mt-1 lg:mt-5 ml-4 lg:ml-0  flex text-zinc-200">
+                          <div className="text-sm lg:text-4xl flex text-zinc-200">
                             {index + 1}/{HomeCards.length}
                           </div>
                         </div>

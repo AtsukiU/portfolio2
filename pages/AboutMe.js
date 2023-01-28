@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Layout from "../components/Layout";
 import MyImage from "../public/000030.JPG";
 import Image from "next/image";
@@ -32,18 +32,24 @@ const AboutMe = () => {
       src: Portfolio1Img,
       subTitle: "React",
       PortfolioDiscriptionURL: "/PortfolioDiscription",
+      PortfolioDiscription:
+        "自身初のポートフォリオサイト。コンセプトはモダンなUIUXです。ダークモードとライトモードの切り替えを実装。直接コンタクトが取れるコンタクトフォームを導入しました。スライダーも導入し、どういったスキルを持っているかなどを視覚的に分かりやすくしています。",
     },
     {
       title: "Post It Memo",
       src: PostItMemo,
       subTitle: "React",
       PortfolioDiscriptionURL: "/PortfolioDiscription",
+      PortfolioDiscription:
+        "付箋型のメモアプリ。簡単に使うことが出来るシンプルなアプリを目指し制作。データの入力、読み込み、削除が出来ます。",
     },
     {
       title: "Portfolio2",
       src: Portfolio2Img,
       subTitle: "React",
       PortfolioDiscriptionURL: "/PortfolioDiscription",
+      PortfolioDiscription:
+        "2つ目のポートフォリオサイト。より自由度が高く、自分が好きだと思えるサイトを目指し制作。",
     },
   ];
 
@@ -173,305 +179,267 @@ const AboutMe = () => {
   return (
     <Layout>
       <div>
-        <div className="min-h-screen  min-w-full  bg-black ">
-          <div className="w-full flex flex-col items-center">
-            <div className="w-full h-[100vh] flex  items-center text-white ">
-              <div className="w-full px-4 lg:px-20  items-center flex  flex-col">
-                <div className="lg:w-7/12  lg:mr-auto  flex flex-col mt-10 uppercase  text-4xl sm:text-6xl lg:text-8xl  ">
-                  <a className="">I&apos;m AUZ.</a>
-                  <a className="text-zinc-600">Welcome to my website.</a>
-                </div>
-                <div className="my-20 sm:flex w-full lg:w-1/2 mr-auto text-zinc-400 text-sm lg:text-base tracking-wide">
-                  AUZです。ポートフォリオサイトをご覧いただきありがとうございます。
-                </div>
-              </div>
-            </div>
-
-            <div className=" w-full min-h-screen lg:mb-40   grid grid-cols-1 lg:grid-cols-3 ">
-              <div className=" lg:col-span-2 h-full min-h-[110vh] flex flex-col justify-center px-4 lg:px-20  text-white tracking-widest backdrop-brightness-50">
-                <div className="text-4xl lg:text-6xl ">AUZ</div>{" "}
-                <div className="text-sm lg:text-lg mt-10 lg:mt-20 mb-20">
-                  Age24 / Web Developer{" "}
-                </div>
-                <div className="border-b mb-10 pb-2 text-xs border-zinc-600">
-                  about me
-                </div>
-                <div className="text-xs lg:text-base lg:w-8/12  pb-10">
-                  1998年山梨で生まれる。大学では経済学を学び、語学の習得にも注力。大学卒業後は金融系企業で窓口営業を経験。働く中で自分が何を本当にしたいかを考え、独学でプログラミングを始める。
-                </div>
-                <div className="text-xs lg:text-base lg:w-8/12 t pb-40">
-                  現在は主にフロントエンド関連でReactやNext.jsを習得。人の心を動かせるものを作ることを目標にしています。
-                </div>
-              </div>
-              <div className=" brightness-100  w-full ml-auto h-full ">
-                <Image
-                  alt="MyImage"
-                  src={MyImage}
-                  objectFit="cover"
-                  layout="fill"
-                />
-              </div>
-            </div>
-
-            {/* <div className="text-white -mt-4"></div> */}
-          </div>
-          <div className="px-0 lg:px-20 ml-0 lg:ml-0  w-full h-full min-h-[100vh]  flex flex-col justify-center bg-zinc-100 text-black rounded-b-2xl lg:rounded-2xl">
-            {" "}
-            <div className=" pt-20 lg:pt-40 pb-20  lg:pb-20 font-bold tracking-wider  text-4xl lg:text-6xl">
-              Portfolio
-            </div>
-            <div className="flex flex-col">
-              <div className=" mt-0 lg:mt-7 pb-20">
-                <div className="text-sm lg:text-base">React / Next.js</div>
-                <div className="text-sm lg:text-base mt-1">
-                  ChakraUI / TailwindCSS / styled-components
-                </div>
-                <div className="text-sm lg:text-base mt-1">
-                  FramerMotion / GSAP{" "}
-                </div>
-                <div className="text-sm lg:text-base mt-1">
-                  Firebase / GraphQL / Node.js
-                </div>
-                <div className="text-sm lg:text-base mt-1">Git / </div>
-              </div>
-              <div className="w-full uppercase pb-20">
-                {PortfolioCards.map((PortfolioCard, index) => {
-                  return (
-                    <div
-                      className="mt-2 px-2  border-b text-black border-black    lg:text-3xl text-sm "
-                      key={index}
-                    >
-                      <Link href="/Portfolio">{PortfolioCard.title}</Link>
-                    </div>
-                  );
-                })}
-                <div className="pt-10 lg:pt-20 pb-0 lg:pb-40 flex ">
-                  <Link href="/Portfolio">
-                    <div className="text-sm  lg:text-xl  border py-2 px-8 rounded-full  border-zinc-300  cursor-pointer duration-500 hover:bg-zinc-200">
-                      VIEW PORTFOLIO
-                    </div>
-                  </Link>
-                </div>
-              </div>
-
-              <div className="pb-20 hidden">
-                <Swiper
-                  module={[Autoplay, EffectFade, Pagination]}
-                  spaceBetween={4}
-                  speed={1000}
-                  pagenation={true}
-                  loop={true}
-                  effect="fade"
-                  slidesPerView={1.1}
-                  breakpoints={{
-                    1024: {
-                      slidesPerView: 1.2,
-                      spaceBetween: 10,
-                    },
-                  }}
-                >
-                  {PortfolioCards.map((PortfolioCard, index) => {
-                    return (
-                      <SwiperSlide key={index}>
-                        <Link href="/Portfolio">
-                          <div className="min-h-[50vh]  mx-auto relative ">
-                            <div>
-                              <Image
-                                className=" filter brightness-100 "
-                                objectFit="cover"
-                                layout="fill"
-                                src={PortfolioCard.src}
-                                alt="PortfolioCards"
-                                mousewheel={true}
-                              />
-                            </div>
-                            <div className=" p-4 lg:p-3  w-full h-full text-sm  lg:text-base   absolute bottom flex items-end  backdrop-brightness-90  duration-500 text-white">
-                              {PortfolioCard.title}
-                            </div>
-                          </div>
-                        </Link>
-                      </SwiperSlide>
-                    );
-                  })}
-                </Swiper>
+        <div className="min-h-screen  min-w-full px-4 lg:px-20   bg-zinc-100">
+          <div className="w-full h-[100vh] lg:mb-20 lg:pb-20 flex  items-center text-white ">
+            <div className="w-full px-4 lg:px-20 items-center flex  flex-col">
+              <div
+                id="Title"
+                className="lg:w-9/12  break-all text-zinc-200 uppercase text-6xl sm:text-8xl lg:text-9xl  "
+              >
+                <a>Welcome to my personal website.</a>
+                <nobr className="breake-keep text-zinc-600">I&apos;m AUZ</nobr>
+                <a className="">,Web Developer and web designer.</a>
               </div>
             </div>
           </div>
 
           <div
-            className=" w-full flex flex-col justify-center bg-black  text-white tracking-widest"
+            id="Title"
+            className=" h-full  lg:pt-0 lg:mt-40 flex flex-col justify-center bg-zinc-100 text-black border-t border-black backdrop-brightness-50"
+          >
+            <div className="grid lg:grid-cols-3">
+              <div className=" flex flex-col mt-20 lg:mt-0 lg:pr-10 lg:border-r lg:border-black ">
+                <div className="text-4xl lg:text-6xl mb-0 lg:mb-0 lg:mt-10 ">
+                  AUZ
+                </div>
+                <div className="lg:mt-20 mt-10">
+                  {" "}
+                  <div className="text-base  lg:text-lg   pb-20">
+                    Age 24 / Web Devoloper / Web designer
+                  </div>
+                  <div className="text-sm  lg:text-base   pb-10">
+                    1998年山梨で生まれる。大学では経済学を学び、語学の習得にも注力。大学卒業後は金融系企業で窓口営業を経験。働く中で自分が何を本当にしたいかを考え、独学でプログラミングを始める。
+                  </div>
+                  <div className="text-sm  lg:text-base  ">
+                    現在は主にフロントエンド関連でReactやNext.jsを習得。人の心を動かせるものを作ることを目標にしています。
+                  </div>
+                </div>
+                <Link href="/Contact">
+                  <div className="lg:mt-40 mt-20 border border-black mr-auto flex group uppercase px-8 py-3 rounded-full text-xs cursor-pointer">
+                    <div className=" -translate-x-6 mr-3 group-hover:opacity-100 opacity-0 duration-700 group-hover:translate-x-5">
+                      →
+                    </div>{" "}
+                    <div className="mx-3 group-hover:translate-x-3 -translate-x-3 duration-500 ">
+                      Contact me
+                    </div>
+                    <div className="group-hover:opacity-0 duration-500 group-hover:translate-x-3">
+                      →
+                    </div>
+                  </div>
+                </Link>{" "}
+              </div>
+              <div className="col-span-2 lg:mt-10 mt-20 mb-10 min-h-[50vh] lg:min-h-[90vh] lg:ml-10 relative">
+                <Image
+                  className=" filter brightness-75   duration-1000 "
+                  objectFit="cover"
+                  layout="fill"
+                  src={MyImage}
+                  alt="PortfolioCards"
+                />
+              </div>
+            </div>
+          </div>
+
+          {/* <div className="text-white -mt-4"></div> */}
+
+          <Link href="/Portfolio">
+            <div className=" pt-20 pb-40 w-full h-full grid lg:grid-cols-3  border-t border-black text-black cursor-pointer">
+              {" "}
+              <div className="  pb-10  lg:pb-20  text-4xl lg:text-6xl">
+                Portfolio
+              </div>
+              <div className="flex flex-col col-span-2">
+                <div className="text-sm  lg:text-lg  pb-20">
+                  <div className="">React / Next.js</div>
+                  <div className=" mt-1">
+                    ChakraUI / TailwindCSS / styled-components
+                  </div>
+                  <div className=" mt-1">FramerMotion / GSAP </div>
+                  <div className=" mt-1">Firebase / GraphQL / Node.js</div>
+                  <div className=" mt-1">Git / </div>
+                </div>
+                <div className="w-full">
+                  {PortfolioCards.map((PortfolioCard, index) => {
+                    return (
+                      <div
+                        className="lg:min-h-[40vh] lg:pr-10 pb-0 lg:pt-20  lg:border-t text-black border-black grid lg:grid-cols-2"
+                        key={index}
+                      >
+                        <div className="text-2xl lg:text-4xl pb-5 lg:pb-0">
+                          {index + 1}.{" "}
+                          <Link href="/Portfolio">{PortfolioCard.title}</Link>
+                        </div>
+                        <div className="min-h-[50vh] mb-20 w-full relative flex lg:hidden">
+                          {" "}
+                          <Image
+                            className=" filter brightness-100   duration-1000 "
+                            objectFit="cover"
+                            layout="fill"
+                            src={PortfolioCard.src}
+                            alt="PortfolioCards"
+                          />
+                        </div>
+                        <div className="hidden lg:flex text-xs  lg:text-base lg:px-10">
+                          {PortfolioCard.PortfolioDiscription}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+          </Link>
+
+          <div
+            className="pt-20 pb-40 w-full border-t border-black text-black tracking-wide grid lg:grid-cols-3"
             id="Skills"
           >
-            <div className="text-4xl lg:text-6xl px-4 lg:px-20 pt-40 ">
-              Skills
-            </div>
-
-            <div className="py-20 lg:py-40 px-0 lg:px-20 gap-2 text-base  lg:text-xl flex items-center">
-              <Swiper
-                modules={[FreeMode]}
-                slidesPerView="2.2"
-                freeMode={false}
-                loop="true"
-                draggable="false"
-                centeredSlides={true}
-                spaceBetween={16}
-                breakpoints={{
-                  1024: {
-                    slidesPerView: 1.8,
-                    loop: true,
-
-                    centeredSlides: true,
-                  },
-                }}
-              >
-                <SwiperSlide>
-                  <div
-                    onClick={OnClickFrontEnd}
-                    isActive={OnClickFrontEnd}
-                    className={classNames(
-                      activeFrontEnd
-                        ? " px-3 py-2  text-white flex justify-center cursor-pointer border rounded-full hover:bg-zinc-800 duration-300 "
-                        : "  px-3 py-2  text-zinc-700 flex justify-center cursor-pointer border rounded-full border-zinc-700 hover:border-zinc-500 hover:text-zinc-500 hover:bg-zinc-800 duration-300"
-                    )}
-                  >
-                    FRONTEND{" "}
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div
-                    onClick={OnClickBackend}
-                    isActive={OnClickFrontEnd}
-                    className={classNames(
-                      activeBackEnd
-                        ? "px-3 py-2  text-white flex justify-center cursor-pointer border rounded-full hover:bg-zinc-800 duration-300 "
-                        : " px-3 py-2  text-zinc-700 flex justify-center cursor-pointer border rounded-full border-zinc-700 hover:border-zinc-500 hover:text-zinc-500 hover:bg-zinc-800 duration-300"
-                    )}
-                  >
-                    BACKEND
-                  </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                  <div
-                    onClick={OnClickOthers}
-                    isActive={OnClickFrontEnd}
-                    className={classNames(
-                      activeOthers
-                        ? " px-3 py-2  text-white flex justify-center cursor-pointer border rounded-full hover:bg-zinc-800 duration-300 "
-                        : " px-3 py-2  text-zinc-700 flex justify-center cursor-pointer border rounded-full border-zinc-700 hover:border-zinc-500 hover:text-zinc-500 hover:bg-zinc-800 duration-300"
-                    )}
-                  >
-                    OTHRES
-                  </div>
-                </SwiperSlide>
-              </Swiper>
-            </div>
-
-            <div className="px-4 lg:px-20 grid grid-col-1 pb-20">
-              {activeFrontEnd ? (
-                <div className="w-full h-full mx-auto   grid grid-cols-1 lg:grid-cols-1 gap-2 lg:gap-10">
-                  {FrontEndSkills.map((skill, index) => {
-                    return (
-                      <div
-                        className=" pb-2  flex flex-col border-b border-zinc-600"
-                        key={index}
-                      >
-                        <div className="text-sm  lg:text-xl font-light">
-                          {skill.title}
-                        </div>
-                        <div className="mt-2  text-gray-400 text-xs lg:text-sm font-light  hidden lg:flex">
-                          {skill.Discription}
-                        </div>
-                      </div>
-                    );
-                  })}
+            <div className="text-4xl lg:text-6xl">Skills</div>
+            <div className="col-span-2 pt-10 lg:pt-0 ">
+              <div className=" pb-20 lg:pb-40 gap-2 text-base  lg:text-xl flex flex-col lg:flex-row">
+                <div
+                  onClick={OnClickFrontEnd}
+                  isActive={OnClickFrontEnd}
+                  className={classNames(
+                    activeFrontEnd
+                      ? " px-8 py-2  text-black flex justify-center cursor-pointer border border-black rounded-full hover:bg-zinc-200 duration-300 "
+                      : "  px-8 py-2  text-zinc-300 flex justify-center cursor-pointer border rounded-full border-zinc-300 hover:border-zinc-600 hover:text-zinc-600 hover:bg-zinc-100 duration-300"
+                  )}
+                >
+                  FRONTEND{" "}
                 </div>
-              ) : (
-                <div></div>
-              )}
-              {activeBackEnd ? (
-                <div className="w-full h-full mx-auto  grid grid-cols-1 lg:grid-cols-1 gap-2 lg:gap-10">
-                  {BackEndSkills.map((skill, index) => {
-                    return (
-                      <div
-                        className="   flex flex-col border-b border-zinc-600 pb-2 lg:pb-4"
-                        key={index}
-                      >
-                        <div className="text-sm lg:text-base font-light">
-                          {skill.title}
-                        </div>
-                        <div className="mt-2 text-gray-400 text-xs lg:text-sm font-light  hidden lg:flex">
-                          {skill.Discription}
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              ) : (
-                <div></div>
-              )}
 
-              {activeOthers ? (
-                <div className="w-full h-full mx-auto  grid grid-cols-1 lg:grid-cols-1 gap-2 lg:gap-10">
-                  {OtherSkills.map((skill, index) => {
-                    return (
-                      <div
-                        className="flex flex-col border-b border-zinc-600 pb-2 lg:pb-4"
-                        key={index}
-                      >
-                        <div className="text-sm lg:text-base  font-light">
-                          {skill.title}
-                        </div>
-                        <div className="mt-2 text-zinc-400 text-xs lg:text-sm font-light  hidden lg:flex">
-                          {skill.Discription}
-                        </div>
-                      </div>
-                    );
-                  })}
+                <div
+                  onClick={OnClickBackend}
+                  isActive={OnClickFrontEnd}
+                  className={classNames(
+                    activeBackEnd
+                      ? " px-8 py-2  text-black flex justify-center cursor-pointer border border-black rounded-full hover:bg-zinc-200 duration-300 "
+                      : "  px-8 py-2  text-zinc-300 flex justify-center cursor-pointer border rounded-full border-zinc-300 hover:border-zinc-600 hover:text-zinc-600 hover:bg-zinc-100 duration-300"
+                  )}
+                >
+                  BACKEND
                 </div>
-              ) : (
-                <div></div>
-              )}
+
+                <div
+                  onClick={OnClickOthers}
+                  isActive={OnClickFrontEnd}
+                  className={classNames(
+                    activeOthers
+                      ? " px-8 py-2  text-black flex justify-center cursor-pointer border border-black rounded-full hover:bg-zinc-200 duration-300 "
+                      : "  px-8 py-2  text-zinc-300 flex justify-center cursor-pointer border rounded-full border-zinc-300 hover:border-zinc-600 hover:text-zinc-600 hover:bg-zinc-100 duration-300"
+                  )}
+                >
+                  OTHRES
+                </div>
+              </div>
+
+              <div className=" lg:mb-40">
+                {activeFrontEnd ? (
+                  <div className="w-full h-full mx-auto   grid grid-cols-1 lg:grid-cols-1331 gap-4 lg:gap-10">
+                    {FrontEndSkills.map((skill, index) => {
+                      return (
+                        <div
+                          className=" pb-2  flex flex-col border-b border-black"
+                          key={index}
+                        >
+                          <div className="text-base  lg:text-xl font-light">
+                            {skill.title}
+                          </div>
+                          <div className="mt-2  text-zinc-600 text-xs lg:text-xs font-light  hidden lg:flex">
+                            {skill.Discription}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                ) : (
+                  <div></div>
+                )}
+                {activeBackEnd ? (
+                  <div className="w-full h-full mx-auto  grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-10">
+                    {BackEndSkills.map((skill, index) => {
+                      return (
+                        <div
+                          className="   flex flex-col border-b border-black pb-2 lg:pb-4"
+                          key={index}
+                        >
+                          <div className="text-sm lg:text-xl font-light">
+                            {skill.title}
+                          </div>
+                          <div className="mt-2 text-zinc-600 text-xs lg:text-sm font-light  hidden lg:flex">
+                            {skill.Discription}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                ) : (
+                  <div></div>
+                )}
+
+                {activeOthers ? (
+                  <div className="w-full h-full mx-auto  grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-10">
+                    {OtherSkills.map((skill, index) => {
+                      return (
+                        <div
+                          className="flex flex-col border-b border-black pb-2 lg:pb-4"
+                          key={index}
+                        >
+                          <div className="text-sm lg:text-xl  font-light">
+                            {skill.title}
+                          </div>
+                          <div className="mt-2 text-zinc-600 text-xs lg:text-sm font-light  hidden lg:flex">
+                            {skill.Discription}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                ) : (
+                  <div></div>
+                )}
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="pt-40 pb-20 bg-black min-w-full  min-h-screen px-4 lg:px-20">
+        <div className="pt-20 pb-20 lg:pb-0  border-black border-t bg-zinc-100 text-black min-w-full  min-h-screen px-4 lg:px-20 tracking-widest">
           {" "}
-          <div className="w-full  mx-auto min-h-screen justify-center  flex flex-col ">
-            <div className="w-full">
-              <div className="text-4xl lg:text-6xl pb-20">Favorite</div>
+          <div className="w-full grid lg:grid-cols-3">
+            <div className="text-4xl lg:text-6xl pb-10  lg:pb-20">Favorite</div>
+            <div className="col-span-2">
               <div className="text-sm lg:text-xl">
                 Travel Football Fishing Car Aquarium Cat Game Guiter PC Books
                 Wiskey and more...
               </div>
-            </div>
-
-            <div className="pt-20 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 sm:gap-1 gap-1">
-              {MyFavorites.map((MyFavorite, index) => {
-                return (
-                  <div
-                    className="h-[15vh] sm:h-[20vh] lg:h-[25vh] sm:hover:h-[50vh]  duration-700 relative group flex justify-center"
-                    key={index}
-                  >
-                    <Image
-                      className="filter brightness-75 hover:brightness-50 duration-700"
-                      objectFit="cover"
-                      lauout="fill"
-                      src={MyFavorite.src}
-                      alt="okinawa"
-                      loading="lazy"
-                    />
-                    <div className="absolute bottom-1 sm:bottom-4 left-0 px-1 sm:px-4 sm:-translate-y-10 sm:opacity-0 group-hover:translate-y-0 group-hover:opacity-100 delay-400 duration-1000">
-                      <div className="text-xs sm:text-2xl font-normal ">
-                        {MyFavorite.title}
-                      </div>
-                      <div className="text-xs font-light text-zinc-300 pt-2 hidden ">
-                        {MyFavorite.discription}
+              <div className="pt-20 lg:mb-40 text-white  grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-1 lg:gap-2">
+                {MyFavorites.map((MyFavorite, index) => {
+                  return (
+                    <div
+                      className="h-[15vh] sm:h-[20vh] lg:h-[25vh] sm:hover:h-[50vh]  duration-700 relative group flex justify-center"
+                      key={index}
+                    >
+                      <Image
+                        className="filter brightness-75 hover:brightness-50 duration-700"
+                        objectFit="cover"
+                        lauout="fill"
+                        src={MyFavorite.src}
+                        alt="okinawa"
+                        loading="lazy"
+                      />
+                      <div className="absolute bottom-1 sm:bottom-4 left-0 px-1 sm:px-4 sm:-translate-y-10 sm:opacity-0 group-hover:translate-y-0 group-hover:opacity-100 delay-400 duration-1000">
+                        <div className="text-xs sm:text-2xl font-normal ">
+                          {MyFavorite.title}
+                        </div>
+                        <div className="text-xs font-light text-zinc-300 pt-2 hidden ">
+                          {MyFavorite.discription}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>
