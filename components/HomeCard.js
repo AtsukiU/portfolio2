@@ -9,7 +9,7 @@ const HomeCard = (props) => {
         onMouseEnter={props.onMouseEnter}
         onMouseLeave={props.onMouseLeave}
         kdrop-br
-        className="min-h-[40vh] lg:min-h-[50vh] flex flex-col  relative rounded-lg lg:rounded-none"
+        className="min-h-[40vh] lg:min-h-[50vh] flex flex-col  relative rounded-lg lg:rounded-none "
       >
         <Image
           className=" w-full h-full  object-cover filter rounded-lg lg:rounded-none"
