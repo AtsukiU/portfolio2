@@ -243,10 +243,11 @@ const AboutMe = () => {
           {/* <div className="text-white -mt-4"></div> */}
 
           <Link href="/Portfolio">
-            <div className=" pt-20 pb-40 w-full h-full grid lg:grid-cols-3  border-t border-black text-black cursor-pointer">
+            <div className="pt-20 pb-40 w-full h-full grid lg:grid-cols-3  border-t border-black text-black cursor-pointer">
               {" "}
-              <div className="  pb-10  lg:pb-20  text-4xl lg:text-6xl">
-                Portfolio
+              <div className="h-full pb-10 lg:pb-20 sticky top-0 left-0 text-4xl lg:text-6xl">
+                <div> Portfolio</div>
+               
               </div>
               <div className="flex flex-col col-span-2">
                 <div className="text-sm  lg:text-lg  pb-20">
@@ -262,7 +263,7 @@ const AboutMe = () => {
                   {PortfolioCards.map((PortfolioCard, index) => {
                     return (
                       <div
-                        className="lg:min-h-[40vh] lg:pr-10 pb-0 lg:pt-20  lg:border-t text-black border-black grid lg:grid-cols-2"
+                        className="lg:min-h-[40vh] lg:pr-10 lg:pb-20 lg:pt-20  lg:border-t text-black border-black grid lg:grid-cols-2"
                         key={index}
                       >
                         <div className="text-2xl lg:text-4xl pb-5 lg:pb-0">
@@ -336,7 +337,7 @@ const AboutMe = () => {
 
               <div className=" lg:mb-40">
                 {activeFrontEnd ? (
-                  <div className="w-full h-full mx-auto   grid grid-cols-1 lg:grid-cols-1331 gap-4 lg:gap-10">
+                  <div className="w-full h-full mx-auto   grid grid-cols-1 lg:grid-cols-1 gap-4 lg:gap-10">
                     {FrontEndSkills.map((skill, index) => {
                       return (
                         <div
