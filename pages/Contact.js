@@ -38,8 +38,8 @@ const Contact = () => {
 
   return (
     <Layout>
-      <div className="px-4 lg:px-20 mt-12 lg:mt-0 pt-5 lg:pt-28 w-full min-h-screen bg-deepgreen grid lg:grid-cols-2">
-        <div className="flex flex-col lg:flex-col  text-4xl lg:text-6xl tracking-wider">
+      <div className="px-4 lg:px-20 lg:mt-0 pt-5 lg:pt-28 w-full min-h-screen bg-deepgreen grid lg:grid-cols-2">
+        <div className="flex mt-10 flex-col lg:flex-col  text-4xl lg:text-6xl tracking-wider">
           <div className=" font-bold">Contact</div>
           <div className="mt-10 lg:mt-20 flex">
             <div className="flex  text-lg lg:text-xl  ml-0 lg:ml-0">
