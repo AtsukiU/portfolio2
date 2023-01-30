@@ -18,8 +18,8 @@ const HomeCard = (props) => {
           alt="cardImage"
         />
 
-        <div className="w-full h-full  pl-4  lg:pl-8  items-start justify-end group flex flex-col  transition cursor-pointer backdrop-brightness-90 hover:backdrop-brightness-50 duration-700 group">
-          <div className="flex justify-center lg:translate-y-7 group-hover:translate-y-0 duration-700 tracking-wide font-light  text-white text-2xl lg:text-3xl ">
+        <div className="w-full h-full  pl-4  lg:pl-4  items-start justify-end group flex flex-col  transition cursor-pointer backdrop-brightness-90 hover:backdrop-brightness-50 duration-700 group">
+          <div className="flex justify-center font-bold lg:translate-y-7 group-hover:translate-y-0 duration-700 tracking-wide text-white text-2xl lg:text-3xl ">
             {props.title}
           </div>
 
