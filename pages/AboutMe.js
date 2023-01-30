@@ -207,12 +207,15 @@ const AboutMe = () => {
                   <div className="text-base  lg:text-3xl">
                     Age 24 / Web Devoloper / Web Designer
                   </div>
-                  <div className="text-sm  lg:text-base  border-black  pt-5 lg:pt-20">
+                  <div className="text-sm  lg:text-base border-black  pt-5 lg:pt-20">
                     1998年山梨で生まれる。大学では経済学を学び、語学の習得にも注力。大学卒業後は金融系企業で窓口営業を経験。働く中で自分が何を本当にしたいかを考え、独学でプログラミングを始める。
+                    <br></br>
+                    <br></br>
+                    人の心を動かせるものを作るということを目標にしています。是非お声がけいただければと思います。
                   </div>
                 </div>
                 <Link href="/Contact">
-                  <div className="lg:mt-10 mt-10 mb-10 border border-black mr-auto flex group uppercase px-8 py-3 rounded-full text-xs cursor-pointer">
+                  <div className="lg:mt-20 mt-10 mb-10 border border-black mr-auto flex group uppercase px-8 py-3 rounded-full text-base cursor-pointer">
                     <div className=" -translate-x-6 mr-3 group-hover:opacity-100 opacity-0 duration-700 group-hover:translate-x-5">
                       →
                     </div>{" "}
@@ -282,7 +285,7 @@ const AboutMe = () => {
           >
             <div className="text-4xl lg:text-6xl">Skills</div>
             <div className="col-span-2 pt-10 lg:pt-0 ">
-              <div className=" pb-20  gap-2 text-base  lg:text-xl flex flex-col lg:flex-row">
+              <div className=" pb-20  gap-2 text-base  lg:text-3xl flex flex-col lg:flex-row">
                 <div
                   onClick={OnClickFrontEnd}
                   isActive={OnClickFrontEnd}
@@ -329,10 +332,10 @@ const AboutMe = () => {
                           className=" pb-2  flex flex-col border-b border-black"
                           key={index}
                         >
-                          <div className="text-sm  lg:text-xl font-light">
+                          <div className="text-sm  lg:text-2xl font-light">
                             {skill.title}
                           </div>
-                          <div className="mt-2  text-zinc-600 text-xs lg:text-base font-light  hidden lg:flex">
+                          <div className="mt-2  text-zinc-600 text-xs lg:text-sm font-light  hidden lg:flex">
                             {skill.Discription}
                           </div>
                         </div>
@@ -343,17 +346,17 @@ const AboutMe = () => {
                   <div></div>
                 )}
                 {activeBackEnd ? (
-                  <div className="w-full h-full mx-auto  grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-10">
+                  <div className="w-full h-full mx-auto  grid grid-cols-1 lg:grid-cols-1 gap-2 lg:gap-10">
                     {BackEndSkills.map((skill, index) => {
                       return (
                         <div
                           className="   flex flex-col border-b border-black pb-2 lg:pb-4"
                           key={index}
                         >
-                          <div className="text-sm lg:text-xl font-light">
+                          <div className="text-sm lg:text-2xl font-light">
                             {skill.title}
                           </div>
-                          <div className="mt-2 text-zinc-600 text-xs lg:text-base font-light  hidden lg:flex">
+                          <div className="mt-2 text-zinc-600 text-xs lg:text-sm font-light  hidden lg:flex">
                             {skill.Discription}
                           </div>
                         </div>
@@ -365,17 +368,17 @@ const AboutMe = () => {
                 )}
 
                 {activeOthers ? (
-                  <div className="w-full h-full mx-auto  grid grid-cols-1 lg:grid-cols-2 gap-2 lg:gap-10">
+                  <div className="w-full h-full mx-auto  grid grid-cols-1 lg:grid-cols-1 gap-2 lg:gap-10">
                     {OtherSkills.map((skill, index) => {
                       return (
                         <div
                           className="flex flex-col border-b border-black pb-2 lg:pb-4"
                           key={index}
                         >
-                          <div className="text-sm lg:text-xl  font-light">
+                          <div className="text-sm lg:text-2xl  font-light">
                             {skill.title}
                           </div>
-                          <div className="mt-2 text-zinc-600 text-xs lg:text-base font-light  hidden lg:flex">
+                          <div className="mt-2 text-zinc-600 text-xs lg:text-sm font-light  hidden lg:flex">
                             {skill.Discription}
                           </div>
                         </div>
