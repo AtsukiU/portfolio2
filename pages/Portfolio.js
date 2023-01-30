@@ -59,7 +59,6 @@ export default function Portfolio() {
               return (
                 <Link key="index" href={Cards.PortfolioDiscriptionURL}>
                   <div
-                    
                     onMouseEnter={() => {
                       console.log("changeimage");
                       setHoverBackgroundImage(Cards.src);
@@ -74,16 +73,16 @@ export default function Portfolio() {
                         layout={"fill"}
                       />
                     </div>
-                    <div className="lg:h-28 h-12  text-2xl lg:text-4xl w-full flex items-center">
+                    <div className="lg:h-28 h-12 mt-5 lg:mt-0  text-3xl lg:text-4xl w-full flex items-center">
                       {Cards.title}
                     </div>
                     <div className="lg:mb-10 mb-10 text-zinc-600 text-xs lg:text-sm">
                       {Cards.subTitle}
                     </div>
-                    <div className="group-hover:h-full pr-10  lg:hidden group-hover:flex text-sm lg:text-base  duration-500 mb-5">
+                    <div className="group-hover:h-full  lg:px-0 lg:pr-10  lg:hidden group-hover:flex text-sm lg:text-base  duration-500 mb-5">
                       {Cards.PortfolioDiscription}
                     </div>
-                    <div className="group-hover:h-full pr-10 lg:hidden group-hover:flex text-sm lg:text-base  duration-500 mb-10">
+                    <div className="group-hover:h-full lg:px-0 lg:pr-10 lg:hidden group-hover:flex text-sm lg:text-base  duration-500 mb-10">
                       {Cards.PortfolioDiscription2}
                     </div>
                   </div>
