@@ -252,14 +252,18 @@ const AboutMe = () => {
                     </div>
                   </Link>
                 </div>
-                <div className="flex flex-col  text-sm  lg:text-3xl text-black py-10 lg:py-20">
-                  <div className="">React / Next.js</div>
-                  <div className=" mt-1">
+                <div className="flex flex-col justify-end  text-sm  lg:text-3xl text-black py-10 lg:py-20">
+                  <div className="flex justify-end">React / Next.js</div>
+                  <div className="flex justify-end mt-1">
                     ChakraUI / TailwindCSS / styled-components
                   </div>
-                  <div className=" mt-1">FramerMotion / GSAP </div>
-                  <div className=" mt-1">Firebase / GraphQL / Node.js</div>
-                  <div className=" mt-1">Git</div>
+                  <div className="flex justify-end mt-1">
+                    FramerMotion / GSAP{" "}
+                  </div>
+                  <div className="flex justify-end mt-1">
+                    Firebase / GraphQL / Node.js
+                  </div>
+                  <div className="flex justify-end mt-1">Git</div>
                 </div>
                 <div className="w-full"></div>
               </div>

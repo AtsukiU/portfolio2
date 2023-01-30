@@ -6,12 +6,12 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily: { 
-        montserrat: ['Montserrat'],handwriting: ['Moon Dance'],
+      fontFamily: {
+        montserrat: ["Inter", "sans-serif"],
       },
-      colors:{
-        deepgreen:"rgb(141,149,146)"
-      }
+      colors: {
+        deepgreen: "rgb(141,149,146)",
+      },
     },
   },
 
@@ -19,6 +19,5 @@ module.exports = {
     extend: {},
   },
 
-  
   plugins: [],
 };
