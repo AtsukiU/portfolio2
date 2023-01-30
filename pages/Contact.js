@@ -38,35 +38,37 @@ const Contact = () => {
 
   return (
     <Layout>
-      <div className="px-4 lg:px-20 lg:mt-0 pt-5 lg:pt-28 w-full min-h-screen bg-deepgreen grid lg:grid-cols-2">
-        <div className="flex mt-10 flex-col lg:flex-col  text-4xl lg:text-6xl tracking-wider">
-          <div className=" font-bold">Contact</div>
-          <div className="mt-10 lg:mt-20 flex">
-            <div className="flex  text-lg lg:text-xl  ml-0 lg:ml-0">
-              <a href="https://twitter.com/itwebzozo">
-                <FaTwitterSquare
-                  size={40}
-                  className="hover:brightness-75 duration-300"
-                />
-              </a>
-            </div>
-            <div className="text-lg lg:text-xl ml-1 lg:ml-1">
-              <a href="https://github.com/AtsukiU">
-                <FaGithubSquare
-                  size={40}
-                  className="hover:brightness-75 duration-300"
-                />
-              </a>
+      <div className="px-4 lg:px-20 lg:mt-0 pt-5  w-full min-h-screen bg-zinc-100 text-black grid lg:grid-cols-1">
+        <div className="flex mt-10 flex-col lg:flex-col  text-4xl lg:text-6xl ">
+          <div className="flex items-end justify-between">
+            <div className="">Contact</div>
+            <div className="flex items-end ml-5">
+              <div className="flex  text-lg lg:text-xl ">
+                <a href="https://twitter.com/itwebzozo">
+                  <FaTwitterSquare
+                    size={40}
+                    className="hover:text-zinc-600 duration-300"
+                  />
+                </a>
+              </div>
+              <div className="text-lg lg:text-xl ml-1 lg:ml-1">
+                <a href="https://github.com/AtsukiU">
+                  <FaGithubSquare
+                    size={40}
+                    className="hover:text-zinc-600 duration-300"
+                  />
+                </a>
+              </div>
             </div>
           </div>
         </div>
         <form
           ref={form}
           onSubmit={handleOnSend}
-          className="text-lg lg:text-2xl mt-0 lg:mt-0 "
+          className="text-sm lg:text-xl mt-0 lg:mt-0 "
         >
           <div className="">
-            <div className="tracking-wider">Email</div>
+            <div className="">Email</div>
             <input
               value={mail}
               name={"mail"}
@@ -74,11 +76,11 @@ const Contact = () => {
               onChange={(e) => {
                 setMail(e.target.value);
               }} //mail input //////////////////////
-              className="mt-2  px-2 h-10 text-sm lg:text-lg w-full bg-deepgreen brightness-95"
+              className="mt-1  px-2 h-10 text-sm lg:text-xl w-full bg-zinc-100 border border-black"
             ></input>
           </div>
           <div className="pt-4">
-            <div className="tracking-wider">Name</div>
+            <div className="">Name</div>
             <input
               type={"text"}
               name={"name"}
@@ -86,7 +88,7 @@ const Contact = () => {
               onChange={(e) => {
                 setName(e.target.value);
               }} //
-              className="mt-2 px-2  h-10 text-sm lg:text-lg w-full bg-deepgreen brightness-95"
+              className="mt-1 px-2  h-10 text-sm lg:text-xl w-full bg-zinc-100 border-black border"
             ></input>
           </div>
 
@@ -97,13 +99,13 @@ const Contact = () => {
             onChange={(e) => {
               setMessage(e.target.value);
             }} //textinput/////////////////////////
-            className="min-h-[30vh]  pt-2 px-2 mt-10 mb-10 text-sm lg:text-lg w-full bg-deepgreen brightness-95"
+            className="min-h-[30vh]  pt-2 px-2 mt-10 mb-10 text-sm lg:text-xl w-full bg-zinc-100 border border-black"
           ></textarea>
           <div className="w-full  flex justify-end">
             <button
               type="submit"
               value="Send"
-              className=" mb-5 px-6 py-1 text-lg lg:text-2xl  backdrop-brightness-95  rounded-full"
+              className=" mb-5 px-8 py-2 text-sm lg:text-xl  border border-black rounded-full"
             >
               Submit
             </button>

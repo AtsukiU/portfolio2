@@ -199,27 +199,24 @@ const AboutMe = () => {
           >
             <div className="grid lg:grid-cols-3">
               <div className=" flex flex-col mt-20 lg:mt-0 lg:pr-10 lg:border-r lg:border-black ">
-                <div className="text-4xl lg:text-6xl mb-0 lg:mb-0 lg:mt-10 ">
+                <div className="text-4xl lg:text-6xl mb-0 lg:mb-0 lg:mt-20 lg:pb-10 ">
                   AUZ
                 </div>
                 <div className="lg:mt-20 mt-10">
                   {" "}
-                  <div className="text-base  lg:text-lg   pb-20">
-                    Age 24 / Web Devoloper / Web designer
+                  <div className="text-base  lg:text-base">
+                    Age 24 / Web Devoloper / Web Designer
                   </div>
-                  <div className="text-sm  lg:text-base   pb-10">
+                  <div className="text-sm  lg:text-base  border-black   pt-10">
                     1998年山梨で生まれる。大学では経済学を学び、語学の習得にも注力。大学卒業後は金融系企業で窓口営業を経験。働く中で自分が何を本当にしたいかを考え、独学でプログラミングを始める。
-                  </div>
-                  <div className="text-sm  lg:text-base  ">
-                    現在は主にフロントエンド関連でReactやNext.jsを習得。人の心を動かせるものを作ることを目標にしています。
                   </div>
                 </div>
                 <Link href="/Contact">
-                  <div className="lg:mt-40 mt-20 border border-black mr-auto flex group uppercase px-8 py-3 rounded-full text-xs cursor-pointer">
+                  <div className="lg:mt-40 mt-20 mb-10 border border-black mr-auto flex group uppercase px-8 py-3 rounded-full text-xs cursor-pointer">
                     <div className=" -translate-x-6 mr-3 group-hover:opacity-100 opacity-0 duration-700 group-hover:translate-x-5">
                       →
                     </div>{" "}
-                    <div className="mx-3 group-hover:translate-x-3 -translate-x-3 duration-500 ">
+                    <div className="mx-3  group-hover:translate-x-3 -translate-x-3 duration-500 ">
                       Contact me
                     </div>
                     <div className="group-hover:opacity-0 duration-500 group-hover:translate-x-3">
@@ -243,50 +240,28 @@ const AboutMe = () => {
           {/* <div className="text-white -mt-4"></div> */}
 
           <Link href="/Portfolio">
-            <div className="pt-20 pb-40 w-full h-full grid lg:grid-cols-3  border-t border-black text-black cursor-pointer">
+            <div className="w-full min-h-[70vh] grid lg:grid-cols-3  border-t border-black text-black cursor-pointer">
               {" "}
-              <div className="h-full pb-10 lg:pb-20 sticky top-0 left-0 text-4xl lg:text-6xl">
-                <div> Portfolio</div>
-               
-              </div>
-              <div className="flex flex-col col-span-2">
-                <div className="text-sm  lg:text-lg  pb-20">
+              <div className="mt-10 text-4xl lg:text-6xl"></div>
+              <div className="flex flex-col  border-black col-span-2 ">
+                <div className="w-full mt-20 mb-10 text-4xl  lg:text-8xl uppercase text-zinc-300">
+                  I love Technology and Design.<br></br>
+                  <Link href="/Portfolio">
+                    <div className="text-black border-b-2 border-black ">
+                      Veiw Portfolio
+                    </div>
+                  </Link>
+                </div>
+                <div className="flex flex-col  text-sm  lg:text-3xl text-black py-10 lg:py-20">
                   <div className="">React / Next.js</div>
                   <div className=" mt-1">
                     ChakraUI / TailwindCSS / styled-components
                   </div>
                   <div className=" mt-1">FramerMotion / GSAP </div>
                   <div className=" mt-1">Firebase / GraphQL / Node.js</div>
-                  <div className=" mt-1">Git / </div>
+                  <div className=" mt-1">Git</div>
                 </div>
-                <div className="w-full">
-                  {PortfolioCards.map((PortfolioCard, index) => {
-                    return (
-                      <div
-                        className="lg:min-h-[40vh] lg:pr-10 lg:pb-20 lg:pt-20  lg:border-t text-black border-black grid lg:grid-cols-2"
-                        key={index}
-                      >
-                        <div className="text-2xl lg:text-4xl pb-5 lg:pb-0">
-                          {index + 1}.{" "}
-                          <Link href="/Portfolio">{PortfolioCard.title}</Link>
-                        </div>
-                        <div className="min-h-[50vh] mb-20 w-full relative flex lg:hidden">
-                          {" "}
-                          <Image
-                            className=" filter brightness-100   duration-1000 "
-                            objectFit="cover"
-                            layout="fill"
-                            src={PortfolioCard.src}
-                            alt="PortfolioCards"
-                          />
-                        </div>
-                        <div className="hidden lg:flex text-xs  lg:text-base lg:px-10">
-                          {PortfolioCard.PortfolioDiscription}
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
+                <div className="w-full"></div>
               </div>
             </div>
           </Link>
@@ -297,7 +272,7 @@ const AboutMe = () => {
           >
             <div className="text-4xl lg:text-6xl">Skills</div>
             <div className="col-span-2 pt-10 lg:pt-0 ">
-              <div className=" pb-20 lg:pb-40 gap-2 text-base  lg:text-xl flex flex-col lg:flex-row">
+              <div className=" pb-20  gap-2 text-base  lg:text-xl flex flex-col lg:flex-row">
                 <div
                   onClick={OnClickFrontEnd}
                   isActive={OnClickFrontEnd}
@@ -347,7 +322,7 @@ const AboutMe = () => {
                           <div className="text-base  lg:text-xl font-light">
                             {skill.title}
                           </div>
-                          <div className="mt-2  text-zinc-600 text-xs lg:text-xs font-light  hidden lg:flex">
+                          <div className="mt-2  text-zinc-600 text-xs lg:text-base font-light  hidden lg:flex">
                             {skill.Discription}
                           </div>
                         </div>
@@ -368,7 +343,7 @@ const AboutMe = () => {
                           <div className="text-sm lg:text-xl font-light">
                             {skill.title}
                           </div>
-                          <div className="mt-2 text-zinc-600 text-xs lg:text-sm font-light  hidden lg:flex">
+                          <div className="mt-2 text-zinc-600 text-xs lg:text-base font-light  hidden lg:flex">
                             {skill.Discription}
                           </div>
                         </div>
@@ -390,7 +365,7 @@ const AboutMe = () => {
                           <div className="text-sm lg:text-xl  font-light">
                             {skill.title}
                           </div>
-                          <div className="mt-2 text-zinc-600 text-xs lg:text-sm font-light  hidden lg:flex">
+                          <div className="mt-2 text-zinc-600 text-xs lg:text-base font-light  hidden lg:flex">
                             {skill.Discription}
                           </div>
                         </div>

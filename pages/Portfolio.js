@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Layout from "../components/Layout";
 import Image from "next/image";
 import Portfolio1Img from "../public/Portfolio1.png";
@@ -10,6 +10,9 @@ import PortfolioDiscription from "./PortfolioDiscription";
 import { MdTransitEnterexit } from "react-icons/md";
 
 export default function Portfolio() {
+  const [hoverBackgroundImage, setHoverBackgroundImage] =
+    useState(Portfolio1Img);
+
   const PortfolioCards = [
     {
       title: "Portfolio 1",
@@ -33,9 +36,9 @@ export default function Portfolio() {
     },
 
     {
-      title: "Portfolio2",
+      title: "Portfolio 2",
       src: Portfolio2Img,
-      subTitle: "Next.js / TailwindCSS / ReactSlick / EmailJS / GSAP",
+      subTitle: "Next.js / TailwindCSS / ReactSwiper / EmailJS / FramerMotion",
       PortfolioDiscriptionURL: "https://portfolio2-three-gamma.vercel.app/",
       PortfolioDiscription:
         "2つ目のポートフォリオサイト。より自由度が高く、自分が好きだと思えるサイトを目指し制作。",
@@ -46,83 +49,56 @@ export default function Portfolio() {
 
   return (
     <Layout>
-      <div className="bg-white text-black">
-        <div className=" w-full mx-auto h-full pt-10  lg:pb-40 grid grid-cols-1">
-          {PortfolioCards.map((PortfolioCard, index) => {
-            return (
-              <div
-                id={PortfolioCards.title}
-                key={index}
-                className=" grid grid-cols-1 lg:grid-cols-1 my-20 lg:my-20 "
-              >
-                <div className="px-4 lg:px-20 flex  items-cneter justify-between ">
-                  <div className=" flex lg:flex-row flex-col pt-0 lg:pt-20 mb-10 lg:mb-20  w-full">
-                    <div className=" text-4xl lg:text-8xl  uppercase text-black tracking-wide">
-                      {PortfolioCard.title}
-                    </div>{" "}
-                    <div className="flex  items-end ">
-                      <div className="text-xs lg:text-2xl lg:ml-10   flex text-zinc-800">
-                        {index + 1}/{PortfolioCards.length}
-                      </div>
-                      <div className=" text-xs lg:text-sm lg:ml-10 text-zinc-800">
-                        {PortfolioCard.subTitle}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className=" lg:ml-0 lg:min-h-[80vh] flex  filter relative">
-                  <a href={PortfolioCard.PortfolioDiscriptionURL}>
+      <div className="bg-zinc-100 w-full min-h-screen  text-black">
+        <div className="pt-20 text-2xl lg:text-6xl px-4 lg:px-8 flex uppercase">
+          Portfolio
+        </div>
+        <div className="pt-4 pb-4 flex lg:flex-row flex-col">
+          <div className="lg:w-1/2 lg:min-h-[90vh] border-t lg:border-t lg:border-b hover:border-b-0 lg:border-r border-black ">
+            {PortfolioCards.map((Cards, index) => {
+              return (
+                <div
+                  key="index"
+                  onMouseEnter={() => {
+                    console.log("changeimage");
+                    setHoverBackgroundImage(Cards.src);
+                  }}
+                  className="lg:px-8 px-4 flex flex-col group border-b border-black"
+                >
+                  <div className="relative flex lg:hidden min-h-[50vh] mt-5 lg:mt-0 w-full">
                     <Image
-                      className=" filter brightness-95  duration-1000 cursol-pointer"
-                      objectFit="cover"
-                      layout="fill"
-                      src={PortfolioCard.src}
-                      alt="PortfolioCards"
-                    />
-                  </a>
-                </div>
-
-                <div className=" min-h-[100vh] lg:min-h-[50vh]  w-full">
-                  <div className="h-[50vh]  flex mb-5 lg:mb-0 filter relative lg:hidden">
-                    <Image
-                      className=" filter brightness-90  duration-1000 "
-                      objectFit="cover"
-                      layout="fill"
-                      src={PortfolioCard.src}
-                      alt="PortfolioCards"
+                      alt="card"
+                      src={Cards.src}
+                      objectFit={"cover"}
+                      layout={"fill"}
                     />
                   </div>
-                  <div className="px-4 lg:px-10 flex flex-col tracking-widest ">
-                    <div className="pt-0 lg:pt-20 lg:px-20 py-5 flex flex-col  text-xs lg:text-sm  text-black ">
-                      <div className="grid grid-cols-1 gap-10 lg:gap-20 lg:grid-cols-2">
-                        <div className="text-xs lg:text-base"> </div>
-
-                        <div className=" flex flex-col text-xs lg:text-base  text-black">
-                          <div>
-                            {" "}
-                            <div className="mb-5 lg:mb-20 text-lg lg:text-2xl ">
-                              About the project
-                            </div>{" "}
-                            <div>{PortfolioCard.PortfolioDiscription}</div>
-                          </div>
-                          <div>
-                            <div className="mb-5 lg:mb-10  text-lg lg:text-2xl "></div>{" "}
-                            <div> {PortfolioCard.PortfolioDiscription2}</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <a
-                      href={PortfolioCard.PortfolioDiscriptionURL}
-                      className="inline-block"
-                    ></a>
+                  <div className="lg:h-28 h-12  text-2xl lg:text-4xl w-full flex items-center">
+                    {Cards.title}
+                  </div>
+                  <div className="lg:mb-10 mb-10 text-zinc-600 text-xs lg:text-sm">
+                    {Cards.subTitle}
+                  </div>
+                  <div className="group-hover:h-full  lg:hidden group-hover:flex text-sm lg:text-base  duration-500 mb-5">
+                    {Cards.PortfolioDiscription}
+                  </div>
+                  <div className="group-hover:h-full  lg:hidden group-hover:flex text-sm lg:text-base  duration-500 mb-10">
+                    {Cards.PortfolioDiscription2}
                   </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
+          <div className="lg:w-1/2 lg:h-9/12 lg:border-y p-4 border-black">
+            <div className="relative h-full w-full">
+              <Image
+                alt="card"
+                src={hoverBackgroundImage}
+                objectFit={"cover"}
+                layout={"fill"}
+              />
+            </div>
+          </div>
         </div>
       </div>
     </Layout>
