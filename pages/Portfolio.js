@@ -57,35 +57,37 @@ export default function Portfolio() {
           <div className="lg:w-1/2 lg:min-h-[90vh] border-t lg:border-t lg:border-b hover:border-b-0 lg:border-r border-black ">
             {PortfolioCards.map((Cards, index) => {
               return (
-                <div
-                  key="index"
-                  onMouseEnter={() => {
-                    console.log("changeimage");
-                    setHoverBackgroundImage(Cards.src);
-                  }}
-                  className="lg:px-8 px-4 flex flex-col group border-b border-black"
-                >
-                  <div className="relative flex lg:hidden min-h-[50vh] mt-5 lg:mt-0 w-full">
-                    <Image
-                      alt="card"
-                      src={Cards.src}
-                      objectFit={"cover"}
-                      layout={"fill"}
-                    />
+                <Link key="index" href={Cards.PortfolioDiscriptionURL}>
+                  <div
+                    
+                    onMouseEnter={() => {
+                      console.log("changeimage");
+                      setHoverBackgroundImage(Cards.src);
+                    }}
+                    className="lg:px-8 px-4 flex flex-col group border-b border-black cursor-pointer"
+                  >
+                    <div className="relative flex lg:hidden min-h-[50vh] mt-5 lg:mt-0 w-full">
+                      <Image
+                        alt="card"
+                        src={Cards.src}
+                        objectFit={"cover"}
+                        layout={"fill"}
+                      />
+                    </div>
+                    <div className="lg:h-28 h-12  text-2xl lg:text-4xl w-full flex items-center">
+                      {Cards.title}
+                    </div>
+                    <div className="lg:mb-10 mb-10 text-zinc-600 text-xs lg:text-sm">
+                      {Cards.subTitle}
+                    </div>
+                    <div className="group-hover:h-full pr-10  lg:hidden group-hover:flex text-sm lg:text-base  duration-500 mb-5">
+                      {Cards.PortfolioDiscription}
+                    </div>
+                    <div className="group-hover:h-full pr-10 lg:hidden group-hover:flex text-sm lg:text-base  duration-500 mb-10">
+                      {Cards.PortfolioDiscription2}
+                    </div>
                   </div>
-                  <div className="lg:h-28 h-12  text-2xl lg:text-4xl w-full flex items-center">
-                    {Cards.title}
-                  </div>
-                  <div className="lg:mb-10 mb-10 text-zinc-600 text-xs lg:text-sm">
-                    {Cards.subTitle}
-                  </div>
-                  <div className="group-hover:h-full  lg:hidden group-hover:flex text-sm lg:text-base  duration-500 mb-5">
-                    {Cards.PortfolioDiscription}
-                  </div>
-                  <div className="group-hover:h-full  lg:hidden group-hover:flex text-sm lg:text-base  duration-500 mb-10">
-                    {Cards.PortfolioDiscription2}
-                  </div>
-                </div>
+                </Link>
               );
             })}
           </div>
