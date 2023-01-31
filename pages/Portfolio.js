@@ -73,17 +73,19 @@ export default function Portfolio() {
                         layout={"fill"}
                       />
                     </div>
-                    <div className="lg:h-28 h-12 mt-5 lg:mt-0  text-3xl lg:text-5xl w-full flex items-center">
-                      {Cards.title}
-                    </div>
-                    <div className="lg:mb-10 mb-10 text-zinc-600 text-xs lg:text-sm">
-                      {Cards.subTitle}
-                    </div>
-                    <div className="group-hover:h-full  lg:px-0 lg:pr-10  lg:hidden group-hover:flex text-xs lg:text-sm  duration-500 mb-5">
-                      {Cards.PortfolioDiscription}
-                    </div>
-                    <div className="group-hover:h-full lg:px-0 lg:pr-10 lg:hidden group-hover:flex text-xs lg:text-sm  duration-500 mb-10">
-                      {Cards.PortfolioDiscription2}
+                    <div className="px-4">
+                      <div className="lg:h-28 h-12 mt-5 lg:mt-0  text-3xl lg:text-5xl w-full flex items-center">
+                        {Cards.title}
+                      </div>
+                      <div className="lg:group-hover:mb-20 mb-10 text-zinc-600 text-xs lg:text-sm">
+                        {Cards.subTitle}
+                      </div>
+                      <div className="group-hover:h-full  lg:px-0 lg:pr-10  lg:hidden group-hover:flex text-xs lg:text-sm  duration-500 mb-5">
+                        {Cards.PortfolioDiscription}
+                      </div>
+                      <div className="group-hover:h-full lg:px-0 pb-20 lg:pr-10 lg:hidden group-hover:flex text-xs lg:text-sm  duration-500 mb-10">
+                        {Cards.PortfolioDiscription2}
+                      </div>
                     </div>
                   </div>
                 </Link>

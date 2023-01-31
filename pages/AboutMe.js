@@ -179,7 +179,7 @@ const AboutMe = () => {
   return (
     <Layout>
       <div>
-        <div className="min-h-screen  min-w-full px-4 lg:px-20   bg-zinc-100">
+        <div className="min-h-screen  min-w-full px-8 lg:px-20   bg-zinc-100">
           <div className="w-full h-[100vh] lg:mb-20 lg:pb-20 flex  items-center text-white ">
             <div className="w-full px-4 lg:px-20 items-center flex  flex-col">
               <div
@@ -197,17 +197,17 @@ const AboutMe = () => {
             id="Title"
             className=" h-full  lg:pt-0 lg:mt-40 flex flex-col justify-center bg-zinc-100 text-black border-t border-black backdrop-brightness-50"
           >
-            <div className="grid lg:grid-cols-3">
-              <div className=" flex flex-col mt-20 lg:mt-0 lg:pr-10 lg:border-r lg:border-black ">
-                <div className="text-4xl lg:text-6xl mb-0  lg:mt-20 lg:pb-10 ">
+            <div className="grid lg:grid-cols-2">
+              <div className="col-span-1 flex flex-col mt-20 lg:mt-0 lg:pr-10 lg:border-r lg:border-black ">
+                <div className="text-4xl lg:text-6xl mb-0  lg:mt-20 lg:pb-20 ">
                   AUZ
                 </div>
-                <div className="lg:mt-0 mt-5">
+                <div className="lg:mt-0 ">
                   {" "}
-                  <div className="text-base  lg:text-3xl">
-                    Age 24 / Web Devoloper 
+                  <div className="text-base  lg:text-lg">
+                    Age 24 / Web Devoloper
                   </div>
-                  <div className="text-sm  lg:text-base border-black  pt-5 lg:pt-20">
+                  <div className="text-sm lg:pr-20  lg:text-base border-black  pt-5 lg:pt-20">
                     1998年山梨で生まれる。大学では経済学を学び、語学の習得にも注力。大学卒業後は金融系企業で窓口営業を経験。働く中で自分が何を本当にしたいかを考え、独学でプログラミングを始める。
                     <br></br>
                     <br></br>
@@ -215,7 +215,7 @@ const AboutMe = () => {
                   </div>
                 </div>
                 <Link href="/Contact">
-                  <div className="lg:mt-20 mt-10 mb-10 border border-black mr-auto flex group uppercase px-8 py-3 rounded-full text-base cursor-pointer">
+                  <div className="lg:mt-40 mt-10 mb-10 border border-black mr-auto flex group uppercase px-8 py-3 rounded-full text-base cursor-pointer">
                     <div className=" -translate-x-6 mr-3 group-hover:opacity-100 opacity-0 duration-700 group-hover:translate-x-5">
                       →
                     </div>{" "}
@@ -228,7 +228,7 @@ const AboutMe = () => {
                   </div>
                 </Link>{" "}
               </div>
-              <div className="col-span-2 lg:mt-10 mt-0 mb-10 min-h-[50vh] lg:min-h-[90vh] lg:ml-10 relative">
+              <div className="col-span-1 lg:mt-10 mt-0 mb-10 min-h-[50vh] lg:min-h-[90vh] lg:ml-10 relative">
                 <Image
                   className=" filter brightness-75   duration-1000 "
                   objectFit="cover"
@@ -242,7 +242,7 @@ const AboutMe = () => {
 
           {/* <div className="text-white -mt-4"></div> */}
 
-          <div className="w-full min-h-[70vh] grid lg:grid-cols-3  border-t border-black text-black cursor-pointer">
+          <div className=" w-full min-h-[70vh] grid lg:grid-cols-3  border-t border-black text-black cursor-pointer">
             {" "}
             <div className="mt-10 text-4xl lg:text-6xl"></div>
             <div className="flex flex-col  border-black col-span-2 ">
@@ -262,7 +262,7 @@ const AboutMe = () => {
                   </div>
                 </Link>
               </div>
-              <div className="flex flex-col justify-end  text-sm  lg:text-3xl text-black py-10 lg:py-20">
+              <div className=" flex flex-col justify-end  text-sm  lg:text-3xl text-black py-10 lg:py-20">
                 <div className="flex justify-end">React / Next.js</div>
                 <div className="flex justify-end mt-1">
                   ChakraUI / TailwindCSS / styled-components
@@ -393,7 +393,7 @@ const AboutMe = () => {
           </div>
         </div>
 
-        <div className="pt-20 pb-20 lg:pb-0  border-black border-t bg-zinc-100 text-black min-w-full  min-h-screen px-4 lg:px-20 tracking-widest">
+        <div className="pt-20 pb-20 lg:pb-0  border-black border-t bg-zinc-100 text-black min-w-full  min-h-screen px-8 lg:px-20 tracking-widest">
           {" "}
           <div className="w-full grid lg:grid-cols-3">
             <div className="text-4xl lg:text-6xl pb-10  lg:pb-20">Favorite</div>
