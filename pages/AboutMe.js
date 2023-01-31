@@ -202,7 +202,7 @@ const AboutMe = () => {
                 <div className="text-4xl lg:text-6xl mb-0  lg:mt-20 lg:pb-20 ">
                   AUZ
                 </div>
-                <div className="lg:mt-0 ">
+                <div className="lg:mt-10 ">
                   {" "}
                   <div className="text-base  lg:text-lg">
                     Age 24 / Web Devoloper

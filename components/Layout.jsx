@@ -3,10 +3,12 @@ import Footer from "./Footer";
 import Head from "next/head";
 import Header from "./Header";
 import Link from "next/link";
+import { Triangle } from "react-loader-spinner";
 
 export default function Layout({ children }) {
   return (
     <div>
+     
       <Head>
         <title>AUZ&apos;s Portfolio</title>
         <meta name="description" content="AUZ's Portfolio" />
