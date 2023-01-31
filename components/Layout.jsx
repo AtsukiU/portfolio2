@@ -8,7 +8,7 @@ export default function Layout({ children }) {
   return (
     <div>
       <Head>
-        <title>Welcome to AUZ&apos;s Portfolio</title>
+        <title>AUZ&apos;s Portfolio</title>
         <meta name="description" content="AUZ's Portfolio" />
 
         <link
