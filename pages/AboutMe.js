@@ -205,7 +205,7 @@ const AboutMe = () => {
                 <div className="lg:mt-0 mt-5">
                   {" "}
                   <div className="text-base  lg:text-3xl">
-                    Age 24 / Web Devoloper / Web Designer
+                    Age 24 / Web Devoloper 
                   </div>
                   <div className="text-sm  lg:text-base border-black  pt-5 lg:pt-20">
                     1998年山梨で生まれる。大学では経済学を学び、語学の習得にも注力。大学卒業後は金融系企業で窓口営業を経験。働く中で自分が何を本当にしたいかを考え、独学でプログラミングを始める。
@@ -251,7 +251,7 @@ const AboutMe = () => {
                 <Link href="/Portfolio">
                   <div className="text-black border-b-2 flex  group border-black hover:text-zinc-600 duration-500">
                     <div className="mr-2 lg:mr-5 lg:group-hover:opacity-0 opacity-100 duration-300">
-                      Veiw
+                      View
                     </div>
                     <div className=" lg:group-hover:-translate-x-64 duration-700">
                       Portfolio
