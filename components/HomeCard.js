@@ -9,7 +9,7 @@ const HomeCard = (props) => {
         onMouseEnter={props.onMouseEnter}
         onMouseLeave={props.onMouseLeave}
         kdrop-br
-        className="min-h-[40vh] lg:min-h-[50vh] flex flex-col  relative "
+        className=" lg:min-h-[50vh] flex flex-col  relative "
       >
         <Image
           className=" w-full h-full  object-cover filter"
@@ -23,7 +23,7 @@ const HomeCard = (props) => {
             {props.title}
           </div>
 
-          <div className="flex lg:opacity-0 group-hover:opacity-100 lg:translate-y-7 group-hover:translate-y-0  group-hover:visible duration-700 py-5 justify-center tracking-wide font-light text-white text-sm lg:text-sm ">
+          <div className="flex lg:opacity-0 group-hover:opacity-100 lg:translate-y-7 group-hover:translate-y-0  group-hover:visible duration-700 py-1 lg:py-5 justify-center tracking-wide font-light text-white text-sm lg:text-sm ">
             {props.discription}
           </div>
         </div>

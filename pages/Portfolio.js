@@ -50,7 +50,7 @@ export default function Portfolio() {
   return (
     <Layout>
       <div className="bg-zinc-100 w-full min-h-screen  text-black">
-        <div className="pt-20 text-2xl lg:text-6xl px-4 lg:px-8 flex uppercase">
+        <div className="pt-20 text-4xl lg:text-6xl px-4 lg:px-8 flex uppercase">
           Portfolio
         </div>
         <div className="pt-4 pb-4 flex lg:flex-row flex-col">
@@ -74,16 +74,16 @@ export default function Portfolio() {
                       />
                     </div>
                     <div className="px-4">
-                      <div className="lg:h-28 h-12 mt-5 lg:mt-0  text-3xl lg:text-5xl w-full flex items-center">
+                      <div className="lg:h-28 h-12 mt-10 lg:mt-0  text-3xl lg:text-5xl w-full flex items-center">
                         {Cards.title}
                       </div>
-                      <div className="lg:group-hover:mb-20 mb-10 text-zinc-600 text-xs lg:text-sm">
+                      <div className="lg:group-hover:mb-20 mb-10 text-zinc-400 text-xs lg:text-sm">
                         {Cards.subTitle}
                       </div>
-                      <div className="group-hover:h-full  lg:px-0 lg:pr-10  lg:hidden group-hover:flex text-xs lg:text-sm  duration-500 mb-5">
+                      <div className="group-hover:h-full  lg:px-0 lg:pr-10  lg:hidden group-hover:flex text-sm lg:text-sm  duration-500 mb-5">
                         {Cards.PortfolioDiscription}
                       </div>
-                      <div className="group-hover:h-full lg:px-0 pb-20 lg:pr-10 lg:hidden group-hover:flex text-xs lg:text-sm  duration-500 mb-10">
+                      <div className="group-hover:h-full lg:px-0 pb-20 lg:pr-10 lg:hidden group-hover:flex text-sm lg:text-sm  duration-500 mb-10">
                         {Cards.PortfolioDiscription2}
                       </div>
                     </div>
