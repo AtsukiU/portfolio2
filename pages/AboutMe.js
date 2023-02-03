@@ -247,7 +247,7 @@ const AboutMe = () => {
                   </div>
                 </div>
                 <Link href="/Contact">
-                  <div className="lg:mt-40 mt-20 mb-20 lg:mb-10 border border-black mr-auto flex group uppercase px-8 py-3 rounded-full text-xl cursor-pointer">
+                  <div className="lg:mt-40 mt-20 mb-20 lg:mb-10 border border-black mr-auto flex group uppercase px-8 py-3 rounded-full text-base lg:text-xl cursor-pointer">
                     <div className=" -translate-x-6 mr-3 group-hover:opacity-100 opacity-0 duration-700 group-hover:translate-x-5">
                       →
                     </div>{" "}
@@ -492,13 +492,13 @@ const AboutMe = () => {
           <div className="border-t border-black pt-10 lg:pt-20 pb-20 lg:pb-40">
             {" "}
             <Link href="/Contact">
-              <div className="text-black flex justify-center uppercase cursor-pointer text-6xl  group  hover:text-zinc-600 duration-500">
-              <div className="pr-2 lg:pr-5 lg:group-hover:opacity-0 opacity-100 duration-300 border-b-2 border-black">
-                 Let&apos;s talk
+              <div className="text-black flex justify-center uppercase cursor-pointer text-xl lg:text-6xl  group  hover:text-zinc-600 duration-500">
+                <div className="pr-2 lg:pr-5 lg:group-hover:opacity-0 opacity-100 duration-300 border-b-2 border-black">
+                  Let&apos;s talk
                 </div>
-              
+
                 <div className="lg:group-hover:-translate-x-64 invisible lg:group-hover:visible duration-1000 ml-4">
-                 Contact Me →
+                  Contact Me →
                 </div>
               </div>
             </Link>
