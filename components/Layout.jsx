@@ -2,12 +2,39 @@ import React from "react";
 import Footer from "./Footer";
 import Head from "next/head";
 import Header from "./Header";
+
 import Link from "next/link";
 import { Triangle } from "react-loader-spinner";
+import { useRouter } from "next/router"
+import { useEffect, useState } from "react"
+import Looder from "../pages/Looder";
 
 export default function Layout({ children }) {
+  const router = useRouter();
+  const [pageLoading, setPageLoading] = useState(false);
+
+  useEffect(() => {
+    const handleStart = (url) => url !== router.asPath && setPageLoading(true);
+    const handleComplete = () => setPageLoading(false);
+
+    router.events.on("routeChangeStart", handleStart);
+    router.events.on("routeChangeComplete", handleComplete);
+    router.events.on("routeChangeError", handleComplete);
+
+    return () => {
+      router.events.off("routeChangeStart", handleStart);
+      router.events.off("routeChangeComplete", handleComplete);
+      router.events.off("routeChangeError", handleComplete);
+    };
+  });
+
+  // TODO 正式なローディングコンポーネントにする
+  const loadingComponent = <Looder />;
+
   return (
     <div>
+      {pageLoading && loadingComponent}
+
       <Head>
         <title>AUZ&apos;s Portfolio</title>
         <meta name="description" content="AUZ's Portfolio" />
