@@ -10,6 +10,8 @@ module.exports = {
       fontFamily: {
         montserrat: ["Inter", "sans-serif"],
         comfortaa: ["Comfortaa", "cursive"],
+        jost:['Jost', "sans-serif"],
+        poppin:['Poppins', "sans-serif"]
       },
       colors: {
         deepgreen: "rgb(141,149,146)",
