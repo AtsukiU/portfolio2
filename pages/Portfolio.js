@@ -76,13 +76,13 @@ export default function Portfolio() {
                       <div className="lg:h-28 h-12 mt-10 lg:mt-0 text-3xl lg:text-5xl font-bold tracking-wide w-full flex justify-between  items-center">
                         <div>{Cards.title}</div><div className="text-black text-xl">{index + 1}/{PortfolioCards.length}</div>
                       </div>
-                      <div className="lg:group-hover:mb-20 lg:mb-20 mb-10 mt-10 lg:mt-0 text-black font-bold text-xs lg:text-base">
+                      <div className="lg:group-hover:mb-10 lg:mb-10 mb-10 mt-10 lg:mt-10 lg:hidden group-hover:flex text-black text-xs lg:text-base">
                         {Cards.subTitle}
                       </div>
-                      <div className="group-hover:h-full tracking-widest lg:tracking-normal lg:hidden pb-5 lg:px-0 lg:pr-10   group-hover:flex text-xs lg:text-base  duration-500 mb-2">
+                      <div className="group-hover:h-full lg:w-4/5 tracking-widest lg:tracking-normal lg:hidden pb-5 lg:px-0 lg:pr-10   group-hover:flex text-xs lg:text-base  duration-500 mb-2">
                         {Cards.PortfolioDiscription}
                       </div>
-                      <div className="group-hover:h-full tracking-widest lg:tracking-normal   lg:px-0 pb-20 lg:pr-10 lg:hidden group-hover:flex text-xs lg:text-base  duration-500 mb-10">
+                      <div className="group-hover:h-full lg:w-4/5 tracking-widest lg:tracking-normal   lg:px-0 pb-20 lg:pr-10 lg:hidden group-hover:flex text-xs lg:text-base  duration-500 mb-10">
                         {Cards.PortfolioDiscription2}
                       </div>
                     </div>

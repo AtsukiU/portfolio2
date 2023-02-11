@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <header className="lg:w-52 w-full  lg:h-screen border-r border-black fixed  font-Montserrat  z-50">
       <div className="lg:bg-stone-200 h-full">
-        <div className="px-0 sm:px-4 lg:px-10 py-2 lg:py-14 flex justify-between lg:justify-start items-center lg:flex-col filter  text-black lg:text-black   w-full h-full ">
+        <div className="px-0 sm:px-4 lg:px-10 py-2 lg:py-14 flex justify-between lg:justify-start items-center lg:items-start lg:flex-col filter  text-black lg:text-black   w-full h-full ">
           <div className="flex pl-4 lg:pl-0 text-3xl tracking-wide">
             {" "}
             <Link href="/">AUZ</Link>
