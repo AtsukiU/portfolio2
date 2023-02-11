@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Layout from "../components/Layout";
+
 import MyImage from "../public/000030.JPG";
 import Image from "next/image";
 import Link from "next/link";
@@ -211,113 +212,81 @@ const AboutMe = () => {
   return (
     <Layout>
       <div>
-        <div className="min-h-screen  min-w-full px-8 lg:px-20   bg-zinc-100">
-          <div className="w-full h-[100vh] lg:mb-20 lg:pb-20 flex  items-center text-white ">
-            <div className="w-full px-4 lg:px-20 items-center flex  flex-col">
+        <div className="min-h-screen  min-w-full  bg-stone-200">
+          <div className="w-full h-[100vh] lg:mb-10 lg:pb-10 px-10 flex  items-center text-black ">
+            <div className="w-full  flex  flex-col items">
               <div
                 id="Title"
-                className="lg:w-9/12  break-all text-zinc-200 uppercase text-6xl sm:text-8xl lg:text-9xl  "
+                className="lg:w-8/12 lg:mt-10  break-all text-black  text-4xl sm:text-6xl lg:text-8xl  "
               >
-                <a>Welcome to my personal website.</a>
-                <nobr className="breake-keep text-zinc-600">I&apos;m AUZ</nobr>
-                <a className="">,Web Developer and web designer.</a>
+                <a>Welcome to my personal website. </a>
+                <nobr className="text-black ">I&apos;m AUZ</nobr>
+                <a className="">. Web Developer and web designer.</a>
               </div>
+              <div className="text-base lg:text-lg mt-20">
+                AUZ
+              </div>
+              <div className="text-base lg:text-lg">Age 25</div>
+              <div className="text-base lg:text-lg"> Web Devoloper</div>
+              <Link href="/Contact">
+                <div className=" mt-20 mr-10 border border-black lg:ml-auto flex group px-8 py-3 rounded-full text-base lg:text-lg cursor-pointer">
+                  <div className=" -translate-x-6 mr-3 group-hover:opacity-100 opacity-0 duration-700 group-hover:translate-x-5">
+                    →
+                  </div>{" "}
+                  <div className="mx-3  group-hover:translate-x-3 -translate-x-3 duration-500 ">
+                    Contact me
+                  </div>
+                  <div className="group-hover:opacity-0 duration-500 group-hover:translate-x-3">
+                    →
+                  </div>
+                </div>
+              </Link>{" "}
             </div>
           </div>
 
-          <div
-            id="Title"
-            className=" h-full  lg:pt-0 lg:mt-40 flex flex-col justify-center bg-zinc-100 text-black border-t border-black backdrop-brightness-50"
-          >
-            <div className="grid lg:grid-cols-3">
-              <div className="col-span-1 flex flex-col mt-20 lg:mt-0 lg:pr-10 lg:border-black ">
-                <div className="text-4xl lg:text-6xl lg:mt-20 pb-10 lg:pb-20 ">
-                  AUZ
-                </div>
-                <div className=" ">
-                  {" "}
-                  <div className="text-base  lg:text-3xl pb-10 lg:pb-0">
-                    Age 24 / Web Devoloper
-                  </div>
-                  <div className="text-sm  lg:pr-10  lg:text-lg border-black  pt-5 lg:pt-20">
-                    1998年山梨で生まれる。大学では経済学を学び、語学の習得にも注力。大学卒業後は金融系企業で窓口営業を経験。働く中で自分が何を本当にしたいかを考え、独学でプログラミングを始める。
-                    <br></br>
-                    <br></br>
-                    人の心を動かせるものを作るということを目標にしています。是非お声がけいただければと思います。
-                  </div>
-                </div>
-                <Link href="/Contact">
-                  <div className="lg:mt-40 mt-20 mb-20 lg:mb-10 border border-black mr-auto flex group uppercase px-8 py-3 rounded-full text-base lg:text-xl cursor-pointer">
-                    <div className=" -translate-x-6 mr-3 group-hover:opacity-100 opacity-0 duration-700 group-hover:translate-x-5">
-                      →
-                    </div>{" "}
-                    <div className="mx-3  group-hover:translate-x-3 -translate-x-3 duration-500 ">
-                      Contact me
-                    </div>
-                    <div className="group-hover:opacity-0 duration-500 group-hover:translate-x-3">
-                      →
-                    </div>
-                  </div>
-                </Link>{" "}
-              </div>
-              <div className="col-span-2 lg:mt-10 mt-0 mb-10 min-h-[50vh] lg:min-h-[90vh] lg:ml-10 relative">
-                <Image
-                  className=" filter brightness-100   duration-500 lg:grayscale hover:grayscale-0"
-                  objectFit="cover"
-                  layout="fill"
-                  src={MyImage}
-                  alt="PortfolioCards"
-                />
-              </div>
-            </div>
-          </div>
-
+       
           {/* <div className="text-white -mt-4"></div> */}
 
-          <div className=" w-full min-h-[70vh] grid lg:grid-cols-3  border-t border-black text-black cursor-pointer">
+          <div className=" w-full lg:mb-40 mb-20 border-black text-black px-10 cursor-pointer">
             {" "}
             <div className="mt-10 text-4xl lg:text-6xl"></div>
             <div className="flex flex-col  border-black col-span-2 ">
-              <div className="w-full lg:mt-20 mb-10 text-4xl sm:text-6xl lg:text-8xl uppercase text-zinc-300">
+              <div className="lg:w-2/3 lg:mt-20 mt-20 mb-10 text-4xl sm:text-6xl lg:text-6xl  text-black">
                 I love Technology and Design.<br></br>
                 <Link href="/Portfolio">
                   <div className="text-black flex   group  hover:text-zinc-600 duration-500">
                     <div className="pr-2 lg:pr-5 lg:group-hover:opacity-0 opacity-100 duration-300 border-b-2 border-black">
                       View
                     </div>
-                    <div className=" lg:group-hover:-translate-x-64 duration-700 border-b-2 border-black">
+                    <div className=" lg:group-hover:-translate-x-40 duration-700 border-b-2 border-black">
                       Portfolio
                     </div>
-                    <div className="lg:group-hover:-translate-x-64 invisible lg:group-hover:visible duration-1000 ml-4">
+                    <div className="lg:group-hover:-translate-x-40 invisible lg:group-hover:visible duration-1000 ml-4">
                       →
                     </div>
                   </div>
                 </Link>
               </div>
-              <div className="pr-8 lg:pr-0 flex flex-col justify-end  text-sm  lg:text-3xl text-black py-10 lg:py-20">
-                <div className="flex justify-end">React / Next.js</div>
-                <div className="flex justify-end mt-1">
+              <div className="lg:w-2/3 pr-8 lg:pr-0  flex flex-col text-sm  lg:text-lg text-black py-10 lg:py-20">
+                <div className="flex ">React / Next.js</div>
+                <div className="flex  mt-1">
                   ChakraUI / TailwindCSS / styled-components
                 </div>
-                <div className="flex justify-end mt-1">
-                  FramerMotion / GSAP{" "}
-                </div>
-                <div className="flex justify-end mt-1">
-                  Firebase / GraphQL / Node.js
-                </div>
-                <div className="flex justify-end mt-1">Git</div>
+                <div className="flex  mt-1">FramerMotion / GSAP </div>
+                <div className="flex  mt-1">Firebase / GraphQL / Node.js</div>
+                <div className="flex mt-1">Git</div>
               </div>
               <div className="w-full"></div>
             </div>
           </div>
 
           <div
-            className="pt-20 pb-20 w-full border-t border-black text-black tracking-wide grid lg:grid-cols-3"
+            className="pt-20 pb-20 px-10 w-full border-t border-black text-black tracking-wide grid lg:grid-cols-3"
             id="Skills"
           >
             <div className="text-4xl lg:text-6xl">Skills</div>
             <div className="col-span-2 pt-10 lg:pt-0 ">
-              <div className=" pb-20  gap-2 text-base  lg:text-3xl flex flex-col lg:flex-row">
+              <div className=" pb-20  gap-2 text-base  lg:text-lg flex flex-col lg:flex-row">
                 <div
                   onClick={OnClickFrontEnd}
                   isActive={OnClickFrontEnd}
@@ -355,16 +324,16 @@ const AboutMe = () => {
                 </div>
               </div>
 
-              <div className=" lg:mb-40">
+              <div className=" lg:mb-20">
                 {activeFrontEnd ? (
-                  <div className="w-full h-full grid grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-20">
+                  <div className="w-full h-full grid grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-10">
                     {FrontEndSkills.map((skill, index) => {
                       return (
                         <div
-                          className="w-full pb-2 relative flex flex-col border-b border-black"
+                          className="w-full pb-2 relative flex flex-col group border-black"
                           key={index}
                         >
-                          <div className="w-full my-20 opacity-5">
+                          <div className="w-full my-20 opacity-10">
                             <Image
                               src={skill.svg}
                               alt={skill.title}
@@ -372,10 +341,10 @@ const AboutMe = () => {
                               objectFit="cover"
                             ></Image>
                           </div>
-                          <div className="text-sm  lg:text-2xl">
+                          <div className="text-sm  lg:text-lg">
                             {skill.title}
                           </div>
-                          <div className="my-2  text-zinc-600 text-xs lg:text-sm font-light  hidden lg:flex">
+                          <div className="my-2  text-zinc-600 text-xs lg:text-sm font-light  hidden">
                             {skill.Discription}
                           </div>
                         </div>
@@ -386,11 +355,11 @@ const AboutMe = () => {
                   <div></div>
                 )}
                 {activeBackEnd ? (
-                  <div className="w-full h-full mx-auto  grid grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-20">
+                  <div className="w-full h-full mx-auto  grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-10">
                     {BackEndSkills.map((skill, index) => {
                       return (
                         <div
-                          className="w-full relative  flex flex-col border-b border-black pb-2"
+                          className="w-full relative  flex flex-col border-black pb-2"
                           key={index}
                         >
                           <div className="w-full my-20 opacity-5">
@@ -401,10 +370,10 @@ const AboutMe = () => {
                               objectFit="cover"
                             ></Image>
                           </div>
-                          <div className="text-sm lg:text-2xl">
+                          <div className="text-sm lg:text-lg">
                             {skill.title}
                           </div>
-                          <div className="my-2 text-zinc-600 text-xs lg:text-base font-light  hidden lg:flex">
+                          <div className="my-2 text-zinc-600 text-xs lg:text-base font-light  hidden ">
                             {skill.Discription}
                           </div>
                         </div>
@@ -416,11 +385,11 @@ const AboutMe = () => {
                 )}
 
                 {activeOthers ? (
-                  <div className="w-full h-full mx-auto  grid grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-20">
+                  <div className="w-full h-full mx-auto  grid grid-cols-2 lg:grid-cols-4 gap-2 lg:gap-10">
                     {OtherSkills.map((skill, index) => {
                       return (
                         <div
-                          className="relative flex flex-col border-b border-black pb-2 "
+                          className="relative flex flex-col border-black pb-2 "
                           key={index}
                         >
                           <div className="w-full my-20 opacity-5">
@@ -431,10 +400,10 @@ const AboutMe = () => {
                               objectFit="cover"
                             ></Image>
                           </div>
-                          <div className="text-sm lg:text-2xl ">
+                          <div className="text-sm lg:text-lg ">
                             {skill.title}
                           </div>
-                          <div className="my-2 text-zinc-600 text-xs lg:text-base font-light  hidden lg:flex">
+                          <div className="my-2 text-zinc-600 text-xs lg:text-base font-light  hidden ">
                             {skill.Discription}
                           </div>
                         </div>
@@ -449,12 +418,12 @@ const AboutMe = () => {
           </div>
         </div>
 
-        <div className="pt-20 pb-20 lg:pb-0   bg-zinc-100 text-black  min-h-screen px-8 lg:px-20 ">
+        <div className="pt-20 pb-20 lg:pb-0 bg-stone-200 text-black border-t border-black  min-h-screen px-10 ">
           {" "}
           <div className="w-full grid lg:grid-cols-3">
-            <div className="text-4xl lg:text-6xl pb-10 lg:pb-20">Favorite</div>
+            <div className="text-4xl lg:text-6xl pb-0 lg:pb-20">Favorite</div>
             <div className="col-span-2">
-              <div className="text-sm lg:text-3xl">
+              <div className="text-sm lg:text-lg mt-10">
                 Travel Football Fishing Car Aquarium Cat Game Guiter PC Books
                 Wiskey and more...
               </div>
@@ -488,17 +457,14 @@ const AboutMe = () => {
             </div>
           </div>
         </div>
-        <div className=" px-8 lg:px-20 bg-zinc-100  text-black">
-          <div className="border-t border-black pt-10 lg:pt-20 pb-20 lg:pb-40">
+        <div className=" bg-stone-200  text-black">
+          <div className="border-t border-black px-10 pt-10 lg:pt-20 pb-20 lg:pb-40">
             {" "}
             <Link href="/Contact">
-              <div className="text-black flex justify-center uppercase cursor-pointer text-xl lg:text-6xl  group  hover:text-zinc-600 duration-500">
-                <div className="pr-2 lg:pr-5 lg:group-hover:opacity-0 opacity-100 duration-300 border-b-2 border-black">
-                  Let&apos;s talk
-                </div>
-
-                <div className="lg:group-hover:-translate-x-64 invisible lg:group-hover:visible duration-1000 ml-4">
-                  Contact Me →
+              <div className="text-black flex cursor-pointer text-xl lg:text-6xl  group  hover:text-zinc-600 duration-500">
+                Contact Me
+                <div className=" lg:invisible translate-x-20 lg:group-hover:translate-x-0 lg:group-hover:visible duration-500 ml-4">
+                  →
                 </div>
               </div>
             </Link>

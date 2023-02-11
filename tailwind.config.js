@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       fontFamily: {
         montserrat: ["Inter", "sans-serif"],
+        comfortaa: ["Comfortaa", "cursive"],
       },
       colors: {
         deepgreen: "rgb(141,149,146)",

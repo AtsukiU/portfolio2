@@ -14,20 +14,20 @@ const Header = () => {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <header className="w-full  items-center fixed mix-blend-normal  lg:mix-blend-difference  font-Montserrat  z-50">
-      <div className="">
-        <div className="px-2 sm:px-4 lg:px-20 pt-0 lg:py-3 flex filter  text-black lg:text-white   w-full h-full items-center justify-between">
-          <div className=" items-center  flex  text-lg">
+    <header className="lg:w-52 w-full  lg:h-screen border-r border-black fixed  font-Montserrat  z-50">
+      <div className="lg:bg-stone-200 h-full">
+        <div className="px-0 sm:px-4 lg:px-10 py-4 lg:py-14 flex justify-between lg:justify-start lg:flex-col filter  text-black lg:text-black   w-full h-full ">
+          <div className="flex pl-4 lg:pl-0 text-3xl tracking-wide">
             {" "}
             <Link href="/">AUZ</Link>
           </div>
 
-          <div className=" h-full flex items-center ">
-            <ul className="h-full  filter gap-8 text-sm flex uppercase items-end ">
+          <div className=" h-full flex items-center lg:mt-10">
+            <ul className="h-full  filter gap-2 text-sm font-semibold flex lg:flex-col uppercase ">
               {headers.map((header, index) => {
                 return (
                   <li
-                    className="items-center  hidden lg:flex duration-300 lg:hover:brightness-90 lg:hover:-translate-y-1"
+                    className="items-center lg:px-1  hidden lg:flex  duration-300 lg:hover:brightness-90 lg:hover:-translate-y-1"
                     key={index}
                   >
                     <Link href={header.url}>{header.list}</Link>
@@ -42,7 +42,7 @@ const Header = () => {
         </div>
       </div>
       {isOpen ? (
-        <div className="flex flex-col lg:hidden w-screen h-[100vh] -mt-12 lg:mt-0 pt-24 lg:pt-0 text-black  bg-white  z-0  lg:-z-1">
+        <div className="flex flex-col lg:hidden w-screen h-[100vh] -mt-20 lg:mt-0 pt-24 lg:pt-0 text-black  bg-stone-200  z-0  lg:-z-1">
           <ul className="h-full w-full flex flex-col ">
             {headers.map((header, index) => {
               return (

@@ -49,12 +49,10 @@ export default function Portfolio() {
 
   return (
     <Layout>
-      <div className="bg-zinc-100 w-full min-h-screen  text-black">
-        <div className="pt-20 text-4xl lg:text-6xl px-4 lg:px-8 flex uppercase">
-          Portfolio
-        </div>
-        <div className="pt-4 pb-4 flex lg:flex-row flex-col">
-          <div className="lg:w-1/2 lg:froat-left lg:overflow-auto  lg:h-[90vh] border-t lg:border-t lg:border-b hover:border-b-0 lg:border-r border-black ">
+      <div className="bg-stone-200 w-full min-h-screen  text-black">
+   
+        <div className="flex lg:flex-row flex-col">
+          <div className="lg:w-3/5 lg:froat-left lg:overflow-auto  lg:h-[100vh] border-t lg:border-t lg:border-b hover:border-b-0 lg:border-r border-black ">
             {PortfolioCards.map((Cards, index) => {
               return (
                 <Link key="index" href={Cards.PortfolioDiscriptionURL}>
@@ -71,19 +69,20 @@ export default function Portfolio() {
                         src={Cards.src}
                         objectFit={"cover"}
                         layout={"fill"}
+                        className=""
                       />
                     </div>
                     <div className="px-4">
-                      <div className="lg:h-28 h-12 mt-10 lg:mt-0 uppercase text-3xl lg:text-5xl w-full flex items-center">
-                        {Cards.title}
+                      <div className="lg:h-28 h-12 mt-10 lg:mt-0 text-3xl lg:text-5xl w-full flex justify-between  items-center">
+                        <div>{Cards.title}</div><div className="text-black text-xl">{index + 1}/{PortfolioCards.length}</div>
                       </div>
-                      <div className="lg:group-hover:mb-10 mb-10 text-zinc-400 text-xs lg:text-sm">
+                      <div className="lg:group-hover:mb-40 lg:mb-20 mb-20 text-black text-xs lg:text-base">
                         {Cards.subTitle}
                       </div>
-                      <div className="group-hover:h-full  lg:px-0 lg:pr-10  lg:hidden group-hover:flex text-sm lg:text-sm  duration-500 mb-5">
+                      <div className="group-hover:h-full tracking-widest lg:hidden pb-5 lg:px-0 lg:pr-10   group-hover:flex text-xs lg:text-base  duration-500 mb-2">
                         {Cards.PortfolioDiscription}
                       </div>
-                      <div className="group-hover:h-full lg:px-0 pb-20 lg:pr-10 lg:hidden group-hover:flex text-sm lg:text-sm  duration-500 mb-10">
+                      <div className="group-hover:h-full tracking-widest  lg:px-0 pb-10 lg:pr-10 lg:hidden group-hover:flex text-xs lg:text-base  duration-500 mb-10">
                         {Cards.PortfolioDiscription2}
                       </div>
                     </div>
@@ -92,7 +91,7 @@ export default function Portfolio() {
               );
             })}
           </div>
-          <div className="lg:w-1/2 lg:float-right lg:h-9/12 lg:border-y p-4 border-black">
+          <div className="lg:w-2/5 lg:float-right lg:h-9/12 lg:border-y border-black">
             <div className="relative h-full w-full">
               <Image
                 alt="card"

@@ -38,8 +38,8 @@ const Contact = () => {
 
   return (
     <Layout>
-      <div className="px-4 lg:px-20 lg:mt-0 pt-5  w-full min-h-screen bg-zinc-100 text-black grid lg:grid-cols-1">
-        <div className="flex mt-10 flex-col lg:flex-col  text-4xl lg:text-6xl ">
+      <div className="px-4 lg:px-20 lg:mt-0 pt-5  w-full min-h-screen bg-stone-200 text-black grid lg:grid-cols-1">
+        <div className="flex mt-20 lg:mt-10 flex-col lg:flex-col  text-4xl lg:text-6xl ">
           <div className="flex items-end justify-between">
             <div className="">Contact</div>
             <div className="flex items-end ml-5">
@@ -76,7 +76,7 @@ const Contact = () => {
               onChange={(e) => {
                 setMail(e.target.value);
               }} //mail input //////////////////////
-              className="mt-1  px-2 h-10 text-sm lg:text-xl w-full bg-zinc-100 border border-black"
+              className="mt-1  px-2 h-10 text-sm lg:text-xl w-full bg-stone-200 border border-black"
             ></input>
           </div>
           <div className="pt-4">
@@ -88,7 +88,7 @@ const Contact = () => {
               onChange={(e) => {
                 setName(e.target.value);
               }} //
-              className="mt-1 px-2  h-10 text-sm lg:text-xl w-full bg-zinc-100 border-black border"
+              className="mt-1 px-2  h-10 text-sm lg:text-xl w-full bg-stone-200 border-black border"
             ></input>
           </div>
 
@@ -99,13 +99,13 @@ const Contact = () => {
             onChange={(e) => {
               setMessage(e.target.value);
             }} //textinput/////////////////////////
-            className="min-h-[30vh]  pt-2 px-2 mt-10 mb-10 text-sm lg:text-xl w-full bg-zinc-100 border border-black"
+            className="min-h-[30vh]  pt-2 px-2 mt-10 mb-10 text-sm lg:text-xl w-full bg-stone-200 border border-black"
           ></textarea>
           <div className="w-full  flex justify-end">
             <button
               type="submit"
               value="Send"
-              className=" mb-5 px-8 py-2 text-sm lg:text-xl  border border-black rounded-full"
+              className=" mb-5 px-8 py-2 text-sm lg:text-lg uppercase  border border-black rounded-full"
             >
               Submit
             </button>

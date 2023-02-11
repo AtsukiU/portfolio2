@@ -16,8 +16,8 @@ import { FaTwitterSquare, FaGithubSquare } from "react-icons/fa";
 export default function Home() {
   return (
     <Layout>
-      <div className="bg-zinc-100">
-        <div className="w-full mx-auto  px-4 lg:px-20  pt-20 lg:pt-28 pb-20 lg:pb-20 min-h-[100vh] gap-2 lg:gap-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4     relative">
+      <div className="bg-stone-200">
+        <div className="w-full mx-auto  px-4 lg:px-40  pt-20 lg:pt-10 pb-10 lg:pb-10 min-h-[100vh] gap-2 lg:gap-10  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-42    relative">
           <HomeCard
             image={AboutMeImage}
             title="About Me"
