@@ -13,6 +13,8 @@ module.exports = {
       },
       colors: {
         deepgreen: "rgb(141,149,146)",
+        yellowbg:"rgb(245,239,223)",
+        bluebg:"rgb(142,174,188)"
       },
     },
   },

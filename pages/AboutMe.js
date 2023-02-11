@@ -217,17 +217,18 @@ const AboutMe = () => {
             <div className="w-full  flex  flex-col items">
               <div
                 id="Title"
-                className="lg:w-8/12 lg:mt-10  break-all text-black  text-4xl sm:text-6xl lg:text-8xl  "
+                className="lg:w-8/12 lg:mt-10  break-all text-black font-bold text-4xl sm:text-6xl lg:text-8xl  "
               >
                 <a>Welcome to my personal website. </a>
                 <nobr className="text-black ">I&apos;m AUZ</nobr>
-                <a className="">. Web Developer and web designer.</a>
+                <a className="">. Web developer and web designer.</a>
               </div>
-              <div className="text-base lg:text-lg mt-20">
-                AUZ
+              <div className="text-base lg:text-lg font-bold mt-20">Men</div>
+              <div className="text-base lg:text-lg font-bold">Age 25</div>
+              <div className="text-base lg:text-lg font-bold">
+                {" "}
+                Web devoloper
               </div>
-              <div className="text-base lg:text-lg">Age 25</div>
-              <div className="text-base lg:text-lg"> Web Devoloper</div>
               <Link href="/Contact">
                 <div className=" mt-20 mr-10 border border-black lg:ml-auto flex group px-8 py-3 rounded-full text-base lg:text-lg cursor-pointer">
                   <div className=" -translate-x-6 mr-3 group-hover:opacity-100 opacity-0 duration-700 group-hover:translate-x-5">
@@ -244,21 +245,20 @@ const AboutMe = () => {
             </div>
           </div>
 
-       
           {/* <div className="text-white -mt-4"></div> */}
 
-          <div className=" w-full lg:mb-40 mb-20 border-black text-black px-10 cursor-pointer">
+          <div className=" w-full lg:pb-40 pb-20 border-black bg-black text-stone-200 px-10 cursor-pointer">
             {" "}
             <div className="mt-10 text-4xl lg:text-6xl"></div>
-            <div className="flex flex-col  border-black col-span-2 ">
-              <div className="lg:w-2/3 lg:mt-20 mt-20 mb-10 text-4xl sm:text-6xl lg:text-6xl  text-black">
-                I love Technology and Design.<br></br>
+            <div className="flex flex-col  border-stone-200 col-span-2 ">
+              <div className="lg:w-2/3 lg:mt-20 mt-20 mb-10 font-bold text-4xl sm:text-6xl lg:text-6xl  ">
+                I love technology and design.<br></br>
                 <Link href="/Portfolio">
-                  <div className="text-black flex   group  hover:text-zinc-600 duration-500">
-                    <div className="pr-2 lg:pr-5 lg:group-hover:opacity-0 opacity-100 duration-300 border-b-2 border-black">
+                  <div className="flex   group  hover:text-stone-400 duration-500">
+                    <div className="pr-2 lg:pr-5 lg:group-hover:opacity-0 opacity-100 duration-300 border-b-2 border-stone-200">
                       View
                     </div>
-                    <div className=" lg:group-hover:-translate-x-40 duration-700 border-b-2 border-black">
+                    <div className=" lg:group-hover:-translate-x-40 duration-700 border-b-2 border-stone-200">
                       Portfolio
                     </div>
                     <div className="lg:group-hover:-translate-x-40 invisible lg:group-hover:visible duration-1000 ml-4">
@@ -267,24 +267,33 @@ const AboutMe = () => {
                   </div>
                 </Link>
               </div>
-              <div className="lg:w-2/3 pr-8 lg:pr-0  flex flex-col text-sm  lg:text-lg text-black py-10 lg:py-20">
-                <div className="flex ">React / Next.js</div>
-                <div className="flex  mt-1">
-                  ChakraUI / TailwindCSS / styled-components
+              <div className="flex">
+                <div className="lg:w-1/2 pr-8 lg:pr-0  flex flex-col text-sm  lg:text-lg border-stone-200 py-10 lg:py-20">
+                  <div className="flex ">React / Next.js</div>
+                  <div className="flex  mt-1">
+                    ChakraUI / TailwindCSS / styled-components
+                  </div>
+                  <div className="flex  mt-1">FramerMotion / GSAP </div>
+                  <div className="flex  mt-1">Firebase / GraphQL / Node.js</div>
+                  <div className="flex mt-1">Git</div>
                 </div>
-                <div className="flex  mt-1">FramerMotion / GSAP </div>
-                <div className="flex  mt-1">Firebase / GraphQL / Node.js</div>
-                <div className="flex mt-1">Git</div>
               </div>
-              <div className="w-full"></div>
             </div>
           </div>
 
           <div
-            className="pt-20 pb-20 px-10 w-full border-t border-black text-black tracking-wide grid lg:grid-cols-3"
+            className="pt-20 pb-20 px-10 w-full border-t bg-yellowbg border-black text-black tracking-wide grid lg:grid-cols-3"
             id="Skills"
           >
-            <div className="text-4xl lg:text-6xl">Skills</div>
+            <div className="text-4xl lg:text-6xl font-bold">
+              <div>Skills</div>{" "}
+              <div className="text-sm lg:text-lg mt-10 lg:mt-20 lg:pr-20 font-normal">
+                I am working on acquiring skills in JavaScript frameworks such
+                as Next.js and React, as well as technologies such as Firebase
+                and GraphQL, as well as improving my English proficiency. I will
+                continue to acquire various skills in the future.
+              </div>
+            </div>
             <div className="col-span-2 pt-10 lg:pt-0 ">
               <div className=" pb-20  gap-2 text-base  lg:text-lg flex flex-col lg:flex-row">
                 <div
@@ -293,7 +302,7 @@ const AboutMe = () => {
                   className={classNames(
                     activeFrontEnd
                       ? " px-8 py-2  text-black flex justify-center cursor-pointer border border-black rounded-full  duration-300 "
-                      : "  px-8 py-2  text-zinc-300 flex justify-center cursor-pointer border rounded-full border-zinc-300 hover:border-zinc-600 hover:text-zinc-600 hover:bg-zinc-100 duration-300"
+                      : "  px-8 py-2  text-zinc-300 flex justify-center cursor-pointer border rounded-full border-zinc-300 hover:border-zinc-600 hover:text-zinc-600  duration-300"
                   )}
                 >
                   FRONTEND{" "}
@@ -305,7 +314,7 @@ const AboutMe = () => {
                   className={classNames(
                     activeBackEnd
                       ? " px-8 py-2  text-black flex justify-center cursor-pointer border border-black rounded-full  duration-300 "
-                      : "  px-8 py-2  text-zinc-300 flex justify-center cursor-pointer border rounded-full border-zinc-300 hover:border-zinc-600 hover:text-zinc-600 hover:bg-zinc-100 duration-300"
+                      : "  px-8 py-2  text-zinc-300 flex justify-center cursor-pointer border rounded-full border-zinc-300 hover:border-zinc-600 hover:text-zinc-600  duration-300"
                   )}
                 >
                   BACKEND
@@ -317,7 +326,7 @@ const AboutMe = () => {
                   className={classNames(
                     activeOthers
                       ? " px-8 py-2  text-black flex justify-center cursor-pointer border border-black rounded-full  duration-300 "
-                      : "  px-8 py-2  text-zinc-300 flex justify-center cursor-pointer border rounded-full border-zinc-300 hover:border-zinc-600 hover:text-zinc-600 hover:bg-zinc-100 duration-300"
+                      : "  px-8 py-2  text-zinc-300 flex justify-center cursor-pointer border rounded-full border-zinc-300 hover:border-zinc-600 hover:text-zinc-600 duration-300"
                   )}
                 >
                   OTHRES
@@ -418,16 +427,18 @@ const AboutMe = () => {
           </div>
         </div>
 
-        <div className="pt-20 pb-20 lg:pb-0 bg-stone-200 text-black border-t border-black  min-h-screen px-10 ">
+        <div className="pt-20 pb-20 lg:pb-0 bg-bluebg text-white border-t border-black  min-h-screen px-10 ">
           {" "}
           <div className="w-full grid lg:grid-cols-3">
-            <div className="text-4xl lg:text-6xl pb-0 lg:pb-20">Favorite</div>
-            <div className="col-span-2">
-              <div className="text-sm lg:text-lg mt-10">
-                Travel Football Fishing Car Aquarium Cat Game Guiter PC Books
-                Wiskey and more...
+            <div className="text-4xl lg:text-6xl pb-0 lg:pb-20 font-bold">
+              <div>Favorite</div>
+              <div className="text-sm lg:text-lg mt-10 lg:mt-20 lg:pr-20 font-normal">
+                I have a variety of hobbies such as traveling, playing the
+                guitar, and keeping an aquarium, and I enjoy life .
               </div>
-              <div className="pt-20 lg:mb-40 text-white  grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-1 lg:gap-2">
+            </div>
+            <div className="lg:col-span-2">
+              <div className="lg:pt-20 pt-10 lg:mb-40 text-white  grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-1 lg:gap-2">
                 {MyFavorites.map((MyFavorite, index) => {
                   return (
                     <div
@@ -461,13 +472,17 @@ const AboutMe = () => {
           <div className="border-t border-black px-10 pt-10 lg:pt-20 pb-20 lg:pb-40">
             {" "}
             <Link href="/Contact">
-              <div className="text-black flex cursor-pointer text-xl lg:text-6xl  group  hover:text-zinc-600 duration-500">
+              <div className="text-black font-bold flex cursor-pointer text-4xl lg:text-6xl group  hover:text-zinc-600 duration-500">
                 Contact Me
-                <div className=" lg:invisible translate-x-20 lg:group-hover:translate-x-0 lg:group-hover:visible duration-500 ml-4">
+                <div className=" lg:invisible lg:translate-x-20 lg:group-hover:translate-x-0 lg:group-hover:visible duration-500 ml-4">
                   →
                 </div>
               </div>
             </Link>
+            <div className="lg:w-1/3 text-sm lg:text-lg mt-10 lg:mt-20 lg:pr-20 font-normal">
+              If you are interested in me and would like to offer me a job,
+              please click on this title to get in touch with me.
+            </div>
           </div>
         </div>
       </div>

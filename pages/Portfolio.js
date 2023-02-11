@@ -52,7 +52,7 @@ export default function Portfolio() {
       <div className="bg-stone-200 w-full min-h-screen  text-black">
    
         <div className="flex lg:flex-row flex-col">
-          <div className="lg:w-3/5 lg:froat-left lg:overflow-auto  lg:h-[100vh] border-t lg:border-t lg:border-b hover:border-b-0 lg:border-r border-black ">
+          <div className="lg:w-3/5 mt-20 lg:mt-0 lg:froat-left lg:overflow-auto  lg:h-[100vh] border-t lg:border-t lg:border-b hover:border-b-0 lg:border-r border-black ">
             {PortfolioCards.map((Cards, index) => {
               return (
                 <Link key="index" href={Cards.PortfolioDiscriptionURL}>
@@ -63,7 +63,7 @@ export default function Portfolio() {
                     }}
                     className="lg:px-8 px-4 flex flex-col group border-b border-black cursor-pointer"
                   >
-                    <div className="relative flex lg:hidden min-h-[50vh] mt-5 lg:mt-0 w-full">
+                    <div className="relative flex lg:hidden min-h-[30vh] lg:min-h-[50vh] mt-10 lg:mt-0 w-full">
                       <Image
                         alt="card"
                         src={Cards.src}
@@ -72,17 +72,17 @@ export default function Portfolio() {
                         className=""
                       />
                     </div>
-                    <div className="px-4">
-                      <div className="lg:h-28 h-12 mt-10 lg:mt-0 text-3xl lg:text-5xl w-full flex justify-between  items-center">
+                    <div className="px-6">
+                      <div className="lg:h-28 h-12 mt-10 lg:mt-0 text-3xl lg:text-5xl font-bold tracking-wide w-full flex justify-between  items-center">
                         <div>{Cards.title}</div><div className="text-black text-xl">{index + 1}/{PortfolioCards.length}</div>
                       </div>
-                      <div className="lg:group-hover:mb-40 lg:mb-20 mb-20 text-black text-xs lg:text-base">
+                      <div className="lg:group-hover:mb-20 lg:mb-20 mb-10 mt-10 lg:mt-0 text-black font-bold text-xs lg:text-base">
                         {Cards.subTitle}
                       </div>
-                      <div className="group-hover:h-full tracking-widest lg:hidden pb-5 lg:px-0 lg:pr-10   group-hover:flex text-xs lg:text-base  duration-500 mb-2">
+                      <div className="group-hover:h-full tracking-widest lg:tracking-normal lg:hidden pb-5 lg:px-0 lg:pr-10   group-hover:flex text-xs lg:text-base  duration-500 mb-2">
                         {Cards.PortfolioDiscription}
                       </div>
-                      <div className="group-hover:h-full tracking-widest  lg:px-0 pb-10 lg:pr-10 lg:hidden group-hover:flex text-xs lg:text-base  duration-500 mb-10">
+                      <div className="group-hover:h-full tracking-widest lg:tracking-normal   lg:px-0 pb-20 lg:pr-10 lg:hidden group-hover:flex text-xs lg:text-base  duration-500 mb-10">
                         {Cards.PortfolioDiscription2}
                       </div>
                     </div>

@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <Layout>
       <div className="bg-stone-200">
-        <div className="w-full mx-auto  px-4 lg:px-40  pt-20 lg:pt-10 pb-10 lg:pb-10 min-h-[100vh] gap-2 lg:gap-10  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-42    relative">
+        <div className="w-full mx-auto  px-4 lg:px-20  pt-20 lg:pt-10 pb-10 lg:pb-10 min-h-[100vh] gap-2 lg:gap-2  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2    relative">
           <HomeCard
             image={AboutMeImage}
             title="About Me"

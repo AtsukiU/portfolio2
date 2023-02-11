@@ -9,10 +9,10 @@ const HomeCard = (props) => {
         onMouseEnter={props.onMouseEnter}
         onMouseLeave={props.onMouseLeave}
         kdrop-br
-        className=" lg:min-h-[40vh] flex flex-col  relative "
+        className=" lg:min-h-[10vh] flex flex-col  relative "
       >
         <Image
-          className=" w-full h-full  object-cover filter"
+          className=" w-full h-full  object-cover  filter"
           layout="fill"
           src={props.image}
           alt="cardImage"
