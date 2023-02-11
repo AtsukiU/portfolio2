@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { FaGithub, FaTwitter } from "react-icons/fa";
+import { FaGithubSquare, FaTwitterSquare } from "react-icons/fa";
 import { Divide as Hamburger } from "hamburger-react";
 
 const Header = () => {
@@ -22,8 +23,8 @@ const Header = () => {
             <Link href="/">AUZ</Link>
           </div>
 
-          <div className=" h-full flex items-center lg:mt-10">
-            <ul className="h-full  filter gap-1 text-lg flex lg:flex-col uppercase ">
+          <div className="  flex items-center lg:mt-10">
+            <ul className=" filter gap-1 text-lg flex lg:flex-col uppercase ">
               {headers.map((header, index) => {
                 return (
                   <li
@@ -38,6 +39,19 @@ const Header = () => {
                 <Hamburger toggled={isOpen} toggle={setOpen} size={24} />
               </div>
             </ul>
+          </div>
+          <div className="hidden lg:flex items-center mt-auto">
+            <div className="flex items-center text-black hover:text-stone-600 duration-500 hover:-translate-y-1">
+              <a href="https://github.com/AtsukiU">
+                {" "}
+                <FaTwitter size={30} />
+              </a>
+            </div>{" "}
+            <div className="flex items-cemter ml-3 mr-20 text-black hover:text-stone-600 duration-500 hover:-translate-y-1">
+              <a href="https://twitter.com/itwebzozo">
+                <FaGithub size={30} />
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -55,11 +69,9 @@ const Header = () => {
               );
             })}
             <div className="mt-20 ml-4 uppercase flex flex-col text-base sm:text-xl">
-              <a href="https://twitter.com/itwebzozo">
-               twitter
-              </a>
+              <a href="https://twitter.com/itwebzozo">twitter</a>
               <a className="mt-8" href="https://github.com/AtsukiU">
-              github
+                github
               </a>
             </div>
           </ul>
