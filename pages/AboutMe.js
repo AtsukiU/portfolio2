@@ -213,11 +213,11 @@ const AboutMe = () => {
     <Layout>
       <div>
         <div className="min-h-screen  min-w-full  bg-stone-200">
-          <div className="w-full h-[100vh] lg:mb-10 lg:pb-10 px-10 flex  items-center text-black ">
+          <div className="w-full min-h-[100vh] lg:mb-10 lg:pb-10 px-10 flex  items-center text-black ">
             <div className="w-full  flex  flex-col items">
               <div
                 id="Title"
-                className="lg:w-8/12 lg:mt-10  break-all text-black font-bold text-4xl sm:text-6xl lg:text-8xl  "
+                className="lg:w-8/12 lg:mt-10  break-all text-black font-bold text-4xl sm:text-5xl lg:text-8xl  "
               >
                 <a>Welcome to my personal website. </a>
                 <nobr className="text-black ">I&apos;m AUZ</nobr>
@@ -225,6 +225,7 @@ const AboutMe = () => {
               </div>
               <div className="text-base lg:text-lg font-bold mt-20">Men</div>
               <div className="text-base lg:text-lg font-bold">Age 25</div>
+              <div className="text-base lg:text-lg font-bold">Japan</div>
               <div className="text-base lg:text-lg font-bold">
                 {" "}
                 Web devoloper
