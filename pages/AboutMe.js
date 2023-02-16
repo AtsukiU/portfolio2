@@ -223,7 +223,7 @@ const AboutMe = () => {
                 <nobr className="text-black ">I&apos;m AUZ</nobr>
                 <a className="">. Web developer and web designer.</a>
               </div>
-              <div className="text-base lg:text-lg font-bold mt-20">Men</div>
+              <div className="text-base lg:text-lg font-bold mt-20">Man</div>
               <div className="text-base lg:text-lg font-bold">Age 25</div>
               <div className="text-base lg:text-lg font-bold">Japan</div>
               <div className="text-base lg:text-lg font-bold">

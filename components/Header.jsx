@@ -6,8 +6,8 @@ import { Divide as Hamburger } from "hamburger-react";
 
 const Header = () => {
   const headers = [
-    { list: "Home", url: "/" },
-    { list: "About ME", url: "/AboutMe" },
+    { list: "HOME", url: "/" },
+    { list: "", url: "/AboutMe" },
     { list: "Portfolio", url: "/Portfolio" },
     { list: "Contact", url: "/Contact" },
   ];
@@ -18,7 +18,7 @@ const Header = () => {
     <header className="lg:w-52 w-full  lg:h-screen border-r border-black fixed  font-Montserrat  z-50">
       <div className="lg:bg-stone-200 h-full">
         <div className="px-0 sm:px-4 lg:px-10 py-2 lg:py-14 flex justify-between lg:justify-start items-center lg:items-start lg:flex-col filter  text-black lg:text-black   w-full h-full ">
-          <div className="flex pl-4 lg:pl-0 text-3xl tracking-wide">
+          <div className="flex pl-4 lg:pl-0 text-3xl font-bold tracking-wide">
             {" "}
             <Link href="/">AUZ</Link>
           </div>
@@ -56,21 +56,21 @@ const Header = () => {
         </div>
       </div>
       {isOpen ? (
-        <div className="flex flex-col lg:hidden w-screen h-[100vh] -mt-20 lg:mt-0 pt-24 lg:pt-0 text-black  bg-stone-200  z-0  lg:-z-1">
+        <div className="flex flex-col lg:hidden w-screen h-[100vh]  mt-20 lg:mt-0 pt-24 lg:pt-0 text-black  bg-stone-200  z-0  lg:-z-1">
           <ul className="h-full w-full flex flex-col ">
             {headers.map((header, index) => {
               return (
                 <li
-                  className=" w-full h-[10vh] flex ml-4 items-center uppercase duration-300 border-black text-base sm:text-xl"
+                  className=" w-full  flex ml-10 items-center uppercase duration-300 border-black text-5xl font-bold sm:text-xl"
                   key={index}
                 >
                   <Link href={header.url}>{header.list}</Link>
                 </li>
               );
             })}
-            <div className="mt-20 ml-4 uppercase flex flex-col text-base sm:text-xl">
+            <div className="mt-20 ml-10 uppercase flex flex-col text-5xl font-bold sm:text-xl">
               <a href="https://twitter.com/itwebzozo">twitter</a>
-              <a className="mt-8" href="https://github.com/AtsukiU">
+              <a className="" href="https://github.com/AtsukiU">
                 github
               </a>
             </div>
