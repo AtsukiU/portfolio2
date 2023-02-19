@@ -41,7 +41,7 @@ const Contact = () => {
       <div className="px-4 lg:px-20 lg:mt-0 pt-5  w-full min-h-screen bg-stone-200 text-black grid lg:grid-cols-1">
         <div className="flex mt-20 lg:mt-10 flex-col lg:flex-col  text-4xl lg:text-6xl ">
           <div className="flex items-end justify-between">
-            <div className="">Contact</div>
+            <div className="font-bold">Contact</div>
             <div className="flex items-end ml-5">
               <div className="flex  text-lg lg:text-xl ">
                 <a href="https://twitter.com/itwebzozo">
@@ -65,7 +65,7 @@ const Contact = () => {
         <form
           ref={form}
           onSubmit={handleOnSend}
-          className="text-sm lg:text-xl mt-0 lg:mt-0 "
+          className="text-base lg:text-xl mt-0 lg:mt-0 "
         >
           <div className="">
             <div className="">Email</div>

@@ -7,7 +7,7 @@ import { Divide as Hamburger } from "hamburger-react";
 const Header = () => {
   const headers = [
     { list: "HOME", url: "/" },
-    { list: "", url: "/AboutMe" },
+    { list: "AboutMe", url: "/AboutMe" },
     { list: "Portfolio", url: "/Portfolio" },
     { list: "Contact", url: "/Contact" },
   ];
@@ -56,22 +56,22 @@ const Header = () => {
         </div>
       </div>
       {isOpen ? (
-        <div className="flex flex-col lg:hidden w-screen h-[100vh]  mt-20 lg:mt-0 pt-24 lg:pt-0 text-black  bg-stone-200  z-0  lg:-z-1">
-          <ul className="h-full w-full flex flex-col ">
+        <div className="flex flex-col lg:hidden w-screen h-[100vh]  -mt-16 lg:mt-0 pt-24 lg:pt-0 text-black  bg-stone-200  z-0  lg:-z-1">
+          <ul className="h-full w-full flex flex-col mt-20 ">
             {headers.map((header, index) => {
               return (
                 <li
-                  className=" w-full  flex ml-10 items-center uppercase duration-300 border-black text-5xl font-bold sm:text-xl"
+                  className=" w-full  flex ml-4 items-center uppercase duration-300 border-black text-5xl font-bold sm:text-xl"
                   key={index}
                 >
                   <Link href={header.url}>{header.list}</Link>
                 </li>
               );
             })}
-            <div className="mt-20 ml-10 uppercase flex flex-col text-5xl font-bold sm:text-xl">
-              <a href="https://twitter.com/itwebzozo">twitter</a>
+            <div className="mt-20 ml-4 flex flex-col text-2xl  font-bold sm:text-xl">
+              <a href="https://twitter.com/itwebzozo">Twitter</a>
               <a className="" href="https://github.com/AtsukiU">
-                github
+                Github
               </a>
             </div>
           </ul>

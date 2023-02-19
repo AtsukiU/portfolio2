@@ -5,18 +5,6 @@ import MyImage from "../public/000030.JPG";
 import Image from "next/image";
 import Link from "next/link";
 
-import Fishing from "../public/IMG_0248.jpg";
-import Guitar from "/public/IMG_0528.jpg";
-import Trip from "/public/000009.JPG";
-import Football from "/public/IMG_1128.JPG";
-import Pc from "/public/IMG_2472.jpg";
-import Wiskey from "/public/IMG_4261.jpg";
-import Aquarium from "/public/IMG_5773.jpg";
-import Cat from "/public/cat.jpg";
-import Car from "/public/IMG_8069.jpg";
-import Unaghi from "/public/unaghi.jpg";
-import Book from "/public/book.jpg";
-import Programming from "../public/programming.jpg";
 
 import Portfolio1Img from "../public/Portfolio1.png";
 import Portfolio2Img from "../public/PortFolio.png";
@@ -139,48 +127,7 @@ const AboutMe = () => {
     },
   ];
 
-  const MyFavorites = [
-    { title: "Trip", discription: "旅行が好きです。", src: Trip },
-    { title: "Car", discription: "愛車のCX-5です。", src: Car },
-    {
-      title: "Fishing",
-      discription: "釣りが好きで海・川・湖行きます。",
-      src: Fishing,
-    },
-    {
-      title: "Football",
-      discription: "サッカーが好きで、メッシとクリロナを生で見たのが自慢です。",
-      src: Football,
-    },
-    {
-      title: "Wiskey",
-      discription: "酒屋巡りして掘り出し物を探しています。",
-      src: Wiskey,
-    },
-    { title: "Eel", discription: "大好物はうなぎです", src: Unaghi },
-    { title: "Aquarium", discription: "", src: Aquarium },
-    {
-      title: "Guitar",
-      discription: "学生時代からギター弾いてます",
-      src: Guitar,
-    },
-    { title: "PC", discription: "興味本位でパソコンを組んでみました", src: Pc },
-    {
-      title: "Book",
-      discription: "本を読むのも好きです。最近はAudible",
-      src: Book,
-    },
-    {
-      title: "Programming",
-      discription: "本を読むのも好きです。最近はAudible",
-      src: Programming,
-    },
-    {
-      title: "Cat",
-      discription: "本を読むのも好きです。最近はAudible",
-      src: Cat,
-    },
-  ];
+  
 
   const [activeFrontEnd, setActiveFrontEnd] = useState(true);
   const [activeBackEnd, setActiveBackEnd] = useState(false);
@@ -223,13 +170,7 @@ const AboutMe = () => {
                 <nobr className="text-black ">I&apos;m AUZ</nobr>
                 <a className="">. Web developer and web designer.</a>
               </div>
-              <div className="text-base lg:text-lg font-bold mt-20">Man</div>
-              <div className="text-base lg:text-lg font-bold">Age 25</div>
-              <div className="text-base lg:text-lg font-bold">Japan</div>
-              <div className="text-base lg:text-lg font-bold">
-                {" "}
-                Web devoloper
-              </div>
+             
               <Link href="/Contact">
                 <div className=" mt-20 mr-10 border border-black lg:ml-auto flex group px-8 py-3 rounded-full text-base lg:text-lg cursor-pointer">
                   <div className=" -translate-x-6 mr-3 group-hover:opacity-100 opacity-0 duration-700 group-hover:translate-x-5">
@@ -343,7 +284,7 @@ const AboutMe = () => {
                           className="w-full pb-2 relative flex flex-col group border-black"
                           key={index}
                         >
-                          <div className="w-full my-20 opacity-10">
+                          <div className="w-full my-10 lg:my-20 opacity-10">
                             <Image
                               src={skill.svg}
                               alt={skill.title}
@@ -372,7 +313,7 @@ const AboutMe = () => {
                           className="w-full relative  flex flex-col border-black pb-2"
                           key={index}
                         >
-                          <div className="w-full my-20 opacity-5">
+                          <div className="w-full my-10 lg:my-20 opacity-5">
                             <Image
                               src={skill.svg}
                               alt={skill.title}
@@ -402,7 +343,7 @@ const AboutMe = () => {
                           className="relative flex flex-col border-black pb-2 "
                           key={index}
                         >
-                          <div className="w-full my-20 opacity-5">
+                          <div className="w-full my-10 lg:my-20 opacity-5">
                             <Image
                               src={skill.svg}
                               alt={skill.title}
@@ -428,52 +369,12 @@ const AboutMe = () => {
           </div>
         </div>
 
-        <div className="pt-20 pb-20 lg:pb-0 bg-bluebg text-white border-t border-black  min-h-screen px-10 ">
-          {" "}
-          <div className="w-full grid lg:grid-cols-3">
-            <div className="text-4xl lg:text-6xl pb-0 lg:pb-20 font-bold">
-              <div>Favorite</div>
-              <div className="text-sm lg:text-lg mt-10 lg:mt-20 lg:pr-20 font-normal">
-                I have a variety of hobbies such as traveling, playing the
-                guitar, and keeping an aquarium, and I enjoy life .
-              </div>
-            </div>
-            <div className="lg:col-span-2">
-              <div className="lg:pt-20 pt-10 lg:mb-40 text-white  grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-1 lg:gap-2">
-                {MyFavorites.map((MyFavorite, index) => {
-                  return (
-                    <div
-                      className="h-[15vh] sm:h-[20vh] lg:h-[25vh] sm:hover:h-[50vh]  duration-700 relative group flex justify-center"
-                      key={index}
-                    >
-                      <Image
-                        className="filter brightness-75 hover:brightness-50 duration-700"
-                        objectFit="cover"
-                        lauout="fill"
-                        src={MyFavorite.src}
-                        alt="okinawa"
-                        loading="lazy"
-                      />
-                      <div className="absolute bottom-1 sm:bottom-4 left-0 px-1 sm:px-4 sm:-translate-y-10 sm:opacity-0 group-hover:translate-y-0 group-hover:opacity-100 delay-400 duration-1000">
-                        <div className="text-xs sm:text-2xl font-normal ">
-                          {MyFavorite.title}
-                        </div>
-                        <div className="text-xs font-light text-zinc-300 pt-2 hidden ">
-                          {MyFavorite.discription}
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className=" bg-stone-200  text-black">
-          <div className="border-t border-black px-10 pt-10 lg:pt-20 pb-20 lg:pb-40">
+        
+        <div className=" bg-bluebg  text-text-white">
+          <div className="border-t border-white px-10 pt-10 lg:pt-20 pb-20 lg:pb-40">
             {" "}
             <Link href="/Contact">
-              <div className="text-black font-bold flex cursor-pointer text-4xl lg:text-6xl group  hover:text-zinc-600 duration-500">
+              <div className=" font-bold flex cursor-pointer text-4xl lg:text-6xl group  hover:text-zinc-200 duration-500">
                 Contact Me
                 <div className=" lg:invisible lg:translate-x-20 lg:group-hover:translate-x-0 lg:group-hover:visible duration-500 ml-4">
                   →
