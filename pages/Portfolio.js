@@ -60,9 +60,9 @@ export default function Portfolio() {
                       console.log("changeimage");
                       setHoverBackgroundImage(Cards.src);
                     }}
-                    className="lg:px-8 px-4 flex flex-col group border-b border-black cursor-pointer"
+                    className="lg:px-10 px-0 flex flex-col group border-b border-black cursor-pointer"
                   >
-                    <div className="relative flex lg:hidden min-h-[30vh] lg:min-h-[50vh] mt-10 lg:mt-0 w-full">
+                    <div className="relative flex lg:hidden group min-h-[40vh] lg:min-h-[50vh] mt-0 lg:mt-0 w-full">
                       <Image
                         alt="card"
                         src={Cards.src}
@@ -72,19 +72,19 @@ export default function Portfolio() {
                       />
                     </div>
                     <div className="px-6">
-                      <div className="lg:h-28 h-12 mt-10 lg:mt-0 text-3xl lg:text-5xl font-bold tracking-wide w-full flex justify-between  items-center">
+                      <div className="group-hover:my-10 mt-10 lg:mt-0 text-4xl lg:text-6xl font-bold lg:font-normal tracking-wide w-full flex justify-between  items-center">
                         <div>{Cards.title}</div>
                         <div className="text-black text-xl">
                           {index + 1}/{PortfolioCards.length}
                         </div>
                       </div>
-                      <div className="lg:group-hover:mb-10 lg:mb-10 mb-10 mt-10 lg:mt-10 lg:hidden group-hover:flex text-black text-xs lg:text-base">
+                      <div className="lg:group-hover:mb-10 lg:mb-10 mb-10 mt-10 lg:mt-10 lg:hidden group-hover:flex text-black text-sm lg:text-base">
                         {Cards.subTitle}
                       </div>
-                      <div className="group-hover:h-full lg:w-4/5 tracking-widest lg:tracking-normal lg:hidden pb-5 lg:px-0 lg:pr-10   group-hover:flex text-xs lg:text-base  duration-500 mb-2">
+                      <div className="group-hover:h-full lg:w-4/5 tracking-widest lg:tracking-normal lg:hidden pb-5 lg:px-0 lg:pr-10   group-hover:flex text-sm lg:text-base  duration-500 mb-2">
                         {Cards.PortfolioDiscription}
                       </div>
-                      <div className="group-hover:h-full lg:w-4/5 tracking-widest lg:tracking-normal   lg:px-0 pb-20 lg:pr-10 lg:hidden group-hover:flex text-xs lg:text-base  duration-500 mb-10">
+                      <div className="group-hover:h-full lg:w-4/5 tracking-widest lg:tracking-normal   lg:px-0 pb-20 lg:pr-10 lg:hidden group-hover:flex text-sm lg:text-base  duration-500 mb-10">
                         {Cards.PortfolioDiscription2}
                       </div>
                     </div>
