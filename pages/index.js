@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import Layout from "../components/Layout";
 
+import AiFillMail from "react-icons/ai";
+import { FaGithub, FaTwitter ,FaMailBulk } from "react-icons/fa";
+
 import MyImage from "../public/000030.JPG";
 import Image from "next/image";
 import Link from "next/link";
-
 
 import Portfolio1Img from "../public/Portfolio1.png";
 import Portfolio2Img from "../public/PortFolio.png";
@@ -127,8 +129,6 @@ const AboutMe = () => {
     },
   ];
 
-  
-
   const [activeFrontEnd, setActiveFrontEnd] = useState(true);
   const [activeBackEnd, setActiveBackEnd] = useState(false);
   const [activeOthers, setActiveOthers] = useState(false);
@@ -170,7 +170,6 @@ const AboutMe = () => {
                 <nobr className="text-black ">I&apos;m AUZ</nobr>
                 <a className="">. Web developer and web designer.</a>
               </div>
-             
               <Link href="/Contact">
                 <div className=" mt-20 mr-10 border border-black lg:ml-auto flex group px-8 py-3 rounded-full text-base lg:text-lg cursor-pointer">
                   <div className=" -translate-x-6 mr-3 group-hover:opacity-100 opacity-0 duration-700 group-hover:translate-x-5">
@@ -189,42 +188,63 @@ const AboutMe = () => {
 
           {/* <div className="text-white -mt-4"></div> */}
 
-          <div className=" w-full lg:pb-40 pb-20 border-black bg-black text-stone-200 px-10 cursor-pointer">
+          <div className=" w-full min-h-[100vh] lg:pb-40 pb-20 border-black bg-black text-stone-200 px-10 cursor-pointer">
             {" "}
             <div className="mt-10 text-4xl lg:text-6xl"></div>
             <div className="flex flex-col  border-stone-200 col-span-2 ">
               <div className="lg:w-2/3 lg:mt-20 mt-20 mb-10 font-bold text-4xl sm:text-6xl lg:text-6xl  ">
-                I love technology and design.<br></br>
-                <Link href="/Portfolio">
-                  <div className="flex   group  hover:text-stone-400 duration-500">
-                    <div className="pr-2 lg:pr-5 lg:group-hover:opacity-0 opacity-100 duration-300 border-b-2 border-stone-200">
-                      View
-                    </div>
-                    <div className=" lg:group-hover:-translate-x-40 duration-700 border-b-2 border-stone-200">
-                      Portfolio
-                    </div>
-                    <div className="lg:group-hover:-translate-x-40 invisible lg:group-hover:visible duration-1000 ml-4">
-                      →
-                    </div>
-                  </div>
-                </Link>
+                I love technology and design.<br></br>Please take a look at my
+                portfolio site.
               </div>
-              <div className="flex">
-                <div className="lg:w-1/2 pr-8 lg:pr-0  flex flex-col text-sm  lg:text-lg border-stone-200 py-10 lg:py-20">
+
+              <div className="flex flex-col lg:flex-row pb-10 lg:pt-20 lg:pb-20 text-stone-200">
+                <div className="lg:w-1/3  lg:my-2 lg:pr-0 flex flex-col text-sm  lg:text-base  bg-black text-stone-200 ">
                   <div className="flex ">React / Next.js</div>
                   <div className="flex  mt-1">
                     ChakraUI / TailwindCSS / styled-components
                   </div>
                   <div className="flex  mt-1">FramerMotion / GSAP </div>
                   <div className="flex  mt-1">Firebase / GraphQL / Node.js</div>
-                  <div className="flex mt-1">Git</div>
+                  <div className="flex mt-1">Git /</div>
+                </div>
+                <div className="lg:w-2/3 mt-10 lg:mt-0 lg:ml-0 text-2xl lg:text-4xl">
+                  {PortfolioCards.map((Card, index) => {
+                    return (
+                      <Link href="/Portfolio" key="index">
+                        <div
+                          className="px-4 py-2 lg:py-4  my-2 font-bold rounded-lg bg-stone-200 hover:bg-black hover:border-stone-200 border-2 hover:text-stone-200 border-black text-black duration-700"
+                          key="index"
+                        >
+                          {Card.title}
+                        </div>
+                      </Link>
+                    );
+                  })}
+                  <Link href="/Portfolio">
+                    <div
+                      className="flex px-2 lg:px-4 lg:py-4 py-2 border-2 my-2 font-bold rounded-lg group bg-black border-stone-200 text-stone-200 "
+                      key="index"
+                    >
+                      <div className="flex   group  hover:text-stone-400 duration-500">
+                        <div className="pr-2 lg:pr-5 lg:group-hover:opacity-0 opacity-100 duration-300 ">
+                          View all
+                        </div>
+                        <div className=" lg:group-hover:-translate-x-40 duration-700 ">
+                          projects
+                        </div>
+                        <div className="lg:group-hover:-translate-x-40 invisible lg:group-hover:visible duration-1000 ml-4">
+                          →
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
 
           <div
-            className="pt-20 pb-20 px-10 w-full border-t bg-yellowbg border-black text-black tracking-wide grid lg:grid-cols-3"
+            className="pt-20 pb-20 px-10 w-full border-t min-h-[100vh] bg-yellowbg border-black text-black tracking-wide grid lg:grid-cols-3"
             id="Skills"
           >
             <div className="text-4xl lg:text-6xl font-bold">
@@ -369,21 +389,26 @@ const AboutMe = () => {
           </div>
         </div>
 
-        
-        <div className=" bg-bluebg  text-text-white">
-          <div className="border-t border-white px-10 pt-10 lg:pt-20 pb-20 lg:pb-40">
-            {" "}
-            <Link href="/Contact">
-              <div className=" font-bold flex cursor-pointer text-4xl lg:text-6xl group  hover:text-zinc-200 duration-500">
-                Contact Me
-                <div className=" lg:invisible lg:translate-x-20 lg:group-hover:translate-x-0 lg:group-hover:visible duration-500 ml-4">
-                  →
-                </div>
+        <div className=" bg-bluebg  text-white">
+          <div className="border-t border-white px-10 pt-20 lg:pt-40 pb-20 lg:pb-40">
+            <div className=" flex items-center font-bold lg:uppercase justify-start lg:justify-center text-4xl lg:text-8xl">
+              Contact me
+            </div>
+
+            <div className="flex flex-col items-center lg:justify-center mt-10 lg:mt-10 ">
+              <div className="lg:w-1/3 text-sm lg:text-lg font-normal">
+                If you are interested in me and would like to offer me a job,
+                please click on this title to get in touch with me.
               </div>
-            </Link>
-            <div className="lg:w-1/3 text-sm lg:text-lg mt-10 lg:mt-20 lg:pr-20 font-normal">
-              If you are interested in me and would like to offer me a job,
-              please click on this title to get in touch with me.
+              <div className="mt-20 text-2xl uppercase mr-auto lg:mr-0 grid gap-6 lg:gap-10 lg:grid-cols-3 grid-cols-2">
+                <div className="lg:h-48 h-32 lg:w-48 w-32 flex justify-center items-center text-bluebg bg-white rounded-full hover:scale-110 duration-300"><a href="https://github.com/AtsukiU">
+                  <FaGithub className="" size={80} /></a>
+                </div>
+                <div className="lg:h-48 h-32 lg:w-48 w-32 flex justify-center items-center text-bluebg bg-white rounded-full hover:scale-110 duration-300"> <a href="https://twitter.com/itwebzozo">
+                  <FaTwitter className="" size={80}/></a>
+                </div>{" "}
+                <div className=" lg:h-48 h-32 lg:w-48 w-32 flex justify-center items-center text-bluebg bg-white rounded-full hover:scale-110 duration-300"><Link href="/Contact"><FaMailBulk className="" size={80}/></Link></div>
+              </div>
             </div>
           </div>
         </div>

@@ -76,7 +76,7 @@ const Contact = () => {
               onChange={(e) => {
                 setMail(e.target.value);
               }} //mail input //////////////////////
-              className="mt-1  px-2 h-10 text-sm lg:text-xl w-full bg-stone-200 border border-black"
+              className="mt-1 rounded-lg  px-2 h-10 text-sm lg:text-xl w-full bg-stone-200 border border-black"
             ></input>
           </div>
           <div className="pt-4">
@@ -88,7 +88,7 @@ const Contact = () => {
               onChange={(e) => {
                 setName(e.target.value);
               }} //
-              className="mt-1 px-2  h-10 text-sm lg:text-xl w-full bg-stone-200 border-black border"
+              className="mt-1 px-2  rounded-lg h-10 text-sm lg:text-xl w-full bg-stone-200 border-black border"
             ></input>
           </div>
 
@@ -99,7 +99,7 @@ const Contact = () => {
             onChange={(e) => {
               setMessage(e.target.value);
             }} //textinput/////////////////////////
-            className="min-h-[30vh]  pt-2 px-2 mt-10 mb-10 text-sm lg:text-xl w-full bg-stone-200 border border-black"
+            className="min-h-[30vh] rounded-lg  pt-2 px-2 mt-10 mb-10 text-sm lg:text-xl w-full bg-stone-200 border border-black"
           ></textarea>
           <div className="w-full  flex justify-end">
             <button
