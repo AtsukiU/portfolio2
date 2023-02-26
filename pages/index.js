@@ -188,16 +188,16 @@ const AboutMe = () => {
 
           {/* <div className="text-white -mt-4"></div> */}
 
-          <div className=" w-full min-h-[100vh] lg:pb-40 pb-20 border-black bg-black text-stone-200 px-10 cursor-pointer">
+          <div className=" w-full min-h-[100vh] lg:pb-20 pb-20 border-black bg-black text-stone-200 px-10 cursor-pointer">
             {" "}
             <div className="mt-10 text-4xl lg:text-6xl"></div>
             <div className="flex flex-col  border-stone-200 col-span-2 ">
-              <div className="lg:w-2/3 lg:mt-20 mt-20 mb-10 font-bold text-4xl sm:text-6xl lg:text-6xl  ">
+              <div className="lg:w-2/3 lg:mt-20 mt-20 mb-10  font-bold text-4xl sm:text-6xl lg:text-6xl  ">
                 I love technology and design.<br></br>Please take a look at my
                 portfolio site.
               </div>
 
-              <div className="flex flex-col lg:flex-row pb-10 lg:pt-20 lg:pb-20 text-stone-200">
+              <div className="flex flex-col lg:flex-col pb-10 lg:pt-10 lg:pb-20 text-stone-200">
                 <div className="lg:w-1/3  lg:my-2 lg:pr-0 flex flex-col text-sm  lg:text-base  bg-black text-stone-200 ">
                   <div className="flex ">React / Next.js</div>
                   <div className="flex  mt-1">
@@ -207,12 +207,12 @@ const AboutMe = () => {
                   <div className="flex  mt-1">Firebase / GraphQL / Node.js</div>
                   <div className="flex mt-1">Git /</div>
                 </div>
-                <div className="lg:w-2/3 mt-10 lg:mt-0 lg:ml-0 text-2xl lg:text-4xl">
+                <div className="lg:w-full mt-10 lg:mt-20 lg:ml-0 text-2xl lg:text-4xl">
                   {PortfolioCards.map((Card, index) => {
                     return (
                       <Link href="/Portfolio" key="index">
                         <div
-                          className="px-4 py-2 lg:py-4  my-2 font-bold rounded-lg bg-stone-200 hover:bg-black hover:border-stone-200 border-2 hover:text-stone-200 border-black text-black duration-700"
+                          className="px-4 py-2 lg:py-4  my-2 font-bold rounded-lg bg-stone-200 hover:bg-black hover:border-stone-200 border hover:text-stone-200 border-black text-black duration-700"
                           key="index"
                         >
                           {Card.title}
@@ -222,10 +222,10 @@ const AboutMe = () => {
                   })}
                   <Link href="/Portfolio">
                     <div
-                      className="flex px-2 lg:px-4 lg:py-4 py-2 border-2 my-2 font-bold rounded-lg group bg-black border-stone-200 text-stone-200 "
+                      className="flex px-4  lg:py-4 py-2 border my-2 font-bold rounded-lg group text-2xl lg:text-4xl bg-black border-stone-200 text-stone-200 "
                       key="index"
                     >
-                      <div className="flex   group  hover:text-stone-400 duration-500">
+                      <div className="flex  group  hover:text-stone-400 duration-500">
                         <div className="pr-2 lg:pr-5 lg:group-hover:opacity-0 opacity-100 duration-300 ">
                           View all
                         </div>
