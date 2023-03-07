@@ -11,6 +11,7 @@ import Link from "next/link";
 import Portfolio1Img from "../public/Portfolio1.png";
 import Portfolio2Img from "../public/PortFolio.png";
 import PostItMemo from "../public/PostItMemo.png";
+import EC from "../public/FireShot Capture 010 - HP by Nextjs - ec-demo-tau.vercel.app.png";
 
 import HTMLIcon from "../public/html5-fill.svg";
 import JavascriptIcon from "../public/logo-javascript.svg";
@@ -34,28 +35,45 @@ import { Autoplay, EffectFade, Pagination, FreeMode } from "swiper";
 const AboutMe = () => {
   const PortfolioCards = [
     {
-      title: "Portfolio1",
+      title: "Portfolio 1",
       src: Portfolio1Img,
-      subTitle: "React",
-      PortfolioDiscriptionURL: "/PortfolioDiscription",
+      subTitle: "React / ChakraUI / EmailJS ",
+      PortfolioDiscriptionURL: "https://portfolio-beta-murex-17.vercel.app/",
       PortfolioDiscription:
         "自身初のポートフォリオサイト。コンセプトはモダンなUIUXです。ダークモードとライトモードの切り替えを実装。直接コンタクトが取れるコンタクトフォームを導入しました。スライダーも導入し、どういったスキルを持っているかなどを視覚的に分かりやすくしています。",
+      PortfolioDiscription2:
+        "Reactを使用。ダークモードの導入や簡単なアニメーションの導入、現代的なUIUXデザインでのポートフォリオサイトの作成を考えていたため、CSSフレームワークはChakraUIが最適であると考え採用しました。",
     },
     {
       title: "Post It Memo",
       src: PostItMemo,
-      subTitle: "React",
-      PortfolioDiscriptionURL: "/PortfolioDiscription",
+      subTitle: "React / Firebase / styled-components / FramerMotion",
+      PortfolioDiscriptionURL: "https://react-post-it.vercel.app/",
       PortfolioDiscription:
         "付箋型のメモアプリ。簡単に使うことが出来るシンプルなアプリを目指し制作。データの入力、読み込み、削除が出来ます。",
+      PortfolioDiscription2:
+        "Reactを使用。CSSフレームワークはstyled-componentsを使用。データの保持にはFirebaseを使用しています。FramerMotionを使用し、メモ作成時のアニメーションを導入しています。",
     },
     {
-      title: "Portfolio2",
-      src: Portfolio2Img,
-      subTitle: "React",
-      PortfolioDiscriptionURL: "/PortfolioDiscription",
+      title: "(EC Demo) ",
+      src: EC,
+      subTitle: "React / Firebase / styled-components / FramerMotion",
+      PortfolioDiscriptionURL: "https://ec-demo-tau.vercel.app/",
       PortfolioDiscription:
-        "2つ目のポートフォリオサイト。より自由度が高く、自分が好きだと思えるサイトを目指し制作。",
+        "付箋型のメモアプリ。簡単に使うことが出来るシンプルなアプリを目指し制作。データの入力、読み込み、削除が出来ます。",
+      PortfolioDiscription2:
+        "Reactを使用。CSSフレームワークはstyled-componentsを使用。データの保持にはFirebaseを使用しています。FramerMotionを使用し、メモ作成時のアニメーションを導入しています。",
+    },
+
+    {
+      title: "Portfolio 2",
+      src: Portfolio2Img,
+      subTitle: "Next.js / TailwindCSS / ReactSwiper / EmailJS / FramerMotion",
+      PortfolioDiscriptionURL: "https://portfolio2-three-gamma.vercel.app/",
+      PortfolioDiscription:
+        "このサイトです。より自由度が高く、自分が好きだと思えるサイトを目指し制作。",
+      PortfolioDiscription2:
+        " Next.js、TailwindCSSを使い制作開始。Next.jsはReactに比べルーティングやSSRの点で優位性があると考え採用。デザイン性を高めたかったのでChakraUIより自由度の高いTailwindCSSを導入。",
     },
   ];
 
@@ -212,12 +230,12 @@ const AboutMe = () => {
                   <div className="flex  mt-1">Firebase / GraphQL / Node.js</div>
                   <div className="flex mt-1">Git /</div>
                 </div>
-                <div className="lg:w-full mt-10 lg:mt-20 lg:ml-0 text-2xl lg:text-4xl">
+                <div className="lg:w-full mt-10 lg:mt-20 lg:ml-0 text-2xl lg:text-4xl border-stone-200 border-t">
                   {PortfolioCards.map((Card, index) => {
                     return (
-                      <Link href="/Portfolio" key="index">
+                      <Link href={Card.PortfolioDiscriptionURL} key="index">
                         <div
-                          className="px-4 py-2 lg:py-4  my-2 font-bold rounded-lg bg-stone-200 hover:bg-black hover:border-stone-200 border hover:text-stone-200 border-black text-black duration-700"
+                          className="px-4 py-2 lg:py-4   font-bold hover:bg-stone-200 hover:border-stone-200 border-b hover:text-black border-stone-200 text-stone-200 duration-700"
                           key="index"
                         >
                           {Card.title}
@@ -226,21 +244,8 @@ const AboutMe = () => {
                     );
                   })}
                   <Link href="/Portfolio">
-                    <div
-                      className="flex px-4  lg:py-4 py-2 border my-2 font-bold rounded-lg group text-2xl lg:text-4xl bg-black border-stone-200 text-stone-200 "
-                      key="index"
-                    >
-                      <div className="flex  group  hover:text-stone-400 duration-500">
-                        <div className="pr-2 lg:pr-5 lg:group-hover:opacity-0 opacity-100 duration-300 ">
-                          View all
-                        </div>
-                        <div className=" lg:group-hover:-translate-x-40 duration-700 ">
-                          projects
-                        </div>
-                        <div className="lg:group-hover:-translate-x-40 invisible lg:group-hover:visible duration-1000 ml-4">
-                          →
-                        </div>
-                      </div>
+                    <div className="px-4 py-2 lg:py-4 flex justify-end  font-bold hover:bg-stone-200 hover:border-stone-200 border-b hover:text-black border-stone-200 text-stone-200 duration-700">
+                      → View all projects
                     </div>
                   </Link>
                 </div>
