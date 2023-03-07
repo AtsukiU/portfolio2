@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Layout from "../components/Layout";
 
 import AiFillMail from "react-icons/ai";
-import { FaGithub, FaTwitter ,FaMailBulk } from "react-icons/fa";
+import { FaGithub, FaTwitter, FaMailBulk } from "react-icons/fa";
 
 import MyImage from "../public/000030.JPG";
 import Image from "next/image";
@@ -169,6 +169,11 @@ const AboutMe = () => {
                 <a>Welcome to my personal website. </a>
                 <nobr className="text-black ">I&apos;m AUZ</nobr>
                 <a className="">. Web developer and web designer.</a>
+                <div className="text-base mt-20 flex flex-col">
+                  <div>Man</div>
+                  <div>Japan</div>
+                  <div>Web developer</div>
+                </div>
               </div>
               <Link href="/Contact">
                 <div className=" mt-20 mr-10 border border-black lg:ml-auto flex group px-8 py-3 rounded-full text-base lg:text-lg cursor-pointer">
@@ -401,13 +406,22 @@ const AboutMe = () => {
                 please click on this title to get in touch with me.
               </div>
               <div className="mt-20 text-2xl uppercase mr-auto lg:mr-0 grid gap-6 lg:gap-10 lg:grid-cols-3 grid-cols-2">
-                <div className="lg:h-48 h-32 lg:w-48 w-32 flex justify-center items-center text-bluebg bg-white rounded-full hover:scale-110 duration-300"><a href="https://github.com/AtsukiU">
-                  <FaGithub className="" size={80} /></a>
+                <div className="lg:h-48 h-32 lg:w-48 w-32 flex justify-center items-center text-bluebg bg-white rounded-full hover:scale-110 duration-300">
+                  <a href="https://github.com/AtsukiU">
+                    <FaGithub className="" size={80} />
+                  </a>
                 </div>
-                <div className="lg:h-48 h-32 lg:w-48 w-32 flex justify-center items-center text-bluebg bg-white rounded-full hover:scale-110 duration-300"> <a href="https://twitter.com/itwebzozo">
-                  <FaTwitter className="" size={80}/></a>
+                <div className="lg:h-48 h-32 lg:w-48 w-32 flex justify-center items-center text-bluebg bg-white rounded-full hover:scale-110 duration-300">
+                  {" "}
+                  <a href="https://twitter.com/itwebzozo">
+                    <FaTwitter className="" size={80} />
+                  </a>
                 </div>{" "}
-                <div className=" lg:h-48 h-32 lg:w-48 w-32 flex justify-center items-center text-bluebg bg-white rounded-full hover:scale-110 duration-300"><Link href="/Contact"><FaMailBulk className="" size={80}/></Link></div>
+                <div className=" lg:h-48 h-32 lg:w-48 w-32 flex justify-center items-center text-bluebg bg-white rounded-full hover:scale-110 duration-300">
+                  <Link href="/Contact">
+                    <FaMailBulk className="" size={80} />
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
