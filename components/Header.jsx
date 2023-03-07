@@ -18,17 +18,17 @@ const Header = () => {
     <header className="lg:w-52 w-full  lg:h-screen border-r border-black fixed  font-Montserrat  z-50">
       <div className="lg:bg-stone-200 h-full">
         <div className="px-0 sm:px-4 lg:px-10 py-2 lg:py-14 flex justify-between lg:justify-start items-center lg:items-start lg:flex-col filter  text-black lg:text-black   w-full h-full ">
-          <div className="flex pl-4 lg:pl-0 text-2xl tracking-wide">
+          <div className="flex pl-4 lg:pl-0 text-4xl font-bold tracking-wide">
             {" "}
             <Link href="/">AUZ</Link>
           </div>
 
           <div className="  flex items-center lg:mt-10">
-            <ul className=" filter gap-1 text-lg flex lg:flex-col uppercase ">
+            <ul className=" filter gap-4 text-base flex lg:flex-col">
               {headers.map((header, index) => {
                 return (
                   <li
-                    className="items-center lg:px-1  hidden lg:flex  duration-300 lg:hover:brightness-90 lg:hover:-translate-y-1"
+                    className="items-center lg:px-1  hidden lg:flex  duration-300 lg:hover:brightness-90 lg:hover:translate-x-2"
                     key={index}
                   >
                     <Link href={header.url}>{header.list}</Link>
