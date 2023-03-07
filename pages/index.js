@@ -164,7 +164,7 @@ const AboutMe = () => {
             <div className="w-full  flex  flex-col items">
               <div
                 id="Title"
-                className="lg:w-8/12 lg:mt-10  break-all text-black font-bold text-4xl sm:text-5xl lg:text-8xl  "
+                className="lg:w-8/12 lg:mt-10  break-all text-black font-bold text-4xl sm:text-5xl lg:text-7xl  "
               >
                 <a>Welcome to my personal website. </a>
                 <nobr className="text-black ">I&apos;m AUZ</nobr>

@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import Layout from "../components/Layout";
 import Image from "next/image";
 import Portfolio1Img from "../public/Portfolio1.png";
-import Portfolio2Img from "../public/PortFolio.png";
+import Portfolio2Img from "../public/ AUZ's Portfolio.png";
+import EC from "../public/FireShot Capture 010 - HP by Nextjs - ec-demo-tau.vercel.app.png"
 import PostItMemo from "../public/PostItMemo.png";
 
 import Link from "next/link";
@@ -33,6 +34,15 @@ export default function Portfolio() {
         "付箋型のメモアプリ。簡単に使うことが出来るシンプルなアプリを目指し制作。データの入力、読み込み、削除が出来ます。",
       PortfolioDiscription2:
         "Reactを使用。CSSフレームワークはstyled-componentsを使用。データの保持にはFirebaseを使用しています。FramerMotionを使用し、メモ作成時のアニメーションを導入しています。",
+    },{
+      title: "(EC Demo) ",
+      src: EC,
+      subTitle: "React / Firebase / styled-components / FramerMotion",
+      PortfolioDiscriptionURL: "https://ec-demo-tau.vercel.app/",
+      PortfolioDiscription:
+        "付箋型のメモアプリ。簡単に使うことが出来るシンプルなアプリを目指し制作。データの入力、読み込み、削除が出来ます。",
+      PortfolioDiscription2:
+        "Reactを使用。CSSフレームワークはstyled-componentsを使用。データの保持にはFirebaseを使用しています。FramerMotionを使用し、メモ作成時のアニメーションを導入しています。",
     },
 
     {
@@ -51,7 +61,7 @@ export default function Portfolio() {
     <Layout>
       <div className="bg-stone-200 w-full min-h-screen  text-black">
         <div className="flex lg:flex-row flex-col">
-          <div className="lg:w-3/5 mt-20 lg:mt-0 lg:froat-left lg:overflow-auto  lg:h-[100vh] border-t lg:border-t lg:border-b hover:border-b-0 lg:border-r border-black ">
+          <div className="lg:w-1/4 mt-20 lg:mt-0 lg:froat-left lg:overflow-auto  lg:h-[100vh] border-t lg:border-t lg:border-b hover:border-b-1 lg:border-r border-black ">
             {PortfolioCards.map((Cards, index) => {
               return (
                 <Link key="index" href={Cards.PortfolioDiscriptionURL}>
@@ -60,9 +70,9 @@ export default function Portfolio() {
                       console.log("changeimage");
                       setHoverBackgroundImage(Cards.src);
                     }}
-                    className="lg:px-10 px-0 flex flex-col group border-b border-black cursor-pointer"
+                    className=" flex flex-col group border-b border-black cursor-pointer"
                   >
-                    <div className="relative flex lg:hidden group min-h-[40vh] lg:min-h-[50vh] mt-0 lg:mt-0 w-full">
+                    <div className="relative flex lg:hidden group min-h-[40vh] lg:min-h-[50vh] w-full">
                       <Image
                         alt="card"
                         src={Cards.src}
@@ -71,21 +81,23 @@ export default function Portfolio() {
                         className=""
                       />
                     </div>
-                    <div className="px-6">
-                      <div className="group-hover:my-10 mt-10 lg:mt-0 text-4xl lg:text-6xl font-bold lg:font-normal tracking-wide w-full flex justify-between  items-center">
+                    <div className="">
+                      <div className="hover:bg-black hover:text-stone-200 duration-700 px-4 pt-10 lg:pt-10 text-4xl lg:text-4xl uppercase  font-bold lg:font-bold  w-full flex justify-between  items-center">
                         <div>{Cards.title}</div>
-                        <div className="text-black text-xl">
+                        <div className="text-base font-normal mt-auto">
                           {index + 1}/{PortfolioCards.length}
                         </div>
                       </div>
-                      <div className="lg:group-hover:mb-10 lg:mb-10 mb-10 mt-10 lg:mt-10 lg:hidden group-hover:flex text-black text-sm lg:text-base">
-                        {Cards.subTitle}
-                      </div>
-                      <div className="group-hover:h-full lg:w-4/5 tracking-widest lg:tracking-normal lg:hidden pb-5 lg:px-0 lg:pr-10   group-hover:flex text-sm lg:text-base  duration-500 mb-2">
-                        {Cards.PortfolioDiscription}
-                      </div>
-                      <div className="group-hover:h-full lg:w-4/5 tracking-widest lg:tracking-normal   lg:px-0 pb-20 lg:pr-10 lg:hidden group-hover:flex text-sm lg:text-base  duration-500 mb-10">
-                        {Cards.PortfolioDiscription2}
+                      <div className="hidden">
+                        <div className="lg:group-hover:mb-10 lg:mb-10 mb-10 mt-10 lg:mt-10 lg:hidden flex text-black text-sm lg:text-base">
+                          {Cards.subTitle}
+                        </div>
+                        <div className="group-hover:h-full lg:w-full tracking-widest lg:tracking-normal lg:hidden pb-5 lg:px-0 lg:pr-10   group-hover:flex text-sm lg:text-base  duration-500 mb-2">
+                          {Cards.PortfolioDiscription}
+                        </div>
+                        <div className="group-hover:h-full lg:w-full tracking-widest lg:tracking-normal   lg:px-0 pb-20 lg:pr-10 lg:hidden group-hover:flex text-sm lg:text-base  duration-500 mb-10">
+                          {Cards.PortfolioDiscription2}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -93,7 +105,7 @@ export default function Portfolio() {
               );
             })}
           </div>
-          <div className="lg:w-2/5 lg:float-right lg:h-9/12 lg:border-y border-black">
+          <div className="lg:w-3/4 lg:float-right lg:h-9/12 lg:border-y border-black">
             <div className="relative h-full w-full">
               <Image
                 alt="card"

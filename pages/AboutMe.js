@@ -87,7 +87,7 @@ const AboutMe = () => {
 
   return (
     <Layout>
-      <div className="min-h-[100vh] flex flex-col lg:flex-row w-full items-center px-10 lg:px-0  bg-white">
+      <div className="min-h-[100vh] flex flex-col lg:flex-row w-full items-center px-10 lg:px-0  bg-stone-200">
         <div className="lg:w-1/2 min-h-[100vh] lg:py-10 pt-20 border-black lg:pl-10 h-full flex flex-col justify-center">
           <div className="mt-10 mx-auto my-auto w-[200px] h-[300px] flex lg:hidden  relative">
             <Image
@@ -129,13 +129,13 @@ const AboutMe = () => {
             歳。4年制大学の経済学部を卒業後、窓口営業を経験。働いている中で、何かを生み出すことへの興味関心に気づき、プログラミングとデザインの勉強を始めました。新しい技術やデザインが好きで、日々新しい価値を生み出すことを目標にWEB制作やWEB開発に関する知識の習得に励んでいます。お声がけお待ちしています。
           </div>
         </div>
-        <div className="lg:mb-20 mx-auto w-[200px] h-[300px] lg:w-[400px] lg:h-[600px] lg:flex   hidden  relative">
+        <div className="lg:mb-20 mx-auto w-[200px] h-[300px] lg:w-[500px] lg:h-[600px] lg:flex   hidden  relative">
           <Image
             src={Avatar}
             layout="fill"
             objectFit="cover"
             alt="Avatar"
-            className=""
+            className="rounded-full"
           />
         </div>
       </div>
