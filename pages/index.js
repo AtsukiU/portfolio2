@@ -235,7 +235,7 @@ const AboutMe = () => {
                     return (
                       <Link href={Card.PortfolioDiscriptionURL} key="index">
                         <div
-                          className="px-4 py-2 lg:py-4   font-bold hover:bg-stone-200 hover:border-stone-200 border-b hover:text-black border-stone-200 text-stone-200 duration-700"
+                          className="px-4 py-2 lg:py-2   font-bold hover:bg-stone-200 hover:border-stone-200 border-b hover:text-black border-stone-200 text-stone-200 duration-700"
                           key="index"
                         >
                           {Card.title}
@@ -244,7 +244,7 @@ const AboutMe = () => {
                     );
                   })}
                   <Link href="/Portfolio">
-                    <div className="px-4 py-2 lg:py-4 flex justify-end  font-bold hover:bg-stone-200 hover:border-stone-200 border-b hover:text-black border-stone-200 text-stone-200 duration-700">
+                    <div className="px-4 py-2 lg:py-4 flex justify-end  font-bold hover:bg-stone-200 hover:border-stone-200 hover:text-black border-stone-200 text-stone-200 duration-700">
                       → View all projects
                     </div>
                   </Link>

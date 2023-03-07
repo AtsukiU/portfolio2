@@ -6,7 +6,7 @@ import { Divide as Hamburger } from "hamburger-react";
 
 const Header = () => {
   const headers = [
-    { list: "HOME", url: "/" },
+    { list: "Home", url: "/" },
     { list: "AboutMe", url: "/AboutMe" },
     { list: "Portfolio", url: "/Portfolio" },
     { list: "Contact", url: "/Contact" },
