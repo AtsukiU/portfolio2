@@ -37,14 +37,15 @@ const Header = () => {
   return (
     <header className=" w-full lg:border-black text-black  fixed font-Montserrat  z-50">
       <div className="lg:h-28 border-b border-black bg-white  flex items-center justify-between">
-        <div className="font-audiowide pl-4 lg:pl-0 w-1/5 lg:border-r h-full text-4xl lg:text-9xl flex items-center justify-center  border-black">
+        <div className="font-audiowide pl-4 lg:pl-0 w-1/5 lg:border-r h-full text-4xl sm:text-6xl lg:text-7xl xl:text-8xl flex items-center justify-center  border-black">
           AUZ
         </div>
         <div className="w-4/5 h-full lg:flex flex-col hidden">
-          <div className="h-1/2 border-b border-black flex items-center px-4 gap-6">
+          <div className="h-1/2 border-b border-black flex items-center px-4 gap-10">
             <div>I&apos;m AUZ </div> <div>Japan </div>
             <div>{ageOutput}</div>
             <div>Web developer</div>
+            <div>Web designer</div>
           </div>
           <ul className="w-full h-14 grid grid-cols-5 ">
             {" "}
@@ -65,10 +66,12 @@ const Header = () => {
         </div>
       </div>
 
-      <div className=" bg-white  w-14 h-[calc(100vh-136px)] lg:flex justify-center items-center  border-r border-black fixed hidden ">
-        <div className="-rotate-90 items-center justify-center  flex ">
-          HOME
-        </div>
+      <div className=" bg-white cursor-pointer hover:bg-black hover:text-white duration-700  w-14 h-[calc(100vh-136px)] lg:flex justify-center items-center  border-r border-black fixed hidden ">
+        <Link href="/">
+          <div className="-rotate-90 items-center justify-center  flex ">
+            HOME
+          </div>
+        </Link>
       </div>
 
       {isOpen ? (

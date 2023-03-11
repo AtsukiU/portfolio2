@@ -41,7 +41,7 @@ const Contact = () => {
       <div className="px-4 lg:px-20 lg:mt-28 lg:pt-5  w-full lg:min-h-[calc(100vh-136px)] min-h-screen mt-14 bg-white text-black grid lg:grid-cols-1">
         <div className="flex mt-20 lg:mt-10 flex-col lg:flex-col  text-4xl lg:text-6xl ">
           <div className="flex items-end justify-between">
-            <div className="font-bold">Contact</div>
+            <div className="">Contact</div>
             <div className="flex items-end ml-5">
               <div className="flex  text-lg lg:text-xl ">
                 <a href="https://twitter.com/itwebzozo">

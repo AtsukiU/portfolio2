@@ -100,7 +100,8 @@ const AboutMe = () => {
           </div>
 
           <div className=" lg:px-40 pt-20 lg:pt-0 text-black  text-sm lg:text-lg break-all">
-            <div className="mb-10 flex uppercase">
+            <div className="mb-20 text-6xl">AUZ</div>
+            <div className="mb-20 flex uppercase">
               <div className="border rounded-full px-4 py-1 border-black">Web developer</div>
               <div className="ml-4 border rounded-full px-4 py-1 border-black">Web designer</div>
             </div>
