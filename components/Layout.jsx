@@ -5,8 +5,8 @@ import Header from "./Header";
 
 import Link from "next/link";
 import { Triangle } from "react-loader-spinner";
-import { useRouter } from "next/router"
-import { useEffect, useState } from "react"
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import Looder from "../pages/Looder";
 
 export default function Layout({ children }) {
@@ -56,9 +56,18 @@ export default function Layout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
           rel="stylesheet"
         ></link>
+
+        <link
+          href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap"
+          rel="stylesheet"
+        ></link>
+        <link
+          href="https://fonts.googleapis.com/css2?family=League+Gothic&display=swap"
+          rel="stylesheet"
+        ></link>
       </Head>
       <Header />
-      <main className="overflow-hidden  font-montserrat lg:ml-52">
+      <main className="overflow-hidden  font-montserrat lg:pl-14 bg-white">
         {children}
       </main>
       <Footer />

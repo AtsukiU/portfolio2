@@ -10,13 +10,15 @@ module.exports = {
       fontFamily: {
         montserrat: ["Inter", "sans-serif"],
         comfortaa: ["Comfortaa", "cursive"],
-        jost:['Jost', "sans-serif"],
-        poppin:['Poppins', "sans-serif"]
+        jost: ["Jost", "sans-serif"],
+        poppin: ["Poppins", "sans-serif"],
+        audiowide: ["Audiowide", "cursive"],
+        leaguegothic: ["League Gothic", "sans-serif"],
       },
       colors: {
         deepgreen: "rgb(141,149,146)",
-        yellowbg:"rgb(245,239,223)",
-        bluebg:"rgb(142,174,188)"
+        yellowbg: "rgb(245,239,223)",
+        bluebg: "rgb(142,174,188)",
       },
     },
   },

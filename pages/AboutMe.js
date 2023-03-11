@@ -87,9 +87,9 @@ const AboutMe = () => {
 
   return (
     <Layout>
-      <div className="min-h-[100vh] flex flex-col lg:flex-row w-full items-center px-10 lg:px-0  bg-stone-200">
-        <div className="lg:w-1/2 min-h-[100vh] lg:py-10 pt-20 border-black lg:pl-10 h-full flex flex-col justify-center">
-          <div className="mt-10 mx-auto my-auto w-[200px] h-[300px] flex lg:hidden  relative">
+      <div className="lg:min-h-[calc(100vh-136px)] min-h-screen mt-14 lg:mt-28 flex flex-col lg:flex-row w-full items-center px-10 lg:px-0  bg-white">
+        <div className="lg:w-1/2 min-h-[calc(100vh-136px)] lg:py-10 border-black lg:pl-10 h-full flex flex-col items-center justify-center">
+          <div className=" mx-auto  w-[200px] h-[300px] flex lg:hidden  relative">
             <Image
               src={Avatar}
               layout="fill"
@@ -98,86 +98,29 @@ const AboutMe = () => {
               className=""
             />
           </div>
-          <div className="text-black font-bold text-4xl lg:text-6xl mt-10 lg:mt-0 ">
-            AUZ
-          </div>
-          <div className="flex gap-2 mt-10 lg:mt-20">
-            <div className="rounded-full text-black text-base  border py-2 px-4 border-black">
-              {ageOutput}
+
+          <div className=" lg:px-40 pt-20 lg:pt-0 text-black  text-sm lg:text-lg break-all">
+            <div className="mb-10 flex uppercase">
+              <div className="border rounded-full px-4 py-1 border-black">Web developer</div>
+              <div className="ml-4 border rounded-full px-4 py-1 border-black">Web designer</div>
             </div>
-            <div className="rounded-full text-black text-base  border py-2 px-4 border-black">
-              Man
+            <div>
+              Welcome to my personal website. My name is AUZ and I love
+              technology and design.I was born in Yamanashi, Japan and I am{" "}
+              {age} years old. With the goal of creating new value, I am
+              acquiring knowledge related to web development and web application
+              development.
             </div>
-            <div className="rounded-full text-black  text-base  border py-2 px-4 border-black">
-              Japan
-            </div>
-          </div>
-          <div className="lg:mt-20 mt-10 text-black  text-sm lg:text-lg ">
-            Welocome to my personal website.Welcome to my personal website. My
-            name is AUZ and I love technology and design.I was born in
-            Yamanashi, Japan and I am {age} years old. After graduating from a
-            4-year university with a degree in economics, I gained experience in
-            customer service as a sales representative.While working, I became
-            interested in the idea of creating something and decided to start
-            studying programming and design. With the goal of creating new
-            value, I am acquiring knowledge related to web development and web
-            application development.
-          </div>
-          <div className="mt-10 mb-20 lg:mb-20 text-black text-xs lg:text-base tracking-wide ">
-            ポートフォリオサイトをご覧頂き有難うございます。AUZです。山梨生まれ。
-            {age}
-            歳。4年制大学の経済学部を卒業後、窓口営業を経験。働いている中で、何かを生み出すことへの興味関心に気づき、プログラミングとデザインの勉強を始めました。新しい技術やデザインが好きで、日々新しい価値を生み出すことを目標にWEB制作やWEB開発に関する知識の習得に励んでいます。お声がけお待ちしています。
           </div>
         </div>
-        <div className="lg:mb-20 mx-auto w-[200px] h-[300px] lg:w-[500px] lg:h-[600px] lg:flex   hidden  relative">
+        <div className=" mx-auto border-l border-black w-[200px] h-[calc(100vh-136px)] lg:w-[500px]  lg:flex   hidden  relative">
           <Image
             src={Avatar}
             layout="fill"
             objectFit="cover"
             alt="Avatar"
-            className="rounded-full"
+            className=""
           />
-        </div>
-      </div>
-      <div className="pt-20 pb-20 lg:pb-0 bg-bluebg text-white border-t border-black  min-h-screen px-10 ">
-        {" "}
-        <div className="w-full grid lg:grid-cols-3">
-          <div className="text-4xl lg:text-6xl pb-0 lg:pb-20 font-bold">
-            <div>Favorite</div>
-            <div className="text-sm lg:text-lg mt-10 lg:mt-20 lg:pr-20 font-normal">
-              I have a variety of hobbies such as traveling, playing the guitar,
-              and keeping an aquarium, and I enjoy life .
-            </div>
-          </div>
-          <div className="lg:col-span-2">
-            <div className="lg:pt-20 pt-10 lg:mb-40 text-white  grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-1 lg:gap-2">
-              {MyFavorites.map((MyFavorite, index) => {
-                return (
-                  <div
-                    className="h-[15vh] sm:h-[20vh] lg:h-[25vh] sm:hover:h-[50vh]  duration-700 relative group flex justify-center"
-                    key={index}
-                  >
-                    <Image
-                      className="filter brightness-75 hover:brightness-50 duration-700"
-                      objectFit="cover"
-                      lauout="fill"
-                      src={MyFavorite.src}
-                      alt="okinawa"
-                      loading="lazy"
-                    />
-                    <div className="absolute bottom-1 sm:bottom-4 left-0 px-1 sm:px-4 sm:-translate-y-10 sm:opacity-0 group-hover:translate-y-0 group-hover:opacity-100 delay-400 duration-1000">
-                      <div className="text-xs sm:text-2xl font-normal ">
-                        {MyFavorite.title}
-                      </div>
-                      <div className="text-xs font-light text-zinc-300 pt-2 hidden ">
-                        {MyFavorite.discription}
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
         </div>
       </div>
     </Layout>

@@ -59,9 +59,9 @@ export default function Portfolio() {
 
   return (
     <Layout>
-      <div className="bg-stone-200 w-full min-h-screen  text-black">
+      <div className="bg-white lg:mt-28 w-full min-[calc(100vh-136px)]  text-black">
         <div className="flex lg:flex-row flex-col">
-          <div className="lg:w-1/4 mt-20 lg:mt-0 lg:froat-left lg:overflow-auto  lg:h-[100vh] border-t lg:border-t lg:border-b hover:border-b-1 lg:border-r border-black ">
+          <div className="lg:w-2/5 mt-16 px-2 lg:px-0  lg:mt-0 lg:froat-left lg:overflow-auto  lg:h-[calc(100vh-136px)]  lg:border-r border-black ">
             {PortfolioCards.map((Cards, index) => {
               return (
                 <Link key="index" href={Cards.PortfolioDiscriptionURL}>
@@ -70,19 +70,20 @@ export default function Portfolio() {
                       console.log("changeimage");
                       setHoverBackgroundImage(Cards.src);
                     }}
-                    className=" flex flex-col group border-b border-black cursor-pointer"
+                    className=" flex flex-col group lg:border-b border-black cursor-pointer"
                   >
-                    <div className="relative flex lg:hidden group min-h-[40vh] lg:min-h-[50vh] w-full">
+                    <div className="relative flex lg:hidden group min-h-[40vh] lg:min-h-[50vh]  w-ful brightness-95 lg:brightness-100">
                       <Image
                         alt="card"
                         src={Cards.src}
                         objectFit={"cover"}
                         layout={"fill"}
-                        className=""
+                        className="rounded-2xl"
                       />
+          
                     </div>
-                    <div className="">
-                      <div className="hover:bg-black hover:text-stone-200 duration-700 px-4 pt-10 lg:pt-10 text-4xl lg:text-4xl uppercase  font-bold lg:font-bold  w-full flex justify-between  items-center">
+                    <div className="mb-10 lg:mb-0">
+                      <div className="hover:bg-black  hover:text-stone-200 duration-700 px-2 lg:px-4 pt-2 lg:pt-10 pb-4 lg:pb-0 text-2xl  border-black lg:text-4xl uppercase w-full flex justify-between  items-center">
                         <div>{Cards.title}</div>
                         <div className="text-base font-normal mt-auto">
                           {index + 1}/{PortfolioCards.length}
@@ -105,8 +106,8 @@ export default function Portfolio() {
               );
             })}
           </div>
-          <div className="lg:w-3/4 lg:float-right lg:h-9/12 lg:border-y border-black">
-            <div className="relative h-full w-full">
+          <div className="lg:w-3/5 lg:float-right lg:h-9/12  border-black">
+            <div className="relative h-full w-full brightness-100">
               <Image
                 alt="card"
                 src={hoverBackgroundImage}
