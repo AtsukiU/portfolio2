@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Layout from "../components/Layout";
 import Image from "next/image";
 import Portfolio1Img from "../public/Portfolio1.png";
-import Portfolio2Img from "../public/ AUZ's Portfolio.png";
+import Portfolio2Img from "../public/FireShot Capture 011 - AUZ's Portfolio - localhost.png";
 import EC from "../public/FireShot Capture 010 - HP by Nextjs - ec-demo-tau.vercel.app.png"
 import PostItMemo from "../public/PostItMemo.png";
 

@@ -37,9 +37,11 @@ const Header = () => {
   return (
     <header className=" w-full lg:border-black text-black  fixed font-Montserrat  z-50">
       <div className="lg:h-28 border-b border-black bg-white  flex items-center justify-between">
-        <div className="font-audiowide pl-4 lg:pl-0 w-1/5 lg:border-r h-full text-4xl sm:text-6xl lg:text-7xl xl:text-8xl flex items-center justify-center  border-black">
-          AUZ
-        </div>
+        <Link href="/">
+          <div className="font-audiowide cursor-pointer pl-4 lg:pl-0 w-1/5 lg:border-r h-full text-4xl sm:text-6xl lg:text-7xl xl:text-8xl flex items-center justify-center  border-black">
+            AUZ
+          </div>
+        </Link>
         <div className="w-4/5 h-full lg:flex flex-col hidden">
           <div className="h-1/2 border-b border-black flex items-center px-4 gap-10">
             <div>I&apos;m AUZ </div> <div>Japan </div>
