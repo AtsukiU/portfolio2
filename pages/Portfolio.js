@@ -106,7 +106,7 @@ export default function Portfolio() {
               );
             })}
           </div>
-          <div className="lg:w-3/5 lg:float-right lg:h-9/12  border-black">
+          <div className="lg:w-3/5 lg:m-10 border  lg:float-right lg:h-9/12  border-black">
             <div className="relative h-full w-full brightness-100">
               <Image
                 alt="card"

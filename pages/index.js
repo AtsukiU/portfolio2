@@ -121,11 +121,11 @@ const AboutMe = () => {
 
           <div className=" bg-bluebg  text-white min-h-[calc(100vh-136px)] flex items-center justify-center">
             <div className="px-10 ">
-              <div className=" flex items-center font-bold lg:uppercase justify-start lg:justify-center text-4xl lg:text-[200px]">
+              <div className=" flex items-center font-bold lg:uppercase justify-start lg:justify-center text-4xl lg:text-8xl">
                 Let&apos;s talk
               </div>
 
-              <div className="flex flex-col items-center lg:justify-center mt-10 lg:mt-28 ">
+              <div className="flex flex-col items-center lg:justify-center mt-10 lg:mt-14 ">
                 <div className="lg:w-1/3 text-sm lg:text-lg font-normal">
                   If you are interested in me and would like to offer me a job,
                   please click on this title to get in touch with me.
