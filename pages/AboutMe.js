@@ -102,8 +102,18 @@ const AboutMe = () => {
           <div className=" lg:px-40 pt-20 lg:pt-0 text-black  text-sm lg:text-lg break-all">
             <div className="mb-10 text-6xl">AUZ</div>
             <div className="mb-10 flex uppercase">
-              <div className="border rounded-full px-4 py-1 border-black">Web developer</div>
-              <div className="ml-4 border rounded-full px-4 py-1 border-black">Web designer</div>
+              <div className="border rounded-full px-4 py-1 border-black">
+                Web developer
+              </div>
+              <div className="ml-4 border rounded-full px-4 py-1 border-black">
+                Web designer
+              </div>
+            </div>
+            <div>
+              {" "}
+              ポートフォリオサイトをご覧頂き有難うございます。AUZです。山梨生まれ。
+              {age}
+              歳。4年制大学の経済学部を卒業後、窓口営業を経験。働いている中で、何かを生み出すことへの興味関心に気づき、プログラミングとデザインの勉強を始めました。新しい技術やデザインが好きで、日々新しい価値を生み出すことを目標にWEB制作やWEB開発に関する知識の習得に励んでいます。お声がけお待ちしています。
             </div>
             <div>
               Welcome to my personal website. My name is AUZ and I love
