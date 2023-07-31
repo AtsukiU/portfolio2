@@ -66,64 +66,16 @@ const Header = () => {
     <header className=" w-full lg:border-black text-black  fixed font-Montserrat  z-50">
       <div className="lg:h-28 border-b border-black bg-white  flex items-center justify-between">
         <Link href="/">
-          <div className="font-audiowide cursor-pointer pl-4 lg:pl-0 w-1/5 lg:border-r h-full text-4xl sm:text-6xl lg:text-7xl xl:text-8xl flex items-center justify-center  border-black">
+          <div className="font-audiowide cursor-pointer pl-4 lg:pl-0 w-1/6 lg:border-r h-full text-2xl sm:text-3xl lg:text-4xl xl:text-5xl flex items-center justify-center  border-black">
             AUZ
           </div>
         </Link>
-        <div className="w-4/5 h-full lg:flex flex-col hidden">
-          <div className="h-14 pl-4 border-b border-black flex items-center justify-center">
-            {" "}
-            <Swiper
-              modules={[
-                Scrollbar,
-                Mousewheel,
-                Thumbs,
-                EffectCoverflow,
-                EffectFade,
-                Mousewheel,
-                Autoplay,
-              ]}
-              slidesPerView={5}
-              loop={true}
-              mousewheel={true}
-              autoplay={{
-                delay: 0,
-                disableOnInteraction: false,
-              }}
-              speed={5000}
-              spaceBetween={20}
-            >
-              <SwiperSlide>
-                <div className="">I&apos;m AUZ </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div>Japan </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div>{ageOutput}</div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div>Web developer</div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div>Web designer</div>
-              </SwiperSlide>{" "}
-              <SwiperSlide>
-                <div className="">I&apos;m AUZ </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div>Japan </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div>{ageOutput}</div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div>Web developer</div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div>Web designer</div>
-              </SwiperSlide>
-            </Swiper>
+        <div className="w-5/6 h-full lg:flex flex-col hidden">
+          <div className="h-14 pl-8 border-b border-black flex items-center  ">
+            <div className="">
+              Hello, I am AUZ. I am {ageOutput} years old and live in Japan. I
+              like design and technology.{" "}
+            </div>
           </div>
 
           <ul className="w-full h-14 grid grid-cols-5 ">
