@@ -109,7 +109,7 @@ const AboutMe = () => {
                 Web designer
               </div>
             </div>
-            <div>
+            <div className="pb-10">
               {" "}
               ポートフォリオサイトをご覧頂き有難うございます。AUZです。山梨生まれ。
               {age}
