@@ -172,7 +172,7 @@ const Skill = () => {
                       className="w-full pb-2 relative flex flex-col group border-black"
                       key={index}
                     >
-                      <div className="w-full my-10 lg:my-28 opacity-10">
+                      <div className="w-full my-10 lg:my-20 opacity-10">
                         <Image
                           src={skill.svg}
                           alt={skill.title}
@@ -199,7 +199,7 @@ const Skill = () => {
                       className="w-full relative  flex flex-col border-black pb-2"
                       key={index}
                     >
-                      <div className="w-full my-10 lg:my-20 opacity-5">
+                      <div className="w-full my-10 lg:my-20 opacity-10">
                         <Image
                           src={skill.svg}
                           alt={skill.title}
@@ -227,7 +227,7 @@ const Skill = () => {
                       className="relative flex flex-col border-black pb-2 "
                       key={index}
                     >
-                      <div className="w-full my-10 lg:my-20 opacity-5">
+                      <div className="w-full my-10 lg:my-20 opacity-10">
                         <Image
                           src={skill.svg}
                           alt={skill.title}
